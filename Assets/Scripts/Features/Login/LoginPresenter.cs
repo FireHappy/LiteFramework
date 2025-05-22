@@ -1,6 +1,10 @@
+using System;
 using UnityEngine;
 
-public class LoginPresenter
+public class LoginPresenter : BasePresenter<LoginView>
 {
+    internal void OnLoginButtonClicked(string userName, string password)
+    {
 
+    }
 }

@@ -45,23 +45,24 @@
     <Analyzer Include="/Users/chenlin/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.1.2/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/LFramework/Core/MVP/Models/IModel.cs" />
-    <Compile Include="Assets/LFramework/Modules/UIModule/UIUtility.cs" />
-    <Compile Include="Assets/LFramework/Modules/UIModule/UIManager.cs" />
-    <Compile Include="Assets/LFramework/Modules/UIModule/BaseItem.cs" />
-    <Compile Include="Assets/LFramework/Modules/UIModule/BasePanel.cs" />
-    <Compile Include="Assets/LFramework/Core/Utils/AutoInjectComponent.cs" />
-    <Compile Include="Assets/Scripts/Features/Login/LoginPanelView.cs" />
-    <Compile Include="Assets/Scripts/Features/Login/ILoginView.cs" />
-    <Compile Include="Assets/Scripts/Features/Login/LoginPresenter.cs" />
     <Compile Include="Assets/Scripts/Main.cs" />
-    <Compile Include="Assets/Scripts/Features/Login/LoginModel.cs" />
-    <Compile Include="Assets/Scripts/Common/Data/UserData.cs" />
     <Compile Include="Assets/LFramework/Core/MVP/Presenters/IPresenter.cs" />
-    <Compile Include="Assets/LFramework/Core/MVP/Views/IView.cs" />
-    <Compile Include="Assets/LFramework/Core/MVP/Presenters/BasePresenter.cs" />
     <Compile Include="Assets/LFramework/Core/MVP/Views/BaseView.cs" />
+    <Compile Include="Assets/Scripts/Features/Login/LoginView.cs" />
+    <Compile Include="Assets/LFramework/Core/MVP/Views/IView.cs" />
     <Compile Include="Assets/LFramework/Core/MVP/Models/BaseModel.cs" />
+    <Compile Include="Assets/LFramework/Modules/UIModule/Interfaces/IUIManager.cs" />
+    <Compile Include="Assets/LFramework/Core/MVP/Presenters/BasePresenter.cs" />
+    <Compile Include="Assets/LFramework/Core/MVP/Models/IModel.cs" />
+    <Compile Include="Assets/LFramework/Core/Utils/AutoInjectComponent.cs" />
+    <Compile Include="Assets/LFramework/Modules/UIModule/UIUtility.cs" />
+    <Compile Include="Assets/Scripts/Features/Login/LoginPresenter.cs" />
+    <Compile Include="Assets/Scripts/Common/Data/UserData.cs" />
+    <Compile Include="Assets/Scripts/Features/Login/LoginModel.cs" />
+    <Compile Include="Assets/LFramework/Modules/UIModule/UIManager.cs" />
+    <Compile Include="Assets/LFramework/Modules/UIModule/Interfaces/IPanel.cs" />
+    <Compile Include="Assets/LFramework/Modules/UIModule/Interfaces/IDialog.cs" />
+    <Compile Include="Assets/LFramework/Modules/UIModule/Interfaces/IItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -921,7 +922,9 @@
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj" />
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj" />
     <ProjectReference Include="Unity.Rider.Editor.csproj" />
+    <ProjectReference Include="VContainer.Editor.csproj" />
     <ProjectReference Include="Unity.Services.Core.csproj" />
+    <ProjectReference Include="VContainer.csproj" />
     <ProjectReference Include="Unity.VisualScripting.Core.csproj" />
     <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj" />
     <ProjectReference Include="Unity.Services.Core.Analytics.csproj" />
@@ -930,8 +933,6 @@
     <ProjectReference Include="Unity.Timeline.Editor.csproj" />
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj" />
     <ProjectReference Include="Unity.VisualScripting.State.csproj" />
-    <ProjectReference Include="VContainer.Editor.csproj" />
-    <ProjectReference Include="VContainer.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

@@ -1,12 +1,20 @@
-public abstract class BasePresenter<TView> where TView : IView
+public abstract class BasePresenter<TView> : IPresenter
+    where TView : IView
 {
     protected TView View;
 
-    public BasePresenter(TView view)
+    public virtual void SetView(TView view)
     {
         View = view;
-        OnInit();
+        OnViewReady();
     }
 
-    protected abstract void OnInit();
+    public virtual void DetachView()
+    {
+        View = default;
+    }
+
+    protected virtual void OnViewReady() { }
+
+    public virtual void Dispose() { }
 }

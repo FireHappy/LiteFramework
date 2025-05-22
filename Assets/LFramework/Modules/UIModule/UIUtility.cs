@@ -2,38 +2,21 @@ using UnityEngine;
 
 public static class UIUtility
 {
-    public static T CreatePanel<T>(Transform parent, string panelPath, bool setActive = true) where T : BasePanel
+    public static TView CreateUI<TView>(Transform parent, string uiPath, bool setActive = true) where TView : IView
     {
-        string prefabName = typeof(T).Name;
-        var go = Resources.Load<GameObject>($"{panelPath}/{prefabName}");
+        string prefabName = typeof(TView).Name;
+        var go = Resources.Load<GameObject>($"{uiPath}/{prefabName}");
         if (go == null)
         {
-            Debug.LogWarning($"找不到 Panel 资源：{panelPath}/{prefabName}");
-            return null;
+            Debug.LogWarning($"找不到 ui 资源：{uiPath}/{prefabName}");
+            return default;
         }
 
         var instance = GameObject.Instantiate(go, parent).transform;
         instance.name = prefabName;
         instance.localScale = Vector3.one;
         instance.gameObject.SetActive(setActive);
-        return instance.GetComponent<T>();
-    }
-
-    public static T CreateItem<T>(Transform parent, string itemPath, bool setActive = true) where T : BaseItem
-    {
-        string prefabName = typeof(T).Name;
-        var go = Resources.Load<GameObject>($"{itemPath}/{prefabName}");
-        if (go == null)
-        {
-            Debug.LogWarning($"找不到 Item 资源：{itemPath}/{prefabName}");
-            return null;
-        }
-
-        var instance = GameObject.Instantiate(go, parent).transform;
-        instance.name = prefabName;
-        instance.localScale = Vector3.one;
-        instance.gameObject.SetActive(setActive);
-        return instance.GetComponent<T>();
+        return instance.GetComponent<TView>();
     }
 
     public static void DestroyUI(Transform uiTransform)

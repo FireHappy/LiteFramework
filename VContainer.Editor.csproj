@@ -45,13 +45,13 @@
     <Analyzer Include="/Users/chenlin/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.1.2/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Editor/ParentReferencePropertyDrawer.cs" />
     <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Editor/ScriptTemplateModifier.cs" />
-    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Editor/Diagnostics/VContainerDiagnosticsTreeView.cs" />
-    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Editor/Diagnostics/TypeNameHelper.cs" />
     <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Editor/Diagnostics/VContainerInstanceTreeView.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Editor/Diagnostics/TypeNameHelper.cs" />
     <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Editor/Diagnostics/SplitterGUILayout.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Editor/ParentReferencePropertyDrawer.cs" />
     <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Editor/Diagnostics/VContainerDiagnosticsWindow.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Editor/Diagnostics/VContainerDiagnosticsTreeView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Editor/VContainer.Editor.asmdef" />

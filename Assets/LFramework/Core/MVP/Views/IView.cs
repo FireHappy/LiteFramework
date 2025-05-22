@@ -1,6 +1,3 @@
 
 
-public interface IView
-{
-
-}
+public interface IView { }

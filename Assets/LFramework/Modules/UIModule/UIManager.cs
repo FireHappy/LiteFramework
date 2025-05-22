@@ -62,8 +62,8 @@ public class UIManager : IUIManager
             AutoInjectComponent.AutoInject(view.transform, view);
         }
         var presenter = container.Resolve<TPresenter>();
-        view.BindPresenter(presenter);
         presenter.SetView(view);
+        view.BindPresenter(presenter);
         return presenter;
     }
 

@@ -10,4 +10,9 @@ public class MainPresenter : BasePresenter<MainView>
         this.userModel = userModel;
         Debug.Log($"UserName: {userModel.userName}");
     }
+
+    public void OnExitButtonClick()
+    {
+        //todo...
+    }
 }

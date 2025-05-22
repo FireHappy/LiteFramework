@@ -15,16 +15,16 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <EnableDefaultItems>false</EnableDefaultItems>
     <LangVersion>9.0</LangVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>VContainer</RootNamespace>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>VContainer</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup>
     <NoWarn>0169;USG0001</NoWarn>
     <DefineConstants>UNITY_2021_3_3;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_IG;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoStandardLibraries>true</NoStandardLibraries>
@@ -45,23 +45,89 @@
     <Analyzer Include="/Users/chenlin/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.1.2/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/LFramework/Core/MVP/Models/IModel.cs" />
-    <Compile Include="Assets/LFramework/Modules/UIModule/UIUtility.cs" />
-    <Compile Include="Assets/LFramework/Modules/UIModule/UIManager.cs" />
-    <Compile Include="Assets/LFramework/Modules/UIModule/BaseItem.cs" />
-    <Compile Include="Assets/LFramework/Modules/UIModule/BasePanel.cs" />
-    <Compile Include="Assets/LFramework/Core/Utils/AutoInjectComponent.cs" />
-    <Compile Include="Assets/Scripts/Features/Login/LoginPanelView.cs" />
-    <Compile Include="Assets/Scripts/Features/Login/ILoginView.cs" />
-    <Compile Include="Assets/Scripts/Features/Login/LoginPresenter.cs" />
-    <Compile Include="Assets/Scripts/Main.cs" />
-    <Compile Include="Assets/Scripts/Features/Login/LoginModel.cs" />
-    <Compile Include="Assets/Scripts/Common/Data/UserData.cs" />
-    <Compile Include="Assets/LFramework/Core/MVP/Presenters/IPresenter.cs" />
-    <Compile Include="Assets/LFramework/Core/MVP/Views/IView.cs" />
-    <Compile Include="Assets/LFramework/Core/MVP/Presenters/BasePresenter.cs" />
-    <Compile Include="Assets/LFramework/Core/MVP/Views/BaseView.cs" />
-    <Compile Include="Assets/LFramework/Core/MVP/Models/BaseModel.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/InjectorCache.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/ContainerBuilderUnityExtensions.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/ActionInstaller.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/LifetimeScope.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/ContainerBuilderExtensions.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/InstanceProviders/InstanceProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/TypeKeyHashTable2.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/InstanceProviders/PrefabComponentProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/InstanceProviders/SystemInstanceProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Annotations/IAsyncStartable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Annotations/IPostFixedTickable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Registry.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/UnmanagedSystemRegistrationBuilder.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Annotations/InjectAttribute.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/IInjector.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/InstanceProviders/NewGameObjectProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/VContainerException.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/InstanceProviders/ExistingComponentProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/IInjectParameter.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/IObjectResolverExtensions.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Annotations/AwaitableExtensions.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Annotations/IPostTickable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/InstanceProviders/UnmanagedSystemInstanceProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/InjectParameter.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/VContainerSettings.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/PlayerLoopItem.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/ContainerBuilder.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/CompositeDisposable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/InstanceProviders/CollectionInstanceProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Diagnostics/ResolveInfo.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Diagnostics/DiagnosticsInfo.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/TypeAnalyzer.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/BuilderCallbackDisposable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/InstanceRegistrationBuilder.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Annotations/IStartable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/EntryPointExceptionHandler.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/IInstanceProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/InstanceProviders/ExistingInstanceProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/InstanceProviders/FindComponentProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/PlayerLoopHelper.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Annotations/IPostLateTickable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/LifetimeScope.AwakeScheduler.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/FuncRegistrationBuilder.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/ComponentRegistrationBuilder.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/OpenGenericRegistrationBuilder.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/DisposeLoopItem.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/ParentReference.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Annotations/ILateTickable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/ReflectionInjector.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Container.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Diagnostics/RegisterInfo.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Annotations/IPostStartable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Annotations/IFixedTickable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/ContainerLocal.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/ObjectResolverUnityExtensions.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/WorldConfigurationHelper.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/EntryPointDispatcher.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/CappedArrayPool.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Annotations/ITickable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Diagnostics/DiagnosticsContext.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/FreeList.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/InstanceProviders/FuncInstanceProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/WorldRegistrationBuilder.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/InstanceProviders/ContainerInstanceProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/InstanceProviders/OpenGenericInstanceProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/RegistrationBuilder.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/InstanceProviders/WorldInstanceProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Registration.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/ListPool.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Diagnostics/DiagnosticsCollector.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Annotations/IPostInitializable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/IInstaller.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/SystemRegistrationBuilder.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/FixedTypeKeyHashTable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/RuntimeTypeCache.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/PlayerLoopRunner.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Annotations/IInitializable.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/AssemblyInfo.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Internal/InstanceProviders/ContainerLocalInstanceProvider.cs" />
+    <Compile Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/Unity/UnmanagedSystemReference.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Library/PackageCache/jp.hadashikick.vcontainer@c25737fe42/Runtime/VContainer.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -388,16 +454,16 @@
       <HintPath>/Applications/Unity/Hub/Editor/2021.3.3f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.3f1c1/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="ReportGeneratorMerged">
-      <HintPath>Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
+    <Reference Include="UnityEditor.OSXStandalone.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.3f1c1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll</HintPath>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2021.3.3f1c1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">
@@ -906,32 +972,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj" />
-    <ProjectReference Include="Unity.VSCode.Editor.csproj" />
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj" />
-    <ProjectReference Include="Unity.Performance.Profile-Analyzer.Editor.csproj" />
-    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj" />
-    <ProjectReference Include="Unity.VisualStudio.Editor.csproj" />
-    <ProjectReference Include="Unity.Timeline.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj" />
-    <ProjectReference Include="Unity.TextMeshPro.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
-    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Flow.csproj" />
-    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj" />
-    <ProjectReference Include="Unity.Rider.Editor.csproj" />
-    <ProjectReference Include="Unity.Services.Core.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Core.csproj" />
-    <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj" />
-    <ProjectReference Include="Unity.Services.Core.Analytics.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj" />
-    <ProjectReference Include="Unity.Services.Core.Environments.csproj" />
-    <ProjectReference Include="Unity.Timeline.Editor.csproj" />
-    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.State.csproj" />
-    <ProjectReference Include="VContainer.Editor.csproj" />
-    <ProjectReference Include="VContainer.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

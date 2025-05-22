@@ -1,5 +1,3 @@
-
-
 public interface IModel<T>
 {
     public T GetData();

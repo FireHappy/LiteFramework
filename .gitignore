@@ -2,3 +2,4 @@
 *.vscode
 **Temp
 **Log
+*.DS_Store

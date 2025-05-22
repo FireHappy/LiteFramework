@@ -49,6 +49,8 @@
     <Compile Include="Assets/LFramework/Core/MVP/Presenters/IPresenter.cs" />
     <Compile Include="Assets/LFramework/Core/MVP/Views/BaseView.cs" />
     <Compile Include="Assets/Scripts/Features/Login/LoginView.cs" />
+    <Compile Include="Assets/LFramework/Core/Utils/VContainerAutoRegister.cs" />
+    <Compile Include="Assets/LFramework/Core/Attributes/AutoRegisterAttribute.cs" />
     <Compile Include="Assets/LFramework/Core/MVP/Views/IView.cs" />
     <Compile Include="Assets/LFramework/Core/MVP/Models/BaseModel.cs" />
     <Compile Include="Assets/LFramework/Modules/UIModule/Interfaces/IUIManager.cs" />
@@ -60,8 +62,6 @@
     <Compile Include="Assets/Scripts/Common/Data/UserData.cs" />
     <Compile Include="Assets/Scripts/Features/Login/LoginModel.cs" />
     <Compile Include="Assets/LFramework/Modules/UIModule/UIManager.cs" />
-    <Compile Include="Assets/LFramework/Core/Attributes/AutoRegisterAttribute.cs" />
-    <Compile Include="Assets/LFramework/Core/Utils/VContainerAutoRegister.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

@@ -11,12 +11,11 @@ public enum UIType
 
 public class UIManager : IUIManager
 {
-    private string panelPath = "UI/Panel";
-    private string itemPath = "UI/Item";
-    private string dialogPath = "UI/Dialog";
+
+    private string uiPath = "UI";
     private string defaultUIParentTag = "UIParent";
     private string defaultUIDialogTag = "DialogParent";
-    private string rootUIPath = "UI/UICanvas";
+    private string rootUIPrefab = "UI/UICanvas";
 
     private readonly IObjectResolver container;
     private Transform uiParent;
@@ -31,20 +30,16 @@ public class UIManager : IUIManager
     where TPresenter : BasePresenter<TView>
     where TView : BaseView<TPresenter>
     {
-        string uiPath = "";
         switch (type)
         {
             case UIType.Panel:
                 parent ??= GetUIParent();
-                uiPath = panelPath;
                 break;
             case UIType.Dialog:
                 parent ??= GetDialogParent();
-                uiPath = dialogPath;
                 break;
             case UIType.Item:
                 parent ??= GetUIParent();
-                uiPath = itemPath;
                 break;
         }
         TView view;
@@ -110,7 +105,7 @@ public class UIManager : IUIManager
         }
         if (dialogParent == null)
         {
-            GameObject.Instantiate(Resources.Load<GameObject>(rootUIPath));
+            GameObject.Instantiate(Resources.Load<GameObject>(rootUIPrefab));
             dialogParent = GameObject.FindWithTag(defaultUIDialogTag)?.transform;
         }
         return dialogParent;
@@ -124,7 +119,7 @@ public class UIManager : IUIManager
         }
         if (uiParent == null)
         {
-            GameObject.Instantiate(Resources.Load<GameObject>(rootUIPath));
+            GameObject.Instantiate(Resources.Load<GameObject>(rootUIPrefab));
             uiParent = GameObject.FindWithTag(defaultUIParentTag)?.transform;
         }
         return uiParent;

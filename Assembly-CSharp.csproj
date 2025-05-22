@@ -60,8 +60,9 @@
     <Compile Include="Assets/LFramework/Modules/UIModule/UIUtility.cs" />
     <Compile Include="Assets/Scripts/Features/Login/LoginPresenter.cs" />
     <Compile Include="Assets/Scripts/Common/Data/UserData.cs" />
-    <Compile Include="Assets/Scripts/Features/Login/LoginModel.cs" />
     <Compile Include="Assets/LFramework/Modules/UIModule/UIManager.cs" />
+    <Compile Include="Assets/Scripts/Features/Main/MainPresenter.cs" />
+    <Compile Include="Assets/Scripts/Features/Main/MainView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

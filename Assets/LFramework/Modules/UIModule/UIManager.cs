@@ -34,6 +34,8 @@ public class UIManager : IUIManager
         {
             case UIType.Panel:
                 parent ??= GetUIParent();
+                //使用覆盖模式,隐藏上一个UI
+                GetTopChild(parent)?.gameObject.SetActive(false);
                 break;
             case UIType.Dialog:
                 parent ??= GetDialogParent();
@@ -57,7 +59,7 @@ public class UIManager : IUIManager
             AutoInjectComponent.AutoInject(view.transform, view);
         }
         var presenter = container.Resolve<TPresenter>();
-        presenter.SetView(view);
+        presenter.AttachView(view);
         view.BindPresenter(presenter);
         return presenter;
     }
@@ -89,11 +91,7 @@ public class UIManager : IUIManager
         }
         if (type == UIType.Panel)
         {
-            var top = GetTopChild(parent);
-            if (top != null)
-            {
-                top.gameObject.SetActive(true);
-            }
+            GetTopChild(parent)?.gameObject.SetActive(false);
         }
     }
 

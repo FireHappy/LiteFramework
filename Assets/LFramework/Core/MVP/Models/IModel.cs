@@ -1,5 +1,4 @@
-public interface IModel<TData>
+public interface IModel
 {
-    public TData GetData();
-    public void SaveData(TData data);
+
 }

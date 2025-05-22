@@ -1,9 +1,18 @@
+using System.ComponentModel;
+using VContainer;
+
 public abstract class BasePresenter<TView> : IPresenter
     where TView : IView
 {
     protected TView View;
 
-    public virtual void SetView(TView view)
+    protected readonly IObjectResolver Container;
+
+    protected BasePresenter(IObjectResolver container)
+    {
+        Container = container;
+    }
+    public virtual void AttachView(TView view)
     {
         View = view;
         OnViewReady();

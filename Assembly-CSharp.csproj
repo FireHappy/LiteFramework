@@ -52,14 +52,13 @@
     <Compile Include="Assets/LFramework/Core/Utils/VContainerAutoRegister.cs" />
     <Compile Include="Assets/LFramework/Core/Attributes/AutoRegisterAttribute.cs" />
     <Compile Include="Assets/LFramework/Core/MVP/Views/IView.cs" />
-    <Compile Include="Assets/LFramework/Core/MVP/Models/BaseModel.cs" />
     <Compile Include="Assets/LFramework/Modules/UIModule/Interfaces/IUIManager.cs" />
     <Compile Include="Assets/LFramework/Core/MVP/Presenters/BasePresenter.cs" />
     <Compile Include="Assets/LFramework/Core/MVP/Models/IModel.cs" />
     <Compile Include="Assets/LFramework/Core/Utils/AutoInjectComponent.cs" />
     <Compile Include="Assets/LFramework/Modules/UIModule/UIUtility.cs" />
     <Compile Include="Assets/Scripts/Features/Login/LoginPresenter.cs" />
-    <Compile Include="Assets/Scripts/Common/Data/UserData.cs" />
+    <Compile Include="Assets/Scripts/Common/Data/UserModel.cs" />
     <Compile Include="Assets/LFramework/Modules/UIModule/UIManager.cs" />
     <Compile Include="Assets/Scripts/Features/Main/MainPresenter.cs" />
     <Compile Include="Assets/Scripts/Features/Main/MainView.cs" />

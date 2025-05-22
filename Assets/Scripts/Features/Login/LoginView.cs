@@ -16,5 +16,4 @@ public class LoginView : BaseView<LoginPresenter>
             presenter.OnLoginButtonClicked(nameInput.text, passwordInput.text);
         });
     }
-
 }

@@ -1,3 +1,4 @@
+using LFramework.Core.MVP;
 using UnityEngine;
 
 namespace LFramework.Module.UI

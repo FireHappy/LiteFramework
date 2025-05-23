@@ -1,3 +1,11 @@
 
 
-public interface IView { }
+namespace LFramework.Core.MVP
+{
+    public interface IView : System.IDisposable
+    {
+        void BindPresenter(IPresenter presenter);
+        void UnBindPresenter();
+    }
+}
+

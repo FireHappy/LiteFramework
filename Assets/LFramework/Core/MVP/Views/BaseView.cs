@@ -7,7 +7,7 @@ namespace LFramework.Core.MVP
     {
         public TPresenter presenter { get; private set; }
 
-        public void BindPresenter(TPresenter presenter)
+        public void BindPresenter(IPresenter presenter)
         {
             if (this.presenter != null)
             {
@@ -21,14 +21,21 @@ namespace LFramework.Core.MVP
                 return;
             }
 
-            this.presenter = presenter;
+            this.presenter = (TPresenter)presenter;
             OnBind();
         }
 
-        /// <summary>
-        /// Presenter 绑定完成后执行，子类可重写进行初始化。
-        /// </summary>
+        public void UnBindPresenter()
+        {
+            presenter = default;
+        }
+
         protected virtual void OnBind() { }
+
+        public void Dispose()
+        {
+
+        }
     }
 }
 

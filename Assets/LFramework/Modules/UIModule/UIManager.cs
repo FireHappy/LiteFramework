@@ -88,6 +88,7 @@ namespace LFramework.Module.UI
                 if (view != null && view.presenter != null)
                 {
                     view.presenter.DetachView();
+                    view.UnBindPresenter();
                 }
                 UIUtility.DestroyUI(tsf);
             }

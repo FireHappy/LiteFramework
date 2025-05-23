@@ -2,6 +2,7 @@ using LFramework.Core.Utility;
 using LFramework.Core.MVP;
 using VContainer;
 using LFramework.Module.UI;
+using UniRx;
 
 namespace LFramework.Demo
 {
@@ -16,7 +17,11 @@ namespace LFramework.Demo
         protected override void OnViewReady()
         {
             var uiManager = Container.Resolve<IUIManager>();
-            View.userName.text = userModel.userName;
+            // 将 Model 的 userName 绑定到 UI 显示
+            userModel.userName
+                .Subscribe(value => View.userName.text = value)
+                .AddTo(View); // 自动在 View 销毁时取消订阅
+
             View.settingButton.onClick.AddListener(() =>
             {
                 //todo open setting view

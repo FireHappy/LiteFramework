@@ -19,7 +19,7 @@ namespace LFramework.Demo
         {
             View.loginButton.onClick.AddListener(() =>
             {
-                this.userModel.userName = View.nameInput.text;
+                this.userModel.userName.Value = View.nameInput.text;
                 this.userModel.password = View.passwordInput.text;
                 var uiManager = Container.Resolve<IUIManager>();
                 uiManager.OpenUI<MainPresenter, MainView>(UIType.Panel);

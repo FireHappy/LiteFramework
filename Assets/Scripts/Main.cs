@@ -25,6 +25,5 @@ public class Main : LifetimeScope
 
         // 加载 Login UI
         uiManager.OpenUI<LoginPresenter, LoginView>(UIType.Panel);
-        // uiManager.CloseUI<LoginPresenter, LoginView>(UIType.Panel);
     }
 }

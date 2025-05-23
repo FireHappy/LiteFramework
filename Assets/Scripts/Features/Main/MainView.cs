@@ -9,11 +9,7 @@ public class MainView : BaseView<MainPresenter>
 
     protected override void OnBind()
     {
-        // 绑定点击事件给 Presenter
-        exitButton.onClick.AddListener(() =>
-        {
-            presenter.OnLoginButtonClicked(nameInput.text, passwordInput.text);
-        });
+
     }
 
 }

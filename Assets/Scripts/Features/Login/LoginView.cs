@@ -1,19 +1,25 @@
 using UnityEngine.UI;
 using LFramework.Utility;
+using LFramework.Core.MVP;
 using TMPro;
-
-public class LoginView : BaseView<LoginPresenter>
+namespace LFramework.Demo
 {
-    [Autowrited] private Button loginButton;
-    [Autowrited] private TMP_InputField nameInput;
-    [Autowrited] private TMP_InputField passwordInput;
-
-    protected override void OnBind()
+    public class LoginView : BaseView<LoginPresenter>
     {
-        // 绑定点击事件给 Presenter
-        loginButton.onClick.AddListener(() =>
+        [Autowrited] private Button loginButton;
+        [Autowrited] private TMP_InputField nameInput;
+        [Autowrited] private TMP_InputField passwordInput;
+
+        protected override void OnBind()
         {
-            presenter.OnLoginButtonClicked(nameInput.text, passwordInput.text);
-        });
+            // 绑定点击事件给 Presenter
+            loginButton.onClick.AddListener(() =>
+            {
+                presenter.OnLoginButtonClicked(nameInput.text, passwordInput.text);
+            });
+        }
     }
+
 }
+
+

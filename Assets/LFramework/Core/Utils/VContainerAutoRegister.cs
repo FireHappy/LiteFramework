@@ -1,18 +1,21 @@
 using System.Reflection;
 using VContainer;
 
-public static class VContainerAutoRegister
+namespace LFramework.Core.Utility
 {
-    public static void RegisterWithAttribute(IContainerBuilder builder, Assembly[] assemblies)
+    public static class VContainerAutoRegister
     {
-        foreach (var assembly in assemblies)
+        public static void RegisterWithAttribute(IContainerBuilder builder, Assembly[] assemblies)
         {
-            foreach (var type in assembly.GetTypes())
+            foreach (var assembly in assemblies)
             {
-                var attr = type.GetCustomAttribute<AutoRegisterAttribute>();
-                if (attr != null && !type.IsAbstract)
+                foreach (var type in assembly.GetTypes())
                 {
-                    builder.Register(type, attr.Lifetime);
+                    var attr = type.GetCustomAttribute<AutoRegisterAttribute>();
+                    if (attr != null && !type.IsAbstract)
+                    {
+                        builder.Register(type, attr.Lifetime);
+                    }
                 }
             }
         }

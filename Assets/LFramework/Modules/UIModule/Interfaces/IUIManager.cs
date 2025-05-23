@@ -1,13 +1,15 @@
-
+using LFramework.Core.MVP;
 using UnityEngine;
 
-public interface IUIManager
+namespace LFramework.Module.UI
 {
-    public TPresenter OpenUI<TPresenter, TView>(UIType type, Transform parent = null)
-        where TPresenter : BasePresenter<TView>
-        where TView : BaseView<TPresenter>;
+    public interface IUIManager
+    {
+        public TPresenter OpenUI<TPresenter, TView>(UIType type, Transform parent = null)
+            where TPresenter : BasePresenter<TView>
+            where TView : BaseView<TPresenter>;
 
-    public void CloseUI<TPresenter, TView>(UIType type, Transform parent = null) where TPresenter : BasePresenter<TView>
-   where TView : BaseView<TPresenter>;
-
+        public void CloseUI<TPresenter, TView>(UIType type, Transform parent = null) where TPresenter : BasePresenter<TView>
+       where TView : BaseView<TPresenter>;
+    }
 }

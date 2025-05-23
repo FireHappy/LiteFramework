@@ -1,135 +1,139 @@
 using LFramework.Utility;
+using LFramework.Core.MVP;
 using UnityEngine;
 using VContainer;
 
-public enum UIType
+namespace LFramework.Module.UI
 {
-    Panel,
-    Item,
-    Dialog
-}
-
-public class UIManager : IUIManager
-{
-
-    private string uiPath = "UI";
-    private string defaultUIParentTag = "UIParent";
-    private string defaultUIDialogTag = "DialogParent";
-    private string rootUIPrefab = "UI/UICanvas";
-
-    private readonly IObjectResolver container;
-    private Transform uiParent;
-    private Transform dialogParent;
-
-    public UIManager(IObjectResolver container)
+    public enum UIType
     {
-        this.container = container;
+        Panel,
+        Item,
+        Dialog
     }
 
-    public TPresenter OpenUI<TPresenter, TView>(UIType type, Transform parent = null)
-    where TPresenter : BasePresenter<TView>
-    where TView : BaseView<TPresenter>
+    public class UIManager : IUIManager
     {
-        switch (type)
-        {
-            case UIType.Panel:
-                parent ??= GetUIParent();
-                //使用覆盖模式,隐藏上一个UI
-                GetTopChild(parent)?.gameObject.SetActive(false);
-                break;
-            case UIType.Dialog:
-                parent ??= GetDialogParent();
-                break;
-            case UIType.Item:
-                parent ??= GetUIParent();
-                break;
-        }
-        TView view;
-        var existing = UIUtility.FindUI<TView>(parent);
-        if (existing != null)
-        {
-            existing.SetAsLastSibling();
-            existing.gameObject.SetActive(true);
-            view = existing.GetComponent<TView>();
-        }
-        else
-        {
-            view = UIUtility.CreateUI<TView>(parent, uiPath);
-            //处理ui组件的注入
-            AutoInjectComponent.AutoInject(view.transform, view);
-        }
-        var presenter = container.Resolve<TPresenter>();
-        presenter.AttachView(view);
-        view.BindPresenter(presenter);
-        return presenter;
-    }
 
-    public void CloseUI<TPresenter, TView>(UIType type, Transform parent = null) where TPresenter : BasePresenter<TView>
-    where TView : BaseView<TPresenter>
-    {
-        switch (type)
+        private string uiPath = "UI";
+        private string defaultUIParentTag = "UIParent";
+        private string defaultUIDialogTag = "DialogParent";
+        private string rootUIPrefab = "UI/UICanvas";
+
+        private readonly IObjectResolver container;
+        private Transform uiParent;
+        private Transform dialogParent;
+
+        public UIManager(IObjectResolver container)
         {
-            case UIType.Panel:
-                parent ??= GetUIParent();
-                break;
-            case UIType.Dialog:
-                parent ??= GetDialogParent();
-                break;
-            case UIType.Item:
-                parent ??= GetUIParent();
-                break;
+            this.container = container;
         }
-        var tsf = UIUtility.FindUI<TView>(parent);
-        if (tsf != null)
+
+        public TPresenter OpenUI<TPresenter, TView>(UIType type, Transform parent = null)
+        where TPresenter : BasePresenter<TView>
+        where TView : BaseView<TPresenter>
         {
-            var view = tsf.GetComponent<TView>();
-            if (view != null && view.presenter != null)
+            switch (type)
             {
-                view.presenter.DetachView();
+                case UIType.Panel:
+                    parent ??= GetUIParent();
+                    GetTopChild(parent)?.gameObject.SetActive(false);
+                    break;
+                case UIType.Dialog:
+                    parent ??= GetDialogParent();
+                    break;
+                case UIType.Item:
+                    parent ??= GetUIParent();
+                    break;
             }
-            UIUtility.DestroyUI(tsf);
+            TView view;
+            var existing = UIUtility.FindUI<TView>(parent);
+            if (existing != null)
+            {
+                existing.SetAsLastSibling();
+                existing.gameObject.SetActive(true);
+                view = existing.GetComponent<TView>();
+            }
+            else
+            {
+                view = UIUtility.CreateUI<TView>(parent, uiPath);
+                //处理ui组件的注入
+                AutoInjectComponent.AutoInject(view.transform, view);
+            }
+            var presenter = container.Resolve<TPresenter>();
+            presenter.AttachView(view);
+            view.BindPresenter(presenter);
+            return presenter;
         }
-        if (type == UIType.Panel)
+
+        public void CloseUI<TPresenter, TView>(UIType type, Transform parent = null) where TPresenter : BasePresenter<TView>
+        where TView : BaseView<TPresenter>
         {
-            GetTopChild(parent)?.gameObject.SetActive(false);
+            switch (type)
+            {
+                case UIType.Panel:
+                    parent ??= GetUIParent();
+                    break;
+                case UIType.Dialog:
+                    parent ??= GetDialogParent();
+                    break;
+                case UIType.Item:
+                    parent ??= GetUIParent();
+                    break;
+            }
+            var tsf = UIUtility.FindUI<TView>(parent);
+            if (tsf != null)
+            {
+                var view = tsf.GetComponent<TView>();
+                if (view != null && view.presenter != null)
+                {
+                    view.presenter.DetachView();
+                }
+                UIUtility.DestroyUI(tsf);
+            }
+            if (type == UIType.Panel)
+            {
+                GetTopChild(parent)?.gameObject.SetActive(false);
+            }
+        }
+
+        private Transform GetDialogParent()
+        {
+            if (dialogParent == null)
+            {
+                dialogParent = GameObject.FindWithTag(defaultUIDialogTag)?.transform;
+            }
+            if (dialogParent == null)
+            {
+                GameObject.Instantiate(Resources.Load<GameObject>(rootUIPrefab));
+                dialogParent = GameObject.FindWithTag(defaultUIDialogTag)?.transform;
+            }
+            return dialogParent;
+        }
+
+        private Transform GetUIParent()
+        {
+            if (uiParent == null)
+            {
+                uiParent = GameObject.FindWithTag(defaultUIParentTag)?.transform;
+            }
+            if (uiParent == null)
+            {
+                GameObject.Instantiate(Resources.Load<GameObject>(rootUIPrefab));
+                uiParent = GameObject.FindWithTag(defaultUIParentTag)?.transform;
+            }
+            return uiParent;
+        }
+
+
+        private Transform GetTopChild(Transform tsf)
+        {
+            if (tsf.childCount > 0)
+            {
+                return tsf.GetChild(tsf.childCount - 1);
+            }
+            return null;
         }
     }
 
-    private Transform GetDialogParent()
-    {
-        if (dialogParent == null)
-        {
-            dialogParent = GameObject.FindWithTag(defaultUIDialogTag)?.transform;
-        }
-        if (dialogParent == null)
-        {
-            GameObject.Instantiate(Resources.Load<GameObject>(rootUIPrefab));
-            dialogParent = GameObject.FindWithTag(defaultUIDialogTag)?.transform;
-        }
-        return dialogParent;
-    }
-
-    private Transform GetUIParent()
-    {
-        if (uiParent == null)
-        {
-            uiParent = GameObject.FindWithTag(defaultUIParentTag)?.transform;
-        }
-        if (uiParent == null)
-        {
-            GameObject.Instantiate(Resources.Load<GameObject>(rootUIPrefab));
-            uiParent = GameObject.FindWithTag(defaultUIParentTag)?.transform;
-        }
-        return uiParent;
-    }
-
-
-    private Transform GetTopChild(Transform tsf)
-    {
-        if (tsf.childCount > 0)
-        {
-            return tsf.GetChild(tsf.childCount - 1);
-        }
-        return null;
-    }
 }

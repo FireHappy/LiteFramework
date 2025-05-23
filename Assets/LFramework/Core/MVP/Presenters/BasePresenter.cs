@@ -1,29 +1,32 @@
-using System.ComponentModel;
 using VContainer;
 
-public abstract class BasePresenter<TView> : IPresenter
-    where TView : IView
+namespace LFramework.Core.MVP
 {
-    protected TView View;
-
-    protected readonly IObjectResolver Container;
-
-    protected BasePresenter(IObjectResolver container)
+    public abstract class BasePresenter<TView> : IPresenter
+        where TView : IView
     {
-        Container = container;
-    }
-    public virtual void AttachView(TView view)
-    {
-        View = view;
-        OnViewReady();
-    }
+        protected TView View;
+        protected readonly IObjectResolver Container;
 
-    public virtual void DetachView()
-    {
-        View = default;
+        protected BasePresenter(IObjectResolver container)
+        {
+            Container = container;
+        }
+
+        public virtual void AttachView(IView view)
+        {
+            View = (TView)view;
+            OnViewReady();
+        }
+
+        public virtual void DetachView()
+        {
+            View = default;
+        }
+
+        protected virtual void OnViewReady() { }
+
+        public virtual void Dispose() { }
     }
-
-    protected virtual void OnViewReady() { }
-
-    public virtual void Dispose() { }
 }
+

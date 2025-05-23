@@ -1,15 +1,24 @@
 using UnityEngine.UI;
 using LFramework.Utility;
+using LFramework.Core.MVP;
 
-public class MainView : BaseView<MainPresenter>
+namespace LFramework.Demo
 {
-    [Autowrited] Button settingButton;
-    [Autowrited] Button exitButton;
-    [Autowrited] Text userName;
-
-    protected override void OnBind()
+    public class MainView : BaseView<MainPresenter>
     {
+        [Autowrited] Button settingButton;
+        [Autowrited] Button exitButton;
+        [Autowrited] Text userName;
+
+        protected override void OnBind()
+        {
+            exitButton.onClick.AddListener(() =>
+            {
+
+            });
+        }
 
     }
-
 }
+
+

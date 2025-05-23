@@ -1,18 +1,25 @@
+using LFramework.Core.Utility;
+using LFramework.Core.MVP;
 using UnityEngine;
 using VContainer;
 
-[AutoRegister(VContainer.Lifetime.Transient)]
-public class MainPresenter : BasePresenter<MainView>
+namespace LFramework.Demo
 {
-    UserModel userModel;
-    public MainPresenter(UserModel userModel, IObjectResolver container) : base(container)
+    [AutoRegister(VContainer.Lifetime.Transient)]
+    public class MainPresenter : BasePresenter<MainView>
     {
-        this.userModel = userModel;
-        Debug.Log($"UserName: {userModel.userName}");
-    }
+        UserModel userModel;
+        public MainPresenter(UserModel userModel, IObjectResolver container) : base(container)
+        {
+            this.userModel = userModel;
+            Debug.Log($"UserName: {userModel.userName}");
+        }
 
-    public void OnExitButtonClick()
-    {
-        //todo...
+        public void OnExitButtonClick()
+        {
+            //todo...
+        }
     }
 }
+
+

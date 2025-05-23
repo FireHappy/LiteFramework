@@ -2,6 +2,7 @@ using LFramework.Core.Utility;
 using LFramework.Core.MVP;
 using LFramework.Module.UI;
 using VContainer;
+using UnityEngine;
 
 
 namespace LFramework.Demo
@@ -14,12 +15,20 @@ namespace LFramework.Demo
         {
             this.userModel = userModel;
         }
-        internal void OnLoginButtonClicked(string userName, string password)
+        protected override void OnViewReady()
         {
-            this.userModel.userName = userName;
-            this.userModel.password = password;
-            var uiManager = Container.Resolve<IUIManager>();
-            uiManager.OpenUI<MainPresenter, MainView>(UIType.Panel);
+            View.loginButton.onClick.AddListener(() =>
+            {
+                this.userModel.userName = View.nameInput.text;
+                this.userModel.password = View.passwordInput.text;
+                var uiManager = Container.Resolve<IUIManager>();
+                uiManager.OpenUI<MainPresenter, MainView>(UIType.Panel);
+            });
+        }
+
+        private void OnDispose()
+        {
+            View.loginButton.onClick.RemoveAllListeners();
         }
     }
 }

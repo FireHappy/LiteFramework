@@ -1,4 +1,6 @@
 
+using LFramework.Core.Utility;
+
 [AutoRegister(VContainer.Lifetime.Singleton)]
 public class UserModel : IModel
 {

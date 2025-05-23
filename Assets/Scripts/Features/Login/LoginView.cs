@@ -6,20 +6,10 @@ namespace LFramework.Demo
 {
     public class LoginView : BaseView<LoginPresenter>
     {
-        [Autowrited] private Button loginButton;
-        [Autowrited] private TMP_InputField nameInput;
-        [Autowrited] private TMP_InputField passwordInput;
-
-        protected override void OnBind()
-        {
-            // 绑定点击事件给 Presenter
-            loginButton.onClick.AddListener(() =>
-            {
-                presenter.OnLoginButtonClicked(nameInput.text, passwordInput.text);
-            });
-        }
+        [Autowrited] public Button loginButton;
+        [Autowrited] public TMP_InputField nameInput;
+        [Autowrited] public TMP_InputField passwordInput;
     }
-
 }
 
 

@@ -94,7 +94,7 @@ namespace LFramework.Module.UI
             }
             if (type == UIType.Panel)
             {
-                GetTopChild(parent)?.gameObject.SetActive(false);
+                GetTopChild(parent)?.gameObject.SetActive(true);
             }
         }
 

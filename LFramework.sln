@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Services.Core", "Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Services.Core.Configuration", "Unity.Services.Core.Configuration.csproj", "{F43BEFBA-537F-167B-93BD-0E10D57CC98A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniRx", "UniRx.csproj", "{5E226390-47B3-2708-0030-3122127E2CCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniRx.Examples", "UniRx.Examples.csproj", "{0B48710E-8849-2BDF-AC9B-1AF788F30E79}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.PlasticSCM.Editor", "Unity.PlasticSCM.Editor.csproj", "{1202B439-F88A-D7E5-2885-6F847CDDF8B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VisualScripting.Core.Editor", "Unity.VisualScripting.Core.Editor.csproj", "{A2F2AAEE-1660-1DF0-B364-59C729011A3C}"
@@ -171,6 +175,14 @@ Global
 		{F43BEFBA-537F-167B-93BD-0E10D57CC98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F43BEFBA-537F-167B-93BD-0E10D57CC98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F43BEFBA-537F-167B-93BD-0E10D57CC98A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E226390-47B3-2708-0030-3122127E2CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E226390-47B3-2708-0030-3122127E2CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E226390-47B3-2708-0030-3122127E2CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E226390-47B3-2708-0030-3122127E2CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B48710E-8849-2BDF-AC9B-1AF788F30E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B48710E-8849-2BDF-AC9B-1AF788F30E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B48710E-8849-2BDF-AC9B-1AF788F30E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B48710E-8849-2BDF-AC9B-1AF788F30E79}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1202B439-F88A-D7E5-2885-6F847CDDF8B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1202B439-F88A-D7E5-2885-6F847CDDF8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1202B439-F88A-D7E5-2885-6F847CDDF8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU

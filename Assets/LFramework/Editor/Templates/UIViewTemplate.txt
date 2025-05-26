@@ -1,0 +1,11 @@
+using UnityEngine;
+using UnityEngine.UI;
+using LFramework.Utility;
+using LFramework.Core.MVP;
+using TMPro;
+
+public class {UI_NAME}View : BaseView<{UI_Name}Presenter>
+{
+    {AutoWriteComponent}
+}
+

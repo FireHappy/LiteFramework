@@ -520,7 +520,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8873477770078811804, guid: e640cf7a381ba4825adfa1736663f342, type: 3}
       propertyPath: m_Name
-      value: Label_UserName
+      value: UserName
       objectReference: {fileID: 0}
     - target: {fileID: 8873477770412872046, guid: e640cf7a381ba4825adfa1736663f342, type: 3}
       propertyPath: m_Name
@@ -532,7 +532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8873477771095515602, guid: e640cf7a381ba4825adfa1736663f342, type: 3}
       propertyPath: m_Name
-      value: Label_Password
+      value: Password
       objectReference: {fileID: 0}
     - target: {fileID: 8873477771382465440, guid: e640cf7a381ba4825adfa1736663f342, type: 3}
       propertyPath: m_Name

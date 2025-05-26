@@ -1,0 +1,21 @@
+using LFramework.Core.Utility;
+using LFramework.Core.MVP;
+using LFramework.Module.UI;
+using VContainer;
+using UnityEngine;
+
+[AutoRegister(VContainer.Lifetime.Transient)]
+public class {UI_NAME}Presenter : BasePresenter<{UI_NAME}View>
+{
+
+    public {UI_NAME}Presenter(IObjectResolver container) : base(container)
+    {
+        
+    }
+
+    protected override void OnViewReady()
+    {
+
+    }
+}
+

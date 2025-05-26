@@ -36,7 +36,7 @@ public class MVPCodeGeneratorWindow : EditorWindow
 
     private void GenerateMVPScripts(string uiName)
     {
-        string className = uiName.Replace("Panel", "").Replace("View", "");
+        string className = uiName.Replace("View", "");
 
         string viewTemplatePath = Path.Combine(templatePath, "ViewTemplate.txt");
         string presenterTemplatePath = Path.Combine(templatePath, "PresenterTemplate.txt");

@@ -34,8 +34,8 @@ namespace LFramework.EditorTools
         public ComponentTypeRef componentType;
     }
 
-    [CreateAssetMenu(fileName = "MVPGeneratorConfig", menuName = "Tools/MVP Generator Config", order = 0)]
-    public class MVPGeneratorConfig : ScriptableObject
+    [CreateAssetMenu(fileName = "UIGeneratorConfig", menuName = "UI/UI Generator Config", order = 0)]
+    public class UIGeneratorConfig : ScriptableObject
     {
         public string outputRootPath = "Assets/Scripts/UI/";
         public string templateRootPath = "Assets/Templates/";

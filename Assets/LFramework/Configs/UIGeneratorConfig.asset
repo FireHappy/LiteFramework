@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: UIGeneratorConfig
   m_EditorClassIdentifier: 
   outputRootPath: Assets/Scripts/Features
-  templateRootPath: Assets/LFramework/Editor/Templates
+  templateRootPath: Assets/LFramework/Editor/UIModule/Templates
   mappings:
   - prefix: Txt
     componentType:
@@ -47,7 +47,7 @@ MonoBehaviour:
     componentType:
       typeName: UnityEngine.UI.Slider, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
         PublicKeyToken=null
-  - prefix: ScrollRect
+  - prefix: SR
     componentType:
       typeName: UnityEngine.UI.ScrollRect, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
         PublicKeyToken=null

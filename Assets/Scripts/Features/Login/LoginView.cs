@@ -1,15 +1,15 @@
+using UnityEngine;
 using UnityEngine.UI;
 using LFramework.Utility;
 using LFramework.Core.MVP;
 using TMPro;
-namespace LFramework.Demo
-{
-    public class LoginView : BaseView<LoginPresenter>
-    {
-        [Autowrited] public Button loginButton;
-        [Autowrited] public TMP_InputField nameInput;
-        [Autowrited] public TMP_InputField passwordInput;
-    }
-}
 
+public class LoginView : BaseView<LoginPresenter>
+{
+    [Autowrited("input_username")] public TMP_InputField inputUserName;
+    [Autowrited("input_password")] public TMP_InputField inputPassword;
+    [Autowrited("btn_login")] public Button btnLogin;
+    [Autowrited("btn_cancel")] public Button btnCancel;
+
+}
 

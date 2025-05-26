@@ -45,14 +45,14 @@
     <Analyzer Include="/Users/chenlin/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.1.2/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/LFramework/Editor/UICodeGenerator.cs" />
-    <Compile Include="Assets/LFramework/Editor/UIGeneratorConfig.cs" />
-    <Compile Include="Assets/LFramework/Editor/UIGeneratorConfigEditor.cs" />
-    <Compile Include="Assets/LFramework/Editor/SearchableTypePopup.cs" />
+    <Compile Include="Assets/LFramework/Editor/UIModule/UICodeGenerator.cs" />
+    <Compile Include="Assets/LFramework/Editor/UIModule/UIGeneratorConfig.cs" />
+    <Compile Include="Assets/LFramework/Editor/UIModule/UIGeneratorConfigEditor.cs" />
+    <Compile Include="Assets/LFramework/Editor/UIModule/SearchableTypePopup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/LFramework/Editor/Templates/UIViewTemplate.txt" />
-    <None Include="Assets/LFramework/Editor/Templates/UIPresenterTemplate.txt" />
+    <None Include="Assets/LFramework/Editor/UIModule/Templates/UIViewTemplate.txt" />
+    <None Include="Assets/LFramework/Editor/UIModule/Templates/UIPresenterTemplate.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

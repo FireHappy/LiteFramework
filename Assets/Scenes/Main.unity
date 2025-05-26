@@ -518,26 +518,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1330341529}
     m_Modifications:
-    - target: {fileID: 8873477770078811804, guid: e640cf7a381ba4825adfa1736663f342, type: 3}
-      propertyPath: m_Name
-      value: UserName
-      objectReference: {fileID: 0}
-    - target: {fileID: 8873477770412872046, guid: e640cf7a381ba4825adfa1736663f342, type: 3}
-      propertyPath: m_Name
-      value: Input_Password
-      objectReference: {fileID: 0}
-    - target: {fileID: 8873477770786371307, guid: e640cf7a381ba4825adfa1736663f342, type: 3}
-      propertyPath: m_Name
-      value: Btn_Cancel
-      objectReference: {fileID: 0}
-    - target: {fileID: 8873477771095515602, guid: e640cf7a381ba4825adfa1736663f342, type: 3}
-      propertyPath: m_Name
-      value: Password
-      objectReference: {fileID: 0}
-    - target: {fileID: 8873477771382465440, guid: e640cf7a381ba4825adfa1736663f342, type: 3}
-      propertyPath: m_Name
-      value: Btn_Login
-      objectReference: {fileID: 0}
     - target: {fileID: 8873477771383121092, guid: e640cf7a381ba4825adfa1736663f342, type: 3}
       propertyPath: m_Name
       value: LoginView
@@ -625,10 +605,6 @@ PrefabInstance:
     - target: {fileID: 8873477771383121093, guid: e640cf7a381ba4825adfa1736663f342, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8873477771413240011, guid: e640cf7a381ba4825adfa1736663f342, type: 3}
-      propertyPath: m_Name
-      value: Input_Name
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e640cf7a381ba4825adfa1736663f342, type: 3}

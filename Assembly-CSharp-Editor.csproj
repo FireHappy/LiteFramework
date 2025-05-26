@@ -48,6 +48,7 @@
     <Compile Include="Assets/LFramework/Editor/MVPCodeGenerator.cs" />
     <Compile Include="Assets/LFramework/Editor/MVPGeneratorConfig.cs" />
     <Compile Include="Assets/LFramework/Editor/MVPGeneratorConfigEditor.cs" />
+    <Compile Include="Assets/LFramework/Editor/SearchableTypePopup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/LFramework/Editor/Templates/ViewTemplate.txt" />

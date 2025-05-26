@@ -1,33 +1,58 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-[Serializable]
-public class PrefixComponentMapping
+namespace LFramework.EditorTools
 {
-    public string prefix;
-    public string componentTypeName; // 用字符串存储，支持反射
-}
-
-[CreateAssetMenu(fileName = "MVPGeneratorConfig", menuName = "Tools/MVPGeneratorConfig", order = 0)]
-public class MVPGeneratorConfig : ScriptableObject
-{
-    public string outputRootPath = "Assets/Scripts/UI/";
-    public string templateRootPath = "Assets/Templates/";
-
-
-    public List<PrefixComponentMapping> mappings = new List<PrefixComponentMapping>();
-
-    public Type GetComponentTypeFromPrefix(string prefix)
+    [Serializable]
+    public class ComponentTypeRef
     {
-        foreach (var map in mappings)
+        [SerializeField] private string typeName;
+
+        public Type Type => string.IsNullOrEmpty(typeName) ? null : Type.GetType(typeName);
+
+        public void SetType(Type type)
         {
-            if (string.Equals(map.prefix, prefix, StringComparison.OrdinalIgnoreCase))
+            if (type == null || !typeof(Component).IsAssignableFrom(type))
             {
-                return Type.GetType(map.componentTypeName);
+                Debug.LogError("必须是 UnityEngine.Component 的子类");
+                return;
             }
+
+            typeName = type.AssemblyQualifiedName;
         }
 
-        return null;
+        public string TypeDisplayName => Type != null ? Type.Name : "(未设置)";
+        public string TypeFullName => typeName;
+    }
+
+    [Serializable]
+    public class PrefixComponentMapping
+    {
+        public string prefix;
+        public ComponentTypeRef componentType;
+    }
+
+    [CreateAssetMenu(fileName = "MVPGeneratorConfig", menuName = "Tools/MVP Generator Config", order = 0)]
+    public class MVPGeneratorConfig : ScriptableObject
+    {
+        public string outputRootPath = "Assets/Scripts/UI/";
+        public string templateRootPath = "Assets/Templates/";
+
+        public List<PrefixComponentMapping> mappings = new List<PrefixComponentMapping>();
+
+        public Type GetComponentTypeFromPrefix(string prefix)
+        {
+            foreach (var map in mappings)
+            {
+                if (string.Equals(map.prefix, prefix, StringComparison.OrdinalIgnoreCase))
+                {
+                    return map.componentType?.Type;
+                }
+            }
+
+            return null;
+        }
     }
 }

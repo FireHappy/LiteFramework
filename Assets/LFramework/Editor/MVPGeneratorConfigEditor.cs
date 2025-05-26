@@ -1,110 +1,78 @@
 using UnityEditor;
 using UnityEngine;
-using LFramework.Utility;
+using System;
+using System.Linq;
+using System.Collections.Generic;
 
-[CustomEditor(typeof(MVPGeneratorConfig))]
-public class MVPGeneratorConfigEditor : Editor
+namespace LFramework.EditorTools
 {
-    private SerializedProperty outputRootPath;
-    private SerializedProperty templateRootPath;
-    private SerializedProperty mappings;
-
-    private string[] commonComponentTypes = new[]
+    [CustomEditor(typeof(MVPGeneratorConfig))]
+    public class MVPGeneratorConfigEditor : Editor
     {
-        "UnityEngine.UI.Button",
-        "UnityEngine.UI.Image",
-        "UnityEngine.UI.Text",
-        "TMPro.TMP_Text",
-        "TMPro.TMP_InputField",
-        "UnityEngine.UI.Toggle",
-        "UnityEngine.UI.Slider",
-    };
+        private SerializedProperty mappings;
+        private List<Type> availableTypes;
 
-    private void OnEnable()
-    {
-        outputRootPath = serializedObject.FindProperty("outputRootPath");
-        templateRootPath = serializedObject.FindProperty("templateRootPath");
-        mappings = serializedObject.FindProperty("mappings");
-    }
-    private void DrawPathSelector(SerializedProperty property, string label)
-    {
-        EditorGUILayout.BeginHorizontal();
-        EditorGUILayout.PrefixLabel(label);
-
-        EditorGUI.BeginChangeCheck();
-        string currentPath = property.stringValue;
-
-        // 可输入路径
-        currentPath = EditorGUILayout.TextField(currentPath);
-
-        // 可视化按钮：选择文件夹
-        if (GUILayout.Button("选择", GUILayout.Width(60)))
+        private void OnEnable()
         {
-            string newPath = EditorUtility.OpenFolderPanel($"选择 {label}", Application.dataPath, "");
-            if (!string.IsNullOrEmpty(newPath))
+            mappings = serializedObject.FindProperty("mappings");
+
+            availableTypes = AppDomain.CurrentDomain.GetAssemblies()
+                .SelectMany(asm => asm.GetTypes())
+                .Where(t => typeof(Component).IsAssignableFrom(t) && !t.IsAbstract && t.IsPublic)
+                .OrderBy(t => t.FullName)
+                .ToList();
+        }
+
+        public override void OnInspectorGUI()
+        {
+            serializedObject.Update();
+
+            EditorGUILayout.LabelField("MVP 路径配置", EditorStyles.boldLabel);
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("outputRootPath"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("templateRootPath"));
+
+            EditorGUILayout.Space();
+            EditorGUILayout.LabelField("前缀组件映射", EditorStyles.boldLabel);
+
+            for (int i = 0; i < mappings.arraySize; i++)
             {
-                // 转换为相对路径
-                if (newPath.StartsWith(Application.dataPath))
+                var element = mappings.GetArrayElementAtIndex(i);
+                var prefixProp = element.FindPropertyRelative("prefix");
+                var typeNameProp = element.FindPropertyRelative("componentType").FindPropertyRelative("typeName");
+
+                EditorGUILayout.BeginHorizontal();
+
+                prefixProp.stringValue = EditorGUILayout.TextField(prefixProp.stringValue, GUILayout.Width(100));
+
+                // 显示当前类型名（简短）
+                string currentTypeShort = "(未设置)";
+                var currentType = Type.GetType(typeNameProp.stringValue);
+                if (currentType != null) currentTypeShort = currentType.FullName;
+
+                if (GUILayout.Button(currentTypeShort, EditorStyles.popup))
                 {
-                    newPath = "Assets" + newPath.Substring(Application.dataPath.Length);
+                    var rect = GUILayoutUtility.GetLastRect();
+                    SearchableTypePopup.Show(rect, availableTypes, typeNameProp.stringValue, selected =>
+                    {
+                        typeNameProp.stringValue = selected;
+                        serializedObject.ApplyModifiedProperties();
+                    });
                 }
-                currentPath = newPath;
+
+                if (GUILayout.Button("🗑", GUILayout.Width(25)))
+                {
+                    mappings.DeleteArrayElementAtIndex(i);
+                }
+
+                EditorGUILayout.EndHorizontal();
             }
-        }
 
-        if (EditorGUI.EndChangeCheck())
-        {
-            property.stringValue = currentPath;
-        }
-
-        EditorGUILayout.EndHorizontal();
-
-        // 路径存在性提示
-        if (!AssetDatabase.IsValidFolder(currentPath))
-        {
-            EditorGUILayout.HelpBox($"路径不存在: {currentPath}", MessageType.Warning);
-        }
-    }
-
-    public override void OnInspectorGUI()
-    {
-        serializedObject.Update();
-
-        EditorGUILayout.LabelField("通用配置", EditorStyles.boldLabel);
-        DrawPathSelector(outputRootPath, "生成代码路径");
-        DrawPathSelector(templateRootPath, "模板路径");
-
-
-        EditorGUILayout.Space(10);
-        EditorGUILayout.LabelField("组件命名前缀映射", EditorStyles.boldLabel);
-
-        for (int i = 0; i < mappings.arraySize; i++)
-        {
-            var element = mappings.GetArrayElementAtIndex(i);
-            var prefix = element.FindPropertyRelative("prefix");
-            var typeName = element.FindPropertyRelative("componentTypeName");
-
-            EditorGUILayout.BeginHorizontal();
-            prefix.stringValue = EditorGUILayout.TextField(prefix.stringValue, GUILayout.Width(100));
-
-            // 支持常用组件类型下拉选择
-            int selectedIndex = Mathf.Max(0, System.Array.IndexOf(commonComponentTypes, typeName.stringValue));
-            int newIndex = EditorGUILayout.Popup(selectedIndex, commonComponentTypes);
-            typeName.stringValue = commonComponentTypes[newIndex];
-
-            // 删除按钮
-            if (GUILayout.Button("🗑", GUILayout.Width(25)))
+            if (GUILayout.Button("+ 添加新映射"))
             {
-                mappings.DeleteArrayElementAtIndex(i);
+                mappings.arraySize++;
             }
-            EditorGUILayout.EndHorizontal();
-        }
 
-        if (GUILayout.Button("添加映射"))
-        {
-            mappings.arraySize++;
+            serializedObject.ApplyModifiedProperties();
         }
-
-        serializedObject.ApplyModifiedProperties();
     }
 }

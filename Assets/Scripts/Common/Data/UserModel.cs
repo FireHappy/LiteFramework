@@ -1,5 +1,5 @@
 
-using LFramework.Core.Utility;
+using LiteFramework.Core.Utility;
 using UniRx;
 
 [AutoRegister(VContainer.Lifetime.Singleton)]

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace LFramework.EditorTools
+namespace LiteFramework.EditorTools
 {
     public class SearchableTypePopup : EditorWindow
     {

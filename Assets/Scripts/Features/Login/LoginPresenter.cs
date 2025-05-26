@@ -1,6 +1,6 @@
-using LFramework.Core.Utility;
-using LFramework.Core.MVP;
-using LFramework.Module.UI;
+using LiteFramework.Core.Utility;
+using LiteFramework.Core.MVP;
+using LiteFramework.Module.UI;
 using VContainer;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ public class LoginPresenter : BasePresenter<LoginView>
 
     public LoginPresenter(IObjectResolver container) : base(container)
     {
-        
+
     }
 
     protected override void OnViewReady()

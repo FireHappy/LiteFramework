@@ -1,10 +1,10 @@
 using VContainer;
 using VContainer.Unity;
-using LFramework.Module.UI;
-using LFramework.Core.Utility;
-using LFramework.Core.MVP;
+using LiteFramework.Module.UI;
+using LiteFramework.Core.Utility;
+using LiteFramework.Core.MVP;
 
-namespace LFramework.Demo
+namespace LiteFramework.Demo
 {
     public class Main : LifetimeScope
     {

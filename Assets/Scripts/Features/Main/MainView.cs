@@ -1,9 +1,9 @@
 using UnityEngine.UI;
-using LFramework.Utility;
-using LFramework.Core.MVP;
+using LiteFramework.Utility;
+using LiteFramework.Core.MVP;
 using TMPro;
 
-namespace LFramework.Demo
+namespace LiteFramework.Demo
 {
     public class MainView : BaseView<MainPresenter>
     {

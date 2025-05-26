@@ -1,10 +1,10 @@
-using LFramework.Core.Utility;
-using LFramework.Core.MVP;
+using LiteFramework.Core.Utility;
+using LiteFramework.Core.MVP;
 using VContainer;
-using LFramework.Module.UI;
+using LiteFramework.Module.UI;
 using UniRx;
 
-namespace LFramework.Demo
+namespace LiteFramework.Demo
 {
     [AutoRegister(VContainer.Lifetime.Transient)]
     public class MainPresenter : BasePresenter<MainView>

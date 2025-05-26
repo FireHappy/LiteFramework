@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace LFramework.EditorTools
+namespace LiteFramework.EditorTools
 {
     [Serializable]
     public class ComponentTypeRef

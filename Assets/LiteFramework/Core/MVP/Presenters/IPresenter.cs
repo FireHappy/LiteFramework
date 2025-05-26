@@ -1,5 +1,5 @@
 
-namespace LFramework.Core.MVP
+namespace LiteFramework.Core.MVP
 {
     public interface IPresenter : System.IDisposable
     {

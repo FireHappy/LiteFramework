@@ -1,7 +1,7 @@
 using System;
 using VContainer;
 
-namespace LFramework.Core.Utility
+namespace LiteFramework.Core.Utility
 {
     [AttributeUsage(AttributeTargets.Class)]
     public class AutoRegisterAttribute : Attribute

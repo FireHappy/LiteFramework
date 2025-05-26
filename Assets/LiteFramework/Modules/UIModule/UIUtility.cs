@@ -1,7 +1,7 @@
-using LFramework.Core.MVP;
+using LiteFramework.Core.MVP;
 using UnityEngine;
 
-namespace LFramework.Module.UI
+namespace LiteFramework.Module.UI
 {
     internal static class UIUtility
     {

@@ -1,6 +1,6 @@
 using VContainer;
 
-namespace LFramework.Core.MVP
+namespace LiteFramework.Core.MVP
 {
     public abstract class BasePresenter<TView> : IPresenter
         where TView : IView

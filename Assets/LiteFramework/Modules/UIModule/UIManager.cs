@@ -1,9 +1,9 @@
-using LFramework.Utility;
-using LFramework.Core.MVP;
+using LiteFramework.Utility;
+using LiteFramework.Core.MVP;
 using UnityEngine;
 using VContainer;
 
-namespace LFramework.Module.UI
+namespace LiteFramework.Module.UI
 {
     public enum UIType
     {

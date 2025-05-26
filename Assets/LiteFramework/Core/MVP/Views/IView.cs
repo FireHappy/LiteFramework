@@ -1,6 +1,6 @@
 
 
-namespace LFramework.Core.MVP
+namespace LiteFramework.Core.MVP
 {
     public interface IView : System.IDisposable
     {

@@ -4,7 +4,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace LFramework.EditorTools
+namespace LiteFramework.EditorTools
 {
     [CustomEditor(typeof(UIGeneratorConfig))]
     public class UIGeneratorConfigEditor : Editor

@@ -1,7 +1,7 @@
 using System.Reflection;
 using VContainer;
 
-namespace LFramework.Core.Utility
+namespace LiteFramework.Core.Utility
 {
     public static class VContainerAutoRegister
     {

@@ -173,8 +173,8 @@
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Windows/WrappedEditorWindow.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Interface/Fuzzy/ExtensibleFuzzyOptionTree.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Plugin/Changelogs/LegacyLudiqGraphs/Changelog_1_4_7.cs" />
-    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/SerializedProperties/SerializedPropertyUtility.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Utilities/PathUtility.cs" />
+    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/SerializedProperties/SerializedPropertyUtility.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Interface/Fuzzy/IFuzzyOptionTree.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/ReorderableList/ReorderableListFlags.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Reflection/Codebase.cs" />
@@ -394,10 +394,10 @@
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Meta/EditorPrefMetadata.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/ReorderableList/ElementAdderMenu/IElementAdderMenuCommand.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Plugin/Acknowledgements/Acknowledgement_DeepCopy.cs" />
-    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Interface/DragAndDrop/IDragAndDropHandler.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Inspection/Primitives/UintInspector.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Descriptors/IDescription.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Widgets/Groups/GraphGroupWidget.cs" />
+    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Interface/DragAndDrop/IDragAndDropHandler.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Utilities/IconExportUtility.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Plugins/PluginSavedVersionMigration.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Context/GraphContextProvider.cs" />

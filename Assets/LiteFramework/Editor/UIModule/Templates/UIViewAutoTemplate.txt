@@ -6,6 +6,6 @@ using TMPro;
 
 public partial class {UI_NAME}View : BaseView<{UI_NAME}Presenter>
 {
-    
+{AutoWriteComponent}
 }
 

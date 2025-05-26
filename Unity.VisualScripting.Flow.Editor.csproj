@@ -63,8 +63,8 @@
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Flow/Units/UnitWidget.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Flow/Plugin/Migrations/Migration_1_1_3_to_1_2_0.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Flow/Plugin/Migrations/Migration_1_1_2_to_1_1_3.cs" />
-    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Flow/Plugin/Changelogs/Changelog_1_1_3.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Flow/Events/MessageListenerEditor.cs" />
+    <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Flow/Plugin/Changelogs/Changelog_1_1_3.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Flow/Framework/Codebase/ExposeOption.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Flow/Framework/Nesting/SuperUnitWidget.cs" />
     <Compile Include="Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Flow/FlowCanvas.cs" />

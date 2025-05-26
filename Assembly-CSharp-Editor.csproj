@@ -46,11 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/LiteFramework/Editor/UIModule/UICodeGenerator.cs" />
+    <Compile Include="Assets/LiteFramework/Editor/UIModule/SearchableTypePopup.cs" />
     <Compile Include="Assets/LiteFramework/Editor/UIModule/UIGeneratorConfig.cs" />
     <Compile Include="Assets/LiteFramework/Editor/UIModule/UIGeneratorConfigEditor.cs" />
-    <Compile Include="Assets/LiteFramework/Editor/UIModule/SearchableTypePopup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets/LiteFramework/Editor/UIModule/Templates/UIViewAutoTemplate.txt" />
     <None Include="Assets/LiteFramework/Editor/UIModule/Templates/UIViewTemplate.txt" />
     <None Include="Assets/LiteFramework/Editor/UIModule/Templates/UIPresenterTemplate.txt" />
   </ItemGroup>
@@ -980,13 +981,13 @@
     <ProjectReference Include="VContainer.csproj" />
     <ProjectReference Include="Unity.VisualScripting.Core.csproj" />
     <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj" />
+    <ProjectReference Include="UniRx.csproj" />
     <ProjectReference Include="Unity.Services.Core.Analytics.csproj" />
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj" />
     <ProjectReference Include="Unity.Services.Core.Environments.csproj" />
     <ProjectReference Include="Unity.Timeline.Editor.csproj" />
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj" />
     <ProjectReference Include="Unity.VisualScripting.State.csproj" />
-    <ProjectReference Include="UniRx.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

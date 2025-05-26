@@ -51,17 +51,20 @@
     <Compile Include="Assets/Scripts/Features/Login/LoginView.cs" />
     <Compile Include="Assets/LiteFramework/Core/Utils/VContainerAutoRegister.cs" />
     <Compile Include="Assets/LiteFramework/Core/Attributes/AutoRegisterAttribute.cs" />
+    <Compile Include="Assets/LiteFramework/Modules/UIModule/BaseUIPresenter.cs" />
+    <Compile Include="Assets/Scripts/Features/Login/LoginView.Auto.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Views/IView.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/Interfaces/IUIManager.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Presenters/BasePresenter.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Models/IModel.cs" />
     <Compile Include="Assets/LiteFramework/Core/Utils/AutoInjectComponent.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/UIUtility.cs" />
+    <Compile Include="Assets/Scripts/Features/Main/MainPresenter.cs" />
     <Compile Include="Assets/Scripts/Features/Login/LoginPresenter.cs" />
     <Compile Include="Assets/Scripts/Common/Data/UserModel.cs" />
-    <Compile Include="Assets/LiteFramework/Modules/UIModule/UIManager.cs" />
-    <Compile Include="Assets/Scripts/Features/Main/MainPresenter.cs" />
     <Compile Include="Assets/Scripts/Features/Main/MainView.cs" />
+    <Compile Include="Assets/LiteFramework/Modules/UIModule/BaseUIView.cs" />
+    <Compile Include="Assets/LiteFramework/Modules/UIModule/UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -949,13 +952,13 @@
     <ProjectReference Include="VContainer.csproj" />
     <ProjectReference Include="Unity.VisualScripting.Core.csproj" />
     <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj" />
+    <ProjectReference Include="UniRx.csproj" />
     <ProjectReference Include="Unity.Services.Core.Analytics.csproj" />
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj" />
     <ProjectReference Include="Unity.Services.Core.Environments.csproj" />
     <ProjectReference Include="Unity.Timeline.Editor.csproj" />
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj" />
     <ProjectReference Include="Unity.VisualScripting.State.csproj" />
-    <ProjectReference Include="UniRx.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

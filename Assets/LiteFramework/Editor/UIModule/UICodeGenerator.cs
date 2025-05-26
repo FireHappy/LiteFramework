@@ -19,7 +19,7 @@ public static class UIPrefabCodeGenerator
     private static void GenerateUIMVP()
     {
         var go = Selection.activeObject as GameObject;
-        string prefabName = go.name.Replace("View", "");
+        string uiName = go.name.Replace("View", "");
 
         var config = LoadUIGeneratorConfig();
         if (config == null)
@@ -30,8 +30,10 @@ public static class UIPrefabCodeGenerator
 
         // 路径
         string viewTemplatePath = Path.Combine(config.templateRootPath, "UIViewTemplate.txt");
+        string viewAutoTemplatePath = Path.Combine(config.templateRootPath, "UIViewAutoTemplate.txt");
         string presenterTemplatePath = Path.Combine(config.templateRootPath, "UIPresenterTemplate.txt");
         string viewTemplate = File.ReadAllText(viewTemplatePath);
+        string viewAutoTemplate = File.ReadAllText(viewAutoTemplatePath);
         string presenterTemplate = File.ReadAllText(presenterTemplatePath);
 
         // 自动字段生成
@@ -39,23 +41,38 @@ public static class UIPrefabCodeGenerator
 
         // 内容替换
         string viewCode = viewTemplate
-            .Replace("{UI_NAME}", prefabName)
-            .Replace("{UI_Name}", prefabName)
+            .Replace("{UI_NAME}", uiName);
+
+        string viewAutoCode = viewAutoTemplate
+            .Replace("{UI_NAME}", uiName)
             .Replace("{AutoWriteComponent}", fields);
 
+        Debug.Log("viewAutoCode:" + viewAutoCode);
+
         string presenterCode = presenterTemplate
-            .Replace("{UI_NAME}", prefabName)
-            .Replace("{UI_Name}", prefabName);
+            .Replace("{UI_NAME}", uiName);
 
         // 写入文件
-        string outputDir = Path.Combine(config.outputRootPath, prefabName);
+        string outputDir = Path.Combine(config.outputRootPath, uiName);
         Directory.CreateDirectory(outputDir);
 
-        File.WriteAllText(Path.Combine(outputDir, $"{prefabName}View.cs"), viewCode);
-        File.WriteAllText(Path.Combine(outputDir, $"{prefabName}Presenter.cs"), presenterCode);
+        //autoView ui 每次改动都会重新覆盖生成
+        File.WriteAllText(Path.Combine(outputDir, $"{uiName}View.Auto.cs"), viewAutoCode);
+
+        var viewFile = Path.Combine(outputDir, $"{uiName}View.cs");
+        if (!File.Exists(viewFile))
+        {
+            File.WriteAllText(Path.Combine(outputDir, $"{uiName}View.cs"), viewCode);
+        }
+
+        var presenterFile = Path.Combine(outputDir, $"{uiName}Presenter.cs");
+        if (!File.Exists(presenterFile))
+        {
+            File.WriteAllText(Path.Combine(outputDir, $"{uiName}Presenter.cs"), presenterCode);
+        }
 
         AssetDatabase.Refresh();
-        EditorUtility.DisplayDialog("生成成功", $"生成 {prefabName} 的 MVP 代码成功", "确定");
+        EditorUtility.DisplayDialog("生成成功", $"生成 {uiName} 的 MVP 代码成功", "确定");
     }
 
     private static string GenerateComponentFields(Transform root, UIGeneratorConfig config)

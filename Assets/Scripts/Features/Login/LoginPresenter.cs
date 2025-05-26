@@ -10,7 +10,7 @@ public class LoginPresenter : BasePresenter<LoginView>
 
     public LoginPresenter(IObjectResolver container) : base(container)
     {
-
+        
     }
 
     protected override void OnViewReady()

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: UIGeneratorConfig
   m_EditorClassIdentifier: 
   outputRootPath: Assets/Scripts/Features
-  templateRootPath: Assets/LFramework/Editor/UIModule/Templates
+  templateRootPath: Assets/LiteFramework/Editor/UIModule/Templates
   mappings:
   - prefix: Txt
     componentType:

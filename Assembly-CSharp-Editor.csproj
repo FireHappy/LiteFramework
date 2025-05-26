@@ -45,7 +45,13 @@
     <Analyzer Include="/Users/chenlin/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.1.2/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/LFramework/Editor/Drawer/AutowriteDrawer.cs" />
+    <Compile Include="Assets/LFramework/Editor/MVPCodeGenerator.cs" />
+    <Compile Include="Assets/LFramework/Editor/MVPGeneratorConfig.cs" />
+    <Compile Include="Assets/LFramework/Editor/MVPGeneratorConfigEditor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets/LFramework/Editor/Templates/ViewTemplate.txt" />
+    <None Include="Assets/LFramework/Editor/Templates/PresenterTemplate.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -979,6 +985,7 @@
     <ProjectReference Include="Unity.Timeline.Editor.csproj" />
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj" />
     <ProjectReference Include="Unity.VisualScripting.State.csproj" />
+    <ProjectReference Include="UniRx.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

@@ -1,0 +1,18 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class {UI_NAME}View : UIView
+{
+    // TODO: 添加 UI 元素引用
+
+    private {UI_NAME}Presenter _presenter;
+
+    public override void OnCreated()
+    {
+        _presenter = new {UI_NAME}Presenter(this);
+
+        // TODO: 添加按钮绑定
+    }
+
+    // TODO: 添加 UI 回调事件
+}

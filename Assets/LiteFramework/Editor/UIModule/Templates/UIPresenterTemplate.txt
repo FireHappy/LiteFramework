@@ -5,23 +5,27 @@ using LiteFramework.Core.Module.UI;
 using VContainer;
 using UnityEngine;
 
-[AutoRegister(VContainer.Lifetime.Transient)]
-public class {UI_NAME}Presenter : BaseUIPresenter<{UI_NAME}View>
+namespace {NAMESPACE}
 {
-
-    public MainPresenter(UIManager uiManager, IObjectResolver container) : base(uiManager, container)
+    [AutoRegister(VContainer.Lifetime.Transient)]
+    public class {UI_NAME}Presenter : BaseUIPresenter<{UI_NAME}View>
     {
 
-    }
+        public MainPresenter(UIManager uiManager, IObjectResolver container) : base(uiManager, container)
+        {
 
-    protected override void OnViewReady()
-    {
+        }
 
-    }
+        protected override void OnViewReady()
+        {
 
-    protected override void OnViewDispose()
-    {
+        }
 
+        protected override void OnViewDispose()
+        {
+
+        }
     }
 }
+
 

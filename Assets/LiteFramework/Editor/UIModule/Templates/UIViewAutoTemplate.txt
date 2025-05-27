@@ -4,9 +4,12 @@ using LiteFramework.Utility;
 using LiteFramework.Core.MVP;
 using LiteFramework.Core.Module.UI;
 using TMPro;
-
-public partial class {UI_NAME}View : BaseUIView<{UI_NAME}Presenter>
+namespace {NAMESPACE}
 {
-{AutoWriteComponent}
+    public partial class {UI_NAME}View : BaseUIView<{UI_NAME}Presenter>
+    {
+    {AutoWriteComponent}
+    }
 }
+
 

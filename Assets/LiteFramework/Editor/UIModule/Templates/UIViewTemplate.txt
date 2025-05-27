@@ -5,16 +5,19 @@ using LiteFramework.Core.MVP;
 using LiteFramework.Core.Module.UI;
 using TMPro;
 
-public partial class {UI_NAME}View : BaseUIView<{UI_NAME}Presenter>
+namespace {NAMESPACE}
 {
-    protected override void OnBind()
+    public partial class {UI_NAME}View : BaseUIView<{UI_NAME}Presenter>
     {
-        //TODO Init
-    }
+        protected override void OnBind()
+        {
+            //TODO Init
+        }
 
-    protected override void OnUnBind()
-    {
-        //TODO UnInit
+        protected override void OnUnBind()
+        {
+            //TODO UnInit
+        }
     }
 }
 

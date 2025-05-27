@@ -37,8 +37,9 @@ namespace LiteFramework.EditorTools
     [CreateAssetMenu(fileName = "UIGeneratorConfig", menuName = "UI/UI Generator Config", order = 0)]
     public class UIGeneratorConfig : ScriptableObject
     {
-        public string outputRootPath = "Assets/Scripts/UI/";
-        public string templateRootPath = "Assets/Templates/";
+        public string outputRootPath = "Assets/Scripts/Features";
+        public string templateRootPath = "Assets/LiteFramework/Editor/UIModule/Templates";
+        public string nameSpace = "";
 
         public List<PrefixComponentMapping> mappings = new List<PrefixComponentMapping>();
 

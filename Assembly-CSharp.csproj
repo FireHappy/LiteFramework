@@ -45,27 +45,27 @@
     <Analyzer Include="/Users/chenlin/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.1.2/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Scripts/Main.cs" />
+    <Compile Include="Assets/Sample/Scripts/Main.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Presenters/IPresenter.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Views/BaseView.cs" />
-    <Compile Include="Assets/Scripts/Features/Login/LoginView.cs" />
+    <Compile Include="Assets/Sample/Scripts/Features/Login/LoginView.cs" />
     <Compile Include="Assets/LiteFramework/Core/Utils/VContainerAutoRegister.cs" />
     <Compile Include="Assets/LiteFramework/Core/Attributes/AutoRegisterAttribute.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/BaseUIPresenter.cs" />
-    <Compile Include="Assets/Scripts/Features/Login/LoginView.Auto.cs" />
+    <Compile Include="Assets/Sample/Scripts/Features/Login/LoginView.Auto.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Views/IView.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/Interfaces/IUIManager.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Presenters/BasePresenter.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Models/IModel.cs" />
     <Compile Include="Assets/LiteFramework/Core/Utils/AutoInjectComponent.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/UIUtility.cs" />
-    <Compile Include="Assets/Scripts/Features/Main/MainPresenter.cs" />
-    <Compile Include="Assets/Scripts/Features/Login/LoginPresenter.cs" />
-    <Compile Include="Assets/Scripts/Common/Data/UserModel.cs" />
-    <Compile Include="Assets/Scripts/Features/Main/MainView.cs" />
+    <Compile Include="Assets/Sample/Scripts/Features/Main/MainPresenter.cs" />
+    <Compile Include="Assets/Sample/Scripts/Features/Login/LoginPresenter.cs" />
+    <Compile Include="Assets/Sample/Scripts/Common/Data/UserModel.cs" />
+    <Compile Include="Assets/Sample/Scripts/Features/Main/MainView.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/BaseUIView.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/UIManager.cs" />
-    <Compile Include="Assets/Scripts/Features/Main/MainView.Auto.cs" />
+    <Compile Include="Assets/Sample/Scripts/Features/Main/MainView.Auto.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

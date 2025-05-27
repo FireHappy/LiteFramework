@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outputRootPath: Assets/Scripts/Features
   templateRootPath: Assets/LiteFramework/Editor/UIModule/Templates
+  nameSpace: LiteFramework.Sample
   mappings:
   - prefix: Txt
     componentType:

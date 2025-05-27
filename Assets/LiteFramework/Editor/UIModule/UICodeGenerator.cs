@@ -8,14 +8,14 @@ using System.Collections.Generic;
 
 public static class UIPrefabCodeGenerator
 {
-    [MenuItem("Assets/生成 UI MVP 模板", true)]
+    [MenuItem("Assets/Generate UI MVP Template", true)]
     private static bool ValidateGenerate()
     {
         var obj = Selection.activeObject;
         return obj is GameObject && AssetDatabase.GetAssetPath(obj).EndsWith(".prefab");
     }
 
-    [MenuItem("Assets/生成 UI MVP 模板")]
+    [MenuItem("Assets/Generate UI MVP Template")]
     private static void GenerateUIMVP()
     {
         var go = Selection.activeObject as GameObject;
@@ -24,7 +24,7 @@ public static class UIPrefabCodeGenerator
         var config = LoadUIGeneratorConfig();
         if (config == null)
         {
-            Debug.LogError("找不到 UIGeneratorConfig");
+            Debug.LogError("Can't Find UIGeneratorConfig");
             return;
         }
 
@@ -75,7 +75,7 @@ public static class UIPrefabCodeGenerator
         }
 
         AssetDatabase.Refresh();
-        EditorUtility.DisplayDialog("生成成功", $"生成 {uiName} 的 MVP 代码成功", "确定");
+        EditorUtility.DisplayDialog("Generate success!!!", $"Generate {uiName}  MVP code success.", "Sure");
     }
 
     private static string GenerateComponentFields(Transform root, UIGeneratorConfig config)

@@ -35,11 +35,6 @@ namespace LiteFramework.Core.Module.UI
         protected virtual void OnViewReady() { }
 
         protected virtual void OnViewDispose() { }
-
-        protected void OpenUI<TView>()
-        {
-
-        }
     }
 }
 

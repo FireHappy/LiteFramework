@@ -18,7 +18,7 @@ namespace LiteFramework.Sample
         {
             view.btnExit.onClick.AddListener(() =>
             {
-
+                uiManager.CloseUI<MainPresenter, MainView>();
             });
         }
 

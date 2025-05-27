@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8873477770078811803}
   - component: {fileID: 8873477770078811802}
   m_Layer: 5
-  m_Name: Txt_UserName
+  m_Name: TxtU_UserName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -741,5 +741,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 225df046937274de8b356b816a1f61d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txtuguiUserName: {fileID: 0}
   btnSetting: {fileID: 0}
   btnExit: {fileID: 0}

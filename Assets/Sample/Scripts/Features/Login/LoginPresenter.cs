@@ -8,7 +8,6 @@ namespace LiteFramework.Sample
     [AutoRegister(VContainer.Lifetime.Transient)]
     public class LoginPresenter : BaseUIPresenter<LoginView>
     {
-
         public LoginPresenter(IUIManager uiManager, IObjectResolver container) : base(uiManager, container)
         {
 
@@ -17,6 +16,7 @@ namespace LiteFramework.Sample
         protected override void OnViewReady()
         {
             UserModel userModel = container.Resolve<UserModel>();
+
             view.inputPassword.onValueChanged.AddListener(value =>
             {
                 userModel.password = value;

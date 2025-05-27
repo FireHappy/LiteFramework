@@ -2,7 +2,6 @@ using LiteFramework.Core.Utility;
 using LiteFramework.Module.UI;
 using LiteFramework.Core.Module.UI;
 using VContainer;
-using UnityEngine.UIElements.Experimental;
 using UniRx;
 
 namespace LiteFramework.Sample
@@ -27,6 +26,7 @@ namespace LiteFramework.Sample
             view.btnSetting.OnClickAsObservable().Subscribe(_ =>
             {
                 //todo 打开设置界面
+                uiManager.OpenUI<SettingPresenter, SettingView>();
             }).AddTo(view);
             //使用UniRx绑定数据的变化
             userModel.userName.Subscribe(value => view.txtuUserName.text = value).AddTo(view);

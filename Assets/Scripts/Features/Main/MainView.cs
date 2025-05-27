@@ -2,10 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using LiteFramework.Utility;
 using LiteFramework.Core.MVP;
-using LiteFramework.Core.Module.UI;
 using TMPro;
+using LiteFramework.Core.Module.UI;
 
-public partial class {UI_NAME}View : BaseUIView<{UI_NAME}Presenter>
+public partial class MainView : BaseUIView<MainPresenter>
 {
     protected override void OnBind()
     {

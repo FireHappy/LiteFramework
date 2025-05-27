@@ -1,12 +1,12 @@
 using LiteFramework.Core.Utility;
-using LiteFramework.Core.MVP;
-using LiteFramework.Module.UI;
+
+
 using LiteFramework.Core.Module.UI;
 using VContainer;
-using UnityEngine;
+using LiteFramework.Module.UI;
 
 [AutoRegister(VContainer.Lifetime.Transient)]
-public class {UI_NAME}Presenter : BaseUIPresenter<{UI_NAME}View>
+public class MainPresenter : BaseUIPresenter<MainView>
 {
 
     public MainPresenter(UIManager uiManager, IObjectResolver container) : base(uiManager, container)

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8873477770078811803}
   - component: {fileID: 8873477770078811802}
   m_Layer: 5
-  m_Name: UserName
+  m_Name: Txt_UserName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 8873477770786371318}
   - component: {fileID: 8873477770786371305}
   m_Layer: 5
-  m_Name: ExitButton
+  m_Name: Btn_Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 8873477771382465455}
   - component: {fileID: 8873477771382465454}
   m_Layer: 5
-  m_Name: SettingButton
+  m_Name: Btn_Setting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,7 +660,6 @@ GameObject:
   - component: {fileID: 8873477771383121093}
   - component: {fileID: 8873477771383121091}
   - component: {fileID: 8873477771383121090}
-  - component: {fileID: 8730393017970937152}
   m_Layer: 5
   m_Name: MainView
   m_TagString: Untagged
@@ -729,15 +728,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8730393017970937152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8873477771383121092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 225df046937274de8b356b816a1f61d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

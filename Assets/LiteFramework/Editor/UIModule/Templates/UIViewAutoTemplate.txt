@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using LiteFramework.Utility;
 using LiteFramework.Core.MVP;
+using LiteFramework.Core.Module.UI;
 using TMPro;
 
 public partial class {UI_NAME}View : BaseUIView<{UI_NAME}Presenter>

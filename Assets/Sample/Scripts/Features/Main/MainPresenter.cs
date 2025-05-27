@@ -1,9 +1,7 @@
 using LiteFramework.Core.Utility;
-using LiteFramework.Core.MVP;
 using LiteFramework.Module.UI;
 using LiteFramework.Core.Module.UI;
 using VContainer;
-using UnityEngine;
 
 namespace LiteFramework.Sample
 {
@@ -11,7 +9,7 @@ namespace LiteFramework.Sample
     public class MainPresenter : BaseUIPresenter<MainView>
     {
 
-        public MainPresenter(UIManager uiManager, IObjectResolver container) : base(uiManager, container)
+        public MainPresenter(IUIManager uiManager, IObjectResolver container) : base(uiManager, container)
         {
 
         }

@@ -11,7 +11,7 @@ namespace LiteFramework.Sample
     public class SettingPresenter : BaseUIPresenter<SettingView>
     {
 
-        public SettingPresenter(IUIManager uiManager, IObjectResolver container) : base(uiManager, container)
+        public SettingPresenter(UIRouter router, IObjectResolver container) : base(router, container)
         {
 
         }

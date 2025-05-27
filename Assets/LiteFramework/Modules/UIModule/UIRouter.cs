@@ -1,73 +1,71 @@
-
 using System;
+using System.Collections.Generic;
+using UnityEngine;
 using LiteFramework.Core.Module.UI;
 using LiteFramework.Core.MVP;
-using LiteFramework.Module.UI;
-using UnityEngine;
 
-public static class UIRouter
+namespace LiteFramework.Module.UI
 {
-    private static IUIManager uiManager;
-
-    public static void Init(IUIManager manager)
+    public class UIRouter
     {
-        uiManager = manager;
-    }
+        private readonly IUIManager uiManager;
 
-    public static IPresenter Open<TView>(UIType type = UIType.Panel, Transform parent = null)
-        where TView : IView
-    {
-        EnsureInitialized();
+        private static readonly Dictionary<Type, Type> PresenterTypeCache = new();
 
-        var presenterType = GetPresenterTypeFromView<TView>();
-        if (presenterType == null)
+        public UIRouter(IUIManager uiManager)
         {
-            Debug.LogError($"UIRouter.Open -> Failed to resolve Presenter type for view {typeof(TView).Name}");
-            return null;
+            this.uiManager = uiManager;
         }
 
-        var method = typeof(IUIManager).GetMethod("OpenUI")?.MakeGenericMethod(presenterType, typeof(TView));
-        return method?.Invoke(uiManager, new object[] { type, parent }) as IPresenter;
-    }
-
-    public static void Close<TView>(UIType type = UIType.Panel, Transform parent = null)
-        where TView : IView
-    {
-        EnsureInitialized();
-
-        var presenterType = GetPresenterTypeFromView<TView>();
-        if (presenterType == null)
+        public IPresenter Open<TView>(UIType type = UIType.Panel, Transform parent = null)
+            where TView : IView
         {
-            Debug.LogError($"UIRouter.Close -> Failed to resolve Presenter type for view {typeof(TView).Name}");
-            return;
-        }
-
-        var method = typeof(IUIManager).GetMethod("CloseUI")?.MakeGenericMethod(presenterType, typeof(TView));
-        method?.Invoke(uiManager, new object[] { type, parent });
-    }
-
-    private static Type GetPresenterTypeFromView<TView>() where TView : IView
-    {
-        var baseType = typeof(TView).BaseType;
-
-        while (baseType != null)
-        {
-            if (baseType.IsGenericType && baseType.GetGenericTypeDefinition() == typeof(BaseUIView<>))
+            var presenterType = GetPresenterTypeFromView<TView>();
+            if (presenterType == null)
             {
-                return baseType.GetGenericArguments()[0];
+                Debug.LogError($"UIRouter.Open -> Failed to resolve Presenter type for view {typeof(TView).Name}");
+                return null;
             }
-            baseType = baseType.BaseType;
+
+            var method = typeof(IUIManager).GetMethod("OpenUI")?.MakeGenericMethod(presenterType, typeof(TView));
+            return method?.Invoke(uiManager, new object[] { type, parent }) as IPresenter;
         }
 
-        return null;
-    }
-
-    private static void EnsureInitialized()
-    {
-        if (uiManager == null)
+        public void Close<TView>(UIType type = UIType.Panel, Transform parent = null)
+            where TView : IView
         {
-            Debug.LogError("UIRouter not initialized. Call UIRouter.Init(uiManager) before use.");
+            var presenterType = GetPresenterTypeFromView<TView>();
+            if (presenterType == null)
+            {
+                Debug.LogError($"UIRouter.Close -> Failed to resolve Presenter type for view {typeof(TView).Name}");
+                return;
+            }
+
+            var method = typeof(IUIManager).GetMethod("CloseUI")?.MakeGenericMethod(presenterType, typeof(TView));
+            method?.Invoke(uiManager, new object[] { type, parent });
+        }
+
+        private Type GetPresenterTypeFromView<TView>() where TView : IView
+        {
+            var viewType = typeof(TView);
+
+            if (PresenterTypeCache.TryGetValue(viewType, out var cachedType))
+                return cachedType;
+
+            var baseType = viewType.BaseType;
+            while (baseType != null)
+            {
+                if (baseType.IsGenericType && baseType.GetGenericTypeDefinition() == typeof(BaseUIView<>))
+                {
+                    var presenterType = baseType.GetGenericArguments()[0];
+                    PresenterTypeCache[viewType] = presenterType;
+                    return presenterType;
+                }
+
+                baseType = baseType.BaseType;
+            }
+
+            return null;
         }
     }
 }
-

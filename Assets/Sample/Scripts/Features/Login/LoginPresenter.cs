@@ -8,7 +8,7 @@ namespace LiteFramework.Sample
     [AutoRegister(VContainer.Lifetime.Transient)]
     public class LoginPresenter : BaseUIPresenter<LoginView>
     {
-        public LoginPresenter(IUIManager uiManager, IObjectResolver container) : base(uiManager, container)
+        public LoginPresenter(UIRouter router, IObjectResolver container) : base(router, container)
         {
 
         }
@@ -29,7 +29,7 @@ namespace LiteFramework.Sample
 
             view.btnLogin.onClick.AddListener(() =>
             {
-                uiManager.OpenUI<MainPresenter, MainView>();
+                router.Open<MainView>();
             });
         }
 

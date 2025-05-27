@@ -9,15 +9,13 @@ namespace LiteFramework.Core.Module.UI
     {
         protected TView view;
         protected readonly IObjectResolver container;
-        protected readonly IUIManager uiManager;
+        protected readonly UIRouter router;
 
 
-
-        protected BaseUIPresenter(IUIManager uiManager, IObjectResolver container)
+        protected BaseUIPresenter(UIRouter router, IObjectResolver container)
         {
             this.container = container;
-            this.uiManager = uiManager;
-            UIRouter.Init(uiManager);
+            this.router = router;
         }
 
         public void AttachView(IView view)

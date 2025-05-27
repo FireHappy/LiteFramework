@@ -12,6 +12,7 @@ namespace LiteFramework.Sample
         {
             // 注册 UIManager 和其它服务
             builder.Register<IUIManager, UIManager>(Lifetime.Singleton);
+            builder.Register<UIRouter>(Lifetime.Singleton);
 
             // 自动注册所有带 [AutoRegister] 的 Presenter
             var assemblies = new[] { typeof(BasePresenter<>).Assembly };
@@ -23,10 +24,10 @@ namespace LiteFramework.Sample
         private void Start()
         {
             // 在容器启动后安全地访问已注入的服务
-            var uiManager = Container.Resolve<IUIManager>();
+            var uiRouter = Container.Resolve<UIRouter>();
 
             // 加载 Login UI
-            uiManager.OpenUI<LoginPresenter, LoginView>();
+            uiRouter.Open<LoginView>();
         }
     }
 }

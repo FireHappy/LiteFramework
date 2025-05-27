@@ -2,7 +2,7 @@
 
 namespace LiteFramework.Core.MVP
 {
-    public interface IView : System.IDisposable
+    public interface IView
     {
         void BindPresenter(IPresenter presenter);
         void UnBindPresenter();

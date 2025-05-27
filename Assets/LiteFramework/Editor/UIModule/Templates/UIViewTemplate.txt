@@ -4,8 +4,16 @@ using LiteFramework.Utility;
 using LiteFramework.Core.MVP;
 using TMPro;
 
-public partial class {UI_NAME}View : BaseView<{UI_NAME}Presenter>
+public partial class {UI_NAME}View : BaseUIView<{UI_NAME}Presenter>
 {
-    
+    protected override void OnBind()
+    {
+        //TODO Init
+    }
+
+    protected override void OnUnBind()
+    {
+        //TODO UnInit
+    }
 }
 

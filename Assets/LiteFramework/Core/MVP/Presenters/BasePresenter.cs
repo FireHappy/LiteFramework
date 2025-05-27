@@ -13,20 +13,20 @@ namespace LiteFramework.Core.MVP
             Container = container;
         }
 
-        public virtual void AttachView(IView view)
+        public void AttachView(IView view)
         {
             View = (TView)view;
             OnViewReady();
         }
 
-        public virtual void DetachView()
+        public void DetachView()
         {
             View = default;
+            OnViewDispose();
         }
 
         protected virtual void OnViewReady() { }
-
-        public virtual void Dispose() { }
+        protected virtual void OnViewDispose() { }
     }
 }
 

@@ -2,6 +2,7 @@ using LiteFramework.Utility;
 using LiteFramework.Core.MVP;
 using UnityEngine;
 using VContainer;
+using LiteFramework.Core.Module.UI;
 
 namespace LiteFramework.Module.UI
 {
@@ -30,8 +31,8 @@ namespace LiteFramework.Module.UI
         }
 
         public TPresenter OpenUI<TPresenter, TView>(UIType type, Transform parent = null)
-        where TPresenter : BasePresenter<TView>
-        where TView : BaseView<TPresenter>
+        where TPresenter : BaseUIPresenter<TView>
+        where TView : BaseUIView<TPresenter>
         {
             switch (type)
             {
@@ -66,8 +67,8 @@ namespace LiteFramework.Module.UI
             return presenter;
         }
 
-        public void CloseUI<TPresenter, TView>(UIType type, Transform parent = null) where TPresenter : BasePresenter<TView>
-        where TView : BaseView<TPresenter>
+        public void CloseUI<TPresenter, TView>(UIType type, Transform parent = null) where TPresenter : BaseUIPresenter<TView>
+        where TView : BaseUIView<TPresenter>
         {
             switch (type)
             {

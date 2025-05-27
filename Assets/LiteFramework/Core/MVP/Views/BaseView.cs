@@ -28,14 +28,11 @@ namespace LiteFramework.Core.MVP
         public void UnBindPresenter()
         {
             presenter = default;
+            OnUnBind();
         }
 
         protected virtual void OnBind() { }
-
-        public void Dispose()
-        {
-
-        }
+        protected virtual void OnUnBind() { }
     }
 }
 

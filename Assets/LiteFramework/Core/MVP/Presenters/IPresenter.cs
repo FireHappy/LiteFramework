@@ -1,7 +1,7 @@
 
 namespace LiteFramework.Core.MVP
 {
-    public interface IPresenter : System.IDisposable
+    public interface IPresenter
     {
         void AttachView(IView view);
         void DetachView();

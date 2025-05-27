@@ -1,10 +1,9 @@
-using UnityEngine;
 using UnityEngine.UI;
 using LiteFramework.Utility;
-using LiteFramework.Core.MVP;
 using TMPro;
+using LiteFramework.Core.Module.UI;
 
-public partial class LoginView : BaseView<LoginPresenter>
+public partial class LoginView : BaseUIView<LoginPresenter>
 {
 	[Autowrited("input_username")] public TMP_InputField inputUserName;
 	[Autowrited("input_password")] public TMP_InputField inputPassword;

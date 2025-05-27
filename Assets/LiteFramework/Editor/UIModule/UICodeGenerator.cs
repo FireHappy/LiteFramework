@@ -47,8 +47,6 @@ public static class UIPrefabCodeGenerator
             .Replace("{UI_NAME}", uiName)
             .Replace("{AutoWriteComponent}", fields);
 
-        Debug.Log("viewAutoCode:" + viewAutoCode);
-
         string presenterCode = presenterTemplate
             .Replace("{UI_NAME}", uiName);
 

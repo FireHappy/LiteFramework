@@ -39,16 +39,21 @@ public static class UIPrefabCodeGenerator
         // 自动字段生成
         var fields = GenerateComponentFields(go.transform, config);
 
+        var nameSpace = config.nameSpace;
+
         // 内容替换
         string viewCode = viewTemplate
-            .Replace("{UI_NAME}", uiName);
+            .Replace("{UI_NAME}", uiName)
+            .Replace("{NAMESPACE}", nameSpace);
 
         string viewAutoCode = viewAutoTemplate
             .Replace("{UI_NAME}", uiName)
-            .Replace("{AutoWriteComponent}", fields);
+            .Replace("{AutoWriteComponent}", fields)
+            .Replace("{NAMESPACE}", nameSpace);
 
         string presenterCode = presenterTemplate
-            .Replace("{UI_NAME}", uiName);
+            .Replace("{UI_NAME}", uiName)
+            .Replace("{NAMESPACE}", nameSpace);
 
         // 写入文件
         string outputDir = Path.Combine(config.outputRootPath, uiName);
@@ -98,7 +103,7 @@ public static class UIPrefabCodeGenerator
             if (usedNames.Contains(varName)) continue;
             usedNames.Add(varName);
 
-            sb.AppendLine($"\t[Autowrited(\"{name.ToLower()}\")] public {type.Name} {filedName};");
+            sb.AppendLine($"\t\t[Autowrited(\"{name.ToLower()}\")] public {type.Name} {filedName};");
         }
 
         return sb.ToString();

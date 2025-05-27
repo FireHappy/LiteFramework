@@ -4,7 +4,7 @@ using LiteFramework.Module.UI;
 using LiteFramework.Core.Utility;
 using LiteFramework.Core.MVP;
 
-namespace LiteFramework.Demo
+namespace LiteFramework.Sample
 {
     public class Main : LifetimeScope
     {

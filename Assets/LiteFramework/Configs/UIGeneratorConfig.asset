@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc000752b7708459d8c47c05c2412696, type: 3}
   m_Name: UIGeneratorConfig
   m_EditorClassIdentifier: 
-  outputRootPath: Assets/Scripts/Features
+  outputRootPath: Assets/Sample/Scripts/Features
   templateRootPath: Assets/LiteFramework/Editor/UIModule/Templates
   nameSpace: LiteFramework.Sample
   mappings:

@@ -1,20 +1,22 @@
 using UnityEngine;
 using UnityEngine.UI;
 using LiteFramework.Utility;
-using LiteFramework.Core.MVP;
-using TMPro;
 using LiteFramework.Core.Module.UI;
+using TMPro;
 
-public partial class MainView : BaseUIView<MainPresenter>
+namespace LiteFramework.Sample
 {
-    protected override void OnBind()
+    public partial class MainView : BaseUIView<MainPresenter>
     {
-        //TODO Init
-    }
+        protected override void OnBind()
+        {
+            //TODO Init
+        }
 
-    protected override void OnUnBind()
-    {
-        //TODO UnInit
+        protected override void OnUnBind()
+        {
+            //TODO UnInit
+        }
     }
 }
 

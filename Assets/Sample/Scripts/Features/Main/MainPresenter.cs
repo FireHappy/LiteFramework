@@ -1,25 +1,31 @@
 using LiteFramework.Core.Utility;
+using LiteFramework.Core.MVP;
+using LiteFramework.Module.UI;
 using LiteFramework.Core.Module.UI;
 using VContainer;
-using LiteFramework.Module.UI;
+using UnityEngine;
 
-[AutoRegister(VContainer.Lifetime.Transient)]
-public class MainPresenter : BaseUIPresenter<MainView>
+namespace LiteFramework.Sample
 {
-
-    public MainPresenter(UIManager uiManager, IObjectResolver container) : base(uiManager, container)
+    [AutoRegister(VContainer.Lifetime.Transient)]
+    public class MainPresenter : BaseUIPresenter<MainView>
     {
 
-    }
+        public MainPresenter(UIManager uiManager, IObjectResolver container) : base(uiManager, container)
+        {
 
-    protected override void OnViewReady()
-    {
+        }
 
-    }
+        protected override void OnViewReady()
+        {
 
-    protected override void OnViewDispose()
-    {
+        }
 
+        protected override void OnViewDispose()
+        {
+
+        }
     }
 }
+
 

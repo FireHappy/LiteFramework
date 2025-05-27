@@ -30,7 +30,7 @@ namespace LiteFramework.Module.UI
             this.container = container;
         }
 
-        public TPresenter OpenUI<TPresenter, TView>(UIType type, Transform parent = null)
+        public TPresenter OpenUI<TPresenter, TView>(UIType type = UIType.Panel, Transform parent = null)
         where TPresenter : BaseUIPresenter<TView>
         where TView : BaseUIView<TPresenter>
         {
@@ -67,7 +67,7 @@ namespace LiteFramework.Module.UI
             return presenter;
         }
 
-        public void CloseUI<TPresenter, TView>(UIType type, Transform parent = null) where TPresenter : BaseUIPresenter<TView>
+        public void CloseUI<TPresenter, TView>(UIType type = UIType.Panel, Transform parent = null) where TPresenter : BaseUIPresenter<TView>
         where TView : BaseUIView<TPresenter>
         {
             switch (type)

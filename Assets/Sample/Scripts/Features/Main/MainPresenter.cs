@@ -16,7 +16,10 @@ namespace LiteFramework.Sample
 
         protected override void OnViewReady()
         {
+            view.btnExit.onClick.AddListener(() =>
+            {
 
+            });
         }
 
         protected override void OnViewDispose()

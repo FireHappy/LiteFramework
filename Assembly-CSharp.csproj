@@ -66,6 +66,7 @@
     <Compile Include="Assets/LiteFramework/Modules/UIModule/BaseUIView.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/UIManager.cs" />
     <Compile Include="Assets/Sample/Scripts/Features/Main/MainView.Auto.cs" />
+    <Compile Include="Assets/LiteFramework/Modules/UIModule/UIRouter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

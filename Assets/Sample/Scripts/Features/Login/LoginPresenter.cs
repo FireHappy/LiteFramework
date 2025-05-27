@@ -29,7 +29,7 @@ namespace LiteFramework.Sample
 
             view.btnLogin.onClick.AddListener(() =>
             {
-                uiManager.OpenUI<MainPresenter, MainView>(UIType.Panel);
+                uiManager.OpenUI<MainPresenter, MainView>();
             });
         }
 

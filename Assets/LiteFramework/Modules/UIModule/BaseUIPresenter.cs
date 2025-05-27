@@ -11,10 +11,13 @@ namespace LiteFramework.Core.Module.UI
         protected readonly IObjectResolver container;
         protected readonly IUIManager uiManager;
 
+
+
         protected BaseUIPresenter(IUIManager uiManager, IObjectResolver container)
         {
             this.container = container;
             this.uiManager = uiManager;
+            UIRouter.Init(uiManager);
         }
 
         public void AttachView(IView view)
@@ -32,6 +35,11 @@ namespace LiteFramework.Core.Module.UI
         protected virtual void OnViewReady() { }
 
         protected virtual void OnViewDispose() { }
+
+        protected void OpenUI<TView>()
+        {
+
+        }
     }
 }
 

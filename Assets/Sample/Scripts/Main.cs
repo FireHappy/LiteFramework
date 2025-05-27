@@ -26,7 +26,7 @@ namespace LiteFramework.Sample
             var uiManager = Container.Resolve<IUIManager>();
 
             // 加载 Login UI
-            uiManager.OpenUI<LoginPresenter, LoginView>(UIType.Panel);
+            uiManager.OpenUI<LoginPresenter, LoginView>();
         }
     }
 }

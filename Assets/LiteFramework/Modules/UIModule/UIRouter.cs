@@ -15,7 +15,7 @@ public static class UIRouter
     }
 
     public static IPresenter Open<TView>(UIType type = UIType.Panel, Transform parent = null)
-        where TView : Component
+        where TView : IView
     {
         EnsureInitialized();
 
@@ -31,7 +31,7 @@ public static class UIRouter
     }
 
     public static void Close<TView>(UIType type = UIType.Panel, Transform parent = null)
-        where TView : Component
+        where TView : IView
     {
         EnsureInitialized();
 
@@ -46,7 +46,7 @@ public static class UIRouter
         method?.Invoke(uiManager, new object[] { type, parent });
     }
 
-    private static Type GetPresenterTypeFromView<TView>() where TView : Component
+    private static Type GetPresenterTypeFromView<TView>() where TView : IView
     {
         var baseType = typeof(TView).BaseType;
 

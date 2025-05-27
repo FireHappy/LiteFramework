@@ -5,7 +5,7 @@ namespace LiteFramework.Module.UI
 {
     internal static class UIUtility
     {
-        public static TView CreateUI<TView>(Transform parent, string uiPath, bool setActive = true) where TView : IView
+        public static TView CreateUI<TView>(Transform parent, string uiPath, bool setActive = true) where TView : Component, IView
         {
             string prefabName = typeof(TView).Name;
             var go = Resources.Load<GameObject>($"{uiPath}/{prefabName}");
@@ -19,7 +19,7 @@ namespace LiteFramework.Module.UI
             instance.name = prefabName;
             instance.localScale = Vector3.one;
             instance.gameObject.SetActive(setActive);
-            return instance.GetComponent<TView>();
+            return instance.gameObject.AddComponent<TView>();
         }
 
         public static void DestroyUI(Transform uiTransform)

@@ -61,7 +61,7 @@
     <Compile Include="Assets/LiteFramework/Core/MVP/Views/IView.cs" />
     <Compile Include="Assets/Sample/Scripts/Features/Main/MainView.Auto.cs" />
     <Compile Include="Assets/Test/UIRouterTest/UIRouterTest.cs" />
-    <Compile Include="Assets/LiteFramework/Modules/UIModule/UIRouterInvoke.cs" />
+    <Compile Include="Assets/Test/UIRouterTest/UIRouterInvoke.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/Interfaces/IUIManager.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Presenters/BasePresenter.cs" />
     <Compile Include="Assets/Sample/Scripts/Features/Setting/SettingView.Auto.cs" />

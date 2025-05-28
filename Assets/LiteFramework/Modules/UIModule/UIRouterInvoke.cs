@@ -7,16 +7,17 @@ using LiteFramework.Core.MVP;
 
 namespace LiteFramework.Module.UI
 {
-    public class UIRouter
+    public class UIRouterInvoke
     {
         private readonly IUIManager uiManager;
 
         private static readonly Dictionary<Type, Type> PresenterTypeCache = new();
 
-        private static readonly Dictionary<(Type presenter, Type view), Action<UIType, Transform>> OpenDelegates = new();
-        private static readonly Dictionary<(Type presenter, Type view), Action<UIType, Transform>> CloseDelegates = new();
+        private static readonly Dictionary<(Type presenter, Type view), Action<IUIManager, UIType, Transform>> OpenDelegates = new();
+        private static readonly Dictionary<(Type presenter, Type view), Action<IUIManager, UIType, Transform>> CloseDelegates = new();
 
-        public UIRouter(IUIManager uiManager)
+
+        public UIRouterInvoke(IUIManager uiManager)
         {
             this.uiManager = uiManager;
         }
@@ -71,66 +72,54 @@ namespace LiteFramework.Module.UI
             return null;
         }
 
+
         private Action<UIType, Transform> GetOpenDelegate(Type presenterType, Type viewType)
         {
             var key = (presenterType, viewType);
-            if (OpenDelegates.TryGetValue(key, out var dlg))
-            {
-                return dlg;
-            }
-
+            if (OpenDelegates.TryGetValue(key, out var compiled))
+                return (t, p) => compiled(uiManager, t, p);  // 闭包只有一次
 
             var method = typeof(IUIManager).GetMethod("OpenUI");
-            if (method == null)
-                throw new InvalidOperationException("OpenUI method not found on IUIManager");
-
             var genericMethod = method.MakeGenericMethod(presenterType, viewType);
 
-            // 构建参数表达式
+            var paramInstance = Expression.Parameter(typeof(IUIManager), "instance");
             var paramType = Expression.Parameter(typeof(UIType), "type");
             var paramParent = Expression.Parameter(typeof(Transform), "parent");
 
-            // 表达式中使用常量 uiManager
-            var instance = Expression.Constant(uiManager);
+            var call = Expression.Call(paramInstance, genericMethod, paramType, paramParent);
 
-            // 调用方法表达式（无返回值，无需 Convert）
-            var call = Expression.Call(instance, genericMethod, paramType, paramParent);
+            var lambda = Expression.Lambda<Action<IUIManager, UIType, Transform>>(call, paramInstance, paramType, paramParent);
 
-            // 直接生成 Action lambda
-            var lambda = Expression.Lambda<Action<UIType, Transform>>(call, paramType, paramParent);
+            compiled = lambda.Compile();
+            OpenDelegates[key] = compiled;
 
-            dlg = lambda.Compile();
-            OpenDelegates[key] = dlg;
-            return dlg;
+            // 返回封装的委托，只捕获一次 uiManager
+            return (t, p) => compiled(uiManager, t, p);
         }
+
 
         private Action<UIType, Transform> GetCloseDelegate(Type presenterType, Type viewType)
         {
             var key = (presenterType, viewType);
-            if (CloseDelegates.TryGetValue(key, out var dlg))
-            {
-                return dlg;
-            }
+            if (CloseDelegates.TryGetValue(key, out var compiled))
+                return (t, p) => compiled(uiManager, t, p); // ✅ 仅捕获一次 uiManager
 
             var method = typeof(IUIManager).GetMethod("CloseUI");
-            if (method == null)
-                throw new InvalidOperationException("CloseUI method not found on IUIManager");
-
             var genericMethod = method.MakeGenericMethod(presenterType, viewType);
 
+            var paramInstance = Expression.Parameter(typeof(IUIManager), "instance");
             var paramType = Expression.Parameter(typeof(UIType), "type");
             var paramParent = Expression.Parameter(typeof(Transform), "parent");
 
-            var instance = Expression.Constant(uiManager);
+            var call = Expression.Call(paramInstance, genericMethod, paramType, paramParent);
 
-            var call = Expression.Call(instance, genericMethod, paramType, paramParent);
+            var lambda = Expression.Lambda<Action<IUIManager, UIType, Transform>>(call, paramInstance, paramType, paramParent);
 
-            var lambda = Expression.Lambda<Action<UIType, Transform>>(call, paramType, paramParent);
+            compiled = lambda.Compile();
+            CloseDelegates[key] = compiled;
 
-            dlg = lambda.Compile();
-
-            CloseDelegates[key] = dlg;
-            return dlg;
+            return (t, p) => compiled(uiManager, t, p); // ✅ 闭包只捕获一次
         }
+
     }
 }

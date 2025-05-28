@@ -9,14 +9,14 @@ namespace LiteFramework.Core.Utility
     /// Tip2: 字段为空的情况下才会激活自动注入的匹配
     /// </summary>
     [AttributeUsage(AttributeTargets.Field, Inherited = true, AllowMultiple = false)]
-    public class Autowrited : PropertyAttribute
+    public class AutowritedAttribute : PropertyAttribute
     {
         public readonly string targetObjName;
-        public Autowrited(string targetObjName)
+        public AutowritedAttribute(string targetObjName)
         {
             this.targetObjName = targetObjName;
         }
-        public Autowrited()
+        public AutowritedAttribute()
         {
 
         }

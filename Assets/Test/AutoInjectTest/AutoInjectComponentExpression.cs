@@ -26,7 +26,7 @@ namespace LiteFramework.Core.Utility
 
             foreach (var field in allFields)
             {
-                var attribute = field.GetCustomAttribute<Autowrited>();
+                var attribute = field.GetCustomAttribute<AutowritedAttribute>();
                 if (attribute != null)
                 {
                     var targetName = string.IsNullOrEmpty(attribute.targetObjName) ? field.Name : attribute.targetObjName;

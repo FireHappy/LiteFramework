@@ -11,7 +11,6 @@ namespace LiteFramework.Sample
     [AutoRegister(VContainer.Lifetime.Transient)]
     public class SettingPresenter : BaseUIPresenter<SettingView>
     {
-
         public SettingPresenter(UIRouter router, IObjectResolver container) : base(router, container)
         {
 

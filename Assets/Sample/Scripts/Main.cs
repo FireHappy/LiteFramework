@@ -3,6 +3,7 @@ using VContainer.Unity;
 using LiteFramework.Module.UI;
 using LiteFramework.Core.Utility;
 using LiteFramework.Core.MVP;
+using System.Diagnostics;
 
 namespace LiteFramework.Sample
 {

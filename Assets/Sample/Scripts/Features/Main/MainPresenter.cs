@@ -25,7 +25,7 @@ namespace LiteFramework.Sample
             //使用UniRx绑定按钮事件
             view.btnSetting.OnClickAsObservable().Subscribe(_ =>
             {
-                router.Open<MainView>();
+                router.Open<SettingView>(UIType.Dialog);
             }).AddTo(view);
             //使用UniRx绑定数据的变化
             userModel.userName.Subscribe(value => view.txtuUserName.text = value).AddTo(view);

@@ -5,6 +5,7 @@ using System.Text;
 using LiteFramework.EditorTools;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 
 public static class UIPrefabCodeGenerator
 {
@@ -37,7 +38,7 @@ public static class UIPrefabCodeGenerator
         string presenterTemplate = File.ReadAllText(presenterTemplatePath);
 
         // 自动字段生成
-        var fields = GenerateComponentFields(go.transform, config);
+        var (fields, fieldsFind) = GenerateComponentFields(go.transform, config);
 
         var nameSpace = config.nameSpace;
 
@@ -48,7 +49,8 @@ public static class UIPrefabCodeGenerator
 
         string viewAutoCode = viewAutoTemplate
             .Replace("{UI_NAME}", uiName)
-            .Replace("{AutoWriteComponent}", fields)
+            .Replace("{Fields}", fields)
+            .Replace("{FieldsFind}", fieldsFind)
             .Replace("{NAMESPACE}", nameSpace);
 
         string presenterCode = presenterTemplate
@@ -78,9 +80,10 @@ public static class UIPrefabCodeGenerator
         EditorUtility.DisplayDialog("Generate success!!!", $"Generate {uiName}  MVP code success.", "Sure");
     }
 
-    private static string GenerateComponentFields(Transform root, UIGeneratorConfig config)
+    private static (string, string) GenerateComponentFields(Transform root, UIGeneratorConfig config)
     {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder fields = new StringBuilder();
+        StringBuilder fieldsFind = new StringBuilder();
         List<string> usedNames = new List<string>();
 
         foreach (Transform child in root.GetComponentsInChildren<Transform>(true))
@@ -103,10 +106,24 @@ public static class UIPrefabCodeGenerator
             if (usedNames.Contains(varName)) continue;
             usedNames.Add(varName);
 
-            sb.AppendLine($"\t\t[Autowrited(\"{name.ToLower()}\")] public {type.Name} {filedName};");
+            fields.AppendLine($"\t\tpublic {type.Name} {filedName};");
+            Debug.Log("fieldName:" + filedName);
+            fieldsFind.AppendLine($"\t\t\t{filedName} = transform.Find(\"{GetFindPath(root, child)}\").GetComponent<{type.Name}>();");
         }
 
-        return sb.ToString();
+        return (fields.ToString(), fieldsFind.ToString());
+    }
+
+    private static string GetFindPath(Transform root, Transform child)
+    {
+        string path = $"{child.name}";
+        var parent = child.parent;
+        while (parent != root)
+        {
+            parent = parent.parent;
+            path = child.parent.name + '/' + path;
+        }
+        return path;
     }
 
     private static UIGeneratorConfig LoadUIGeneratorConfig()

@@ -45,43 +45,43 @@
     <Analyzer Include="/Users/chenlin/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.1.2/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Test/StaticBindVsAutoInjectTest/MyUIView.cs" />
     <Compile Include="Assets/Sample/Scripts/Main.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Presenters/IPresenter.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Views/BaseView.cs" />
     <Compile Include="Assets/Sample/Scripts/Features/Login/LoginView.cs" />
+    <Compile Include="Assets/Test/AutoInjectTest/AutoInjectComponentExpression.cs" />
     <Compile Include="Assets/Sample/Scripts/Features/Setting/SettingView.cs" />
     <Compile Include="Assets/LiteFramework/Core/Utils/VContainerAutoRegister.cs" />
+    <Compile Include="Assets/Test/UIRouterTest/DelegateVsReflectionTest.cs" />
     <Compile Include="Assets/LiteFramework/Core/Attributes/AutoRegisterAttribute.cs" />
+    <Compile Include="Assets/Test/StaticBindVsAutoInjectTest/StaticBindVsAutoInjectTest.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/BaseUIPresenter.cs" />
     <Compile Include="Assets/Sample/Scripts/Features/Login/LoginView.Auto.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Views/IView.cs" />
     <Compile Include="Assets/Sample/Scripts/Features/Main/MainView.Auto.cs" />
+    <Compile Include="Assets/Test/UIRouterTest/UIRouterTest.cs" />
+    <Compile Include="Assets/LiteFramework/Modules/UIModule/UIRouterInvoke.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/Interfaces/IUIManager.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Presenters/BasePresenter.cs" />
     <Compile Include="Assets/Sample/Scripts/Features/Setting/SettingView.Auto.cs" />
     <Compile Include="Assets/LiteFramework/Core/MVP/Models/IModel.cs" />
+    <Compile Include="Assets/Test/UIRouterTest/Dummy/DummyView.cs" />
+    <Compile Include="Assets/Test/UIRouterTest/Dummy/DummyPresenter.cs" />
     <Compile Include="Assets/LiteFramework/Core/Utils/AutoInjectComponent.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/UIUtility.cs" />
     <Compile Include="Assets/Sample/Scripts/Features/Main/MainPresenter.cs" />
+    <Compile Include="Assets/Test/UIRouterTest/Dummy/DummyView.Auto.cs" />
     <Compile Include="Assets/Sample/Scripts/Features/Login/LoginPresenter.cs" />
+    <Compile Include="Assets/Test/UIRouterTest/DummyUIManager.cs" />
     <Compile Include="Assets/Sample/Scripts/Common/Data/UserModel.cs" />
+    <Compile Include="Assets/Test/AutoInjectTest/AutoInjectTest.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/UIRouter.cs" />
     <Compile Include="Assets/Sample/Scripts/Features/Main/MainView.cs" />
+    <Compile Include="Assets/LiteFramework/Core/Attributes/AutoWrite.cs" />
     <Compile Include="Assets/Sample/Scripts/Features/Setting/SettingPresenter.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/BaseUIView.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/UIManager.cs" />
-    <Compile Include="Assets/Test/UIRouterTest/DummyUIManager.cs" />
-    <Compile Include="Assets/Test/UIRouterTest/Dummy/DummyView.Auto.cs" />
-    <Compile Include="Assets/Test/UIRouterTest/Dummy/DummyView.cs" />
-    <Compile Include="Assets/Test/UIRouterTest/Dummy/DummyPresenter.cs" />
-    <Compile Include="Assets/Test/UIRouterTest/UIRouterTest.cs" />
-    <Compile Include="Assets/LiteFramework/Modules/UIModule/UIRouterInvoke.cs" />
-    <Compile Include="Assets/Test/UIRouterTest/DelegateVsReflectionTest.cs" />
-    <Compile Include="Assets/Test/AutoInjectTest/AutoInjectComponentExpression.cs" />
-    <Compile Include="Assets/Test/AutoInjectTest/AutoInjectTest.cs" />
-    <Compile Include="Assets/LiteFramework/Core/Attributes/AutoWrite.cs" />
-    <Compile Include="Assets/Test/StaticBindVsAutoInjectTest/StaticBindVsAutoInjectTest.cs" />
-    <Compile Include="Assets/Test/StaticBindVsAutoInjectTest/MyUIView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

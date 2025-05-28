@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIRoot: {fileID: 495409730}
   Target: {fileID: 495409733}
-  LoopCount: 1000
+  LoopCount: 9
 --- !u!1 &938425397
 GameObject:
   m_ObjectHideFlags: 0

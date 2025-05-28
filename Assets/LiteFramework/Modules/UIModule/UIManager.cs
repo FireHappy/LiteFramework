@@ -57,8 +57,8 @@ namespace LiteFramework.Module.UI
             else
             {
                 view = UIUtility.CreateUI<TView>(parent, uiPath);
-                //处理ui组件的注入
-                AutoInjectComponent.AutoInject(view.transform, view);
+                //初始化组件
+                view.InitComponents();
             }
             var presenter = container.Resolve<TPresenter>();
             presenter.AttachView(view);

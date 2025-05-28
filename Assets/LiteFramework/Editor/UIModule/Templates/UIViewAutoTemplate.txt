@@ -1,13 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
-using LiteFramework.Utility;
+using LiteFramework.Core.Utility;
 using LiteFramework.Core.Module.UI;
 using TMPro;
 namespace {NAMESPACE}
 {
     public partial class {UI_NAME}View : BaseUIView<{UI_NAME}Presenter>
     {
-{AutoWriteComponent}
+{Fields}
+        public override void InitComponents()
+        {
+{FieldsFind}
+        }
     }
 }
 

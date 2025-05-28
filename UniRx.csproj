@@ -203,9 +203,9 @@
     <Compile Include="Assets/Plugins/UniRx/Scripts/System/IOptimizedObservable.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/UnityGraphicExtensions.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/SelectMany.cs" />
+    <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Triggers/ObservablePointerClickTrigger.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/Dematerialize.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Triggers/ObservableUpdateSelectedTrigger.cs" />
-    <Compile Include="Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Triggers/ObservablePointerClickTrigger.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/Start.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/TakeLast.cs" />
     <Compile Include="Assets/Plugins/UniRx/Scripts/Operators/Select.cs" />

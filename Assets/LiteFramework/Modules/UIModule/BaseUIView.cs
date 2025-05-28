@@ -32,6 +32,11 @@ namespace LiteFramework.Core.Module.UI
             OnUnBind();
         }
 
+        public virtual void InitComponents()
+        {
+
+        }
+
         protected virtual void OnBind() { }
         protected virtual void OnUnBind() { }
     }

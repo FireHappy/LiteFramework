@@ -28,4 +28,18 @@ public class MyUIView : MonoBehaviour
         RectContent = root.Find("RectContent").GetComponent<RectTransform>();
         CanvasGroup = root.Find("CanvasGroup").GetComponent<CanvasGroup>();
     }
+
+    public void Clear()
+    {
+        BtnPlay = null;
+        BtnExit = null;
+        ImgIcon = null;
+        TxtName = null;
+        TxtScore = null;
+        SldProgress = null;
+        TogOption = null;
+        PanelInfo = null;
+        RectContent = null;
+        CanvasGroup = null;
+    }
 }

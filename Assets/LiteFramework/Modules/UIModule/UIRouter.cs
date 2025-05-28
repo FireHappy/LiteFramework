@@ -13,8 +13,8 @@ namespace LiteFramework.Module.UI
 
         private static readonly Dictionary<Type, Type> PresenterTypeCache = new();
 
-        private static readonly Dictionary<(Type presenter, Type view), Action<UIType, Transform>> OpenDelegates = new();
-        private static readonly Dictionary<(Type presenter, Type view), Action<UIType, Transform>> CloseDelegates = new();
+        private static readonly Dictionary<(Type presenter, Type view), Action<IUIManager, UIType, Transform>> OpenDelegates = new();
+        private static readonly Dictionary<(Type presenter, Type view), Action<IUIManager, UIType, Transform>> CloseDelegates = new();
 
         public UIRouter(IUIManager uiManager)
         {
@@ -28,10 +28,11 @@ namespace LiteFramework.Module.UI
             if (presenterType == null)
             {
                 Debug.LogError($"UIRouter.Open -> Failed to resolve Presenter type for view {typeof(TView).Name}");
+                return;
             }
 
             var openDel = GetOpenDelegate(presenterType, typeof(TView));
-            openDel(type, parent);
+            openDel(uiManager, type, parent);
         }
 
         public void Close<TView>(UIType type = UIType.Panel, Transform parent = null)
@@ -45,7 +46,7 @@ namespace LiteFramework.Module.UI
             }
 
             var closeDel = GetCloseDelegate(presenterType, typeof(TView));
-            closeDel(type, parent);
+            closeDel(uiManager, type, parent);
         }
 
         private Type GetPresenterTypeFromView<TView>() where TView : IView
@@ -71,14 +72,13 @@ namespace LiteFramework.Module.UI
             return null;
         }
 
-        private Action<UIType, Transform> GetOpenDelegate(Type presenterType, Type viewType)
+        private Action<IUIManager, UIType, Transform> GetOpenDelegate(Type presenterType, Type viewType)
         {
             var key = (presenterType, viewType);
             if (OpenDelegates.TryGetValue(key, out var dlg))
             {
                 return dlg;
             }
-
 
             var method = typeof(IUIManager).GetMethod("OpenUI");
             if (method == null)
@@ -87,24 +87,21 @@ namespace LiteFramework.Module.UI
             var genericMethod = method.MakeGenericMethod(presenterType, viewType);
 
             // 构建参数表达式
+            var paramManager = Expression.Parameter(typeof(IUIManager), "manager");
             var paramType = Expression.Parameter(typeof(UIType), "type");
             var paramParent = Expression.Parameter(typeof(Transform), "parent");
 
-            // 表达式中使用常量 uiManager
-            var instance = Expression.Constant(uiManager);
+            // manager.OpenUI<Presenter, View>(type, parent)
+            var call = Expression.Call(paramManager, genericMethod, paramType, paramParent);
 
-            // 调用方法表达式（无返回值，无需 Convert）
-            var call = Expression.Call(instance, genericMethod, paramType, paramParent);
-
-            // 直接生成 Action lambda
-            var lambda = Expression.Lambda<Action<UIType, Transform>>(call, paramType, paramParent);
-
+            var lambda = Expression.Lambda<Action<IUIManager, UIType, Transform>>(call, paramManager, paramType, paramParent);
             dlg = lambda.Compile();
+
             OpenDelegates[key] = dlg;
             return dlg;
         }
 
-        private Action<UIType, Transform> GetCloseDelegate(Type presenterType, Type viewType)
+        private Action<IUIManager, UIType, Transform> GetCloseDelegate(Type presenterType, Type viewType)
         {
             var key = (presenterType, viewType);
             if (CloseDelegates.TryGetValue(key, out var dlg))
@@ -118,15 +115,13 @@ namespace LiteFramework.Module.UI
 
             var genericMethod = method.MakeGenericMethod(presenterType, viewType);
 
+            var paramManager = Expression.Parameter(typeof(IUIManager), "manager");
             var paramType = Expression.Parameter(typeof(UIType), "type");
             var paramParent = Expression.Parameter(typeof(Transform), "parent");
 
-            var instance = Expression.Constant(uiManager);
+            var call = Expression.Call(paramManager, genericMethod, paramType, paramParent);
 
-            var call = Expression.Call(instance, genericMethod, paramType, paramParent);
-
-            var lambda = Expression.Lambda<Action<UIType, Transform>>(call, paramType, paramParent);
-
+            var lambda = Expression.Lambda<Action<IUIManager, UIType, Transform>>(call, paramManager, paramType, paramParent);
             dlg = lambda.Compile();
 
             CloseDelegates[key] = dlg;

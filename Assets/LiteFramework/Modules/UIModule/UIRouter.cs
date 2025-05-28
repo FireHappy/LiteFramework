@@ -12,6 +12,9 @@ namespace LiteFramework.Module.UI
 
         private static readonly Dictionary<Type, Type> PresenterTypeCache = new();
 
+        private static readonly Dictionary<(Type presenter, Type view), Func<UIType, Transform, IPresenter>> OpenDelegates = new();
+        private static readonly Dictionary<(Type presenter, Type view), Action<UIType, Transform>> CloseDelegates = new();
+
         public UIRouter(IUIManager uiManager)
         {
             this.uiManager = uiManager;
@@ -27,8 +30,8 @@ namespace LiteFramework.Module.UI
                 return null;
             }
 
-            var method = typeof(IUIManager).GetMethod("OpenUI")?.MakeGenericMethod(presenterType, typeof(TView));
-            return method?.Invoke(uiManager, new object[] { type, parent }) as IPresenter;
+            var openDel = GetOpenDelegate(presenterType, typeof(TView));
+            return openDel(type, parent);
         }
 
         public void Close<TView>(UIType type = UIType.Panel, Transform parent = null)
@@ -41,8 +44,8 @@ namespace LiteFramework.Module.UI
                 return;
             }
 
-            var method = typeof(IUIManager).GetMethod("CloseUI")?.MakeGenericMethod(presenterType, typeof(TView));
-            method?.Invoke(uiManager, new object[] { type, parent });
+            var closeDel = GetCloseDelegate(presenterType, typeof(TView));
+            closeDel(type, parent);
         }
 
         private Type GetPresenterTypeFromView<TView>() where TView : IView
@@ -67,5 +70,32 @@ namespace LiteFramework.Module.UI
 
             return null;
         }
+
+        private Func<UIType, Transform, IPresenter> GetOpenDelegate(Type presenterType, Type viewType)
+        {
+            var key = (presenterType, viewType);
+            if (OpenDelegates.TryGetValue(key, out var dlg))
+                return dlg;
+
+            var method = typeof(IUIManager).GetMethod("OpenUI")?.MakeGenericMethod(presenterType, viewType);
+            var del = (Func<UIType, Transform, IPresenter>)Delegate.CreateDelegate(
+                typeof(Func<UIType, Transform, IPresenter>), uiManager, method);
+            OpenDelegates[key] = del;
+            return del;
+        }
+
+        private Action<UIType, Transform> GetCloseDelegate(Type presenterType, Type viewType)
+        {
+            var key = (presenterType, viewType);
+            if (CloseDelegates.TryGetValue(key, out var dlg))
+                return dlg;
+
+            var method = typeof(IUIManager).GetMethod("CloseUI")?.MakeGenericMethod(presenterType, viewType);
+            var del = (Action<UIType, Transform>)Delegate.CreateDelegate(
+                typeof(Action<UIType, Transform>), uiManager, method);
+            CloseDelegates[key] = del;
+            return del;
+        }
     }
+
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using LiteFramework.Utility;
+using LiteFramework.Core.Utility;
 using LiteFramework.Core.Module.UI;
 using TMPro;
 namespace LiteFramework.Sample

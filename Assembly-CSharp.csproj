@@ -77,6 +77,9 @@
     <Compile Include="Assets/Test/UIRouterTest/UIRouterTest.cs" />
     <Compile Include="Assets/LiteFramework/Modules/UIModule/UIRouterInvoke.cs" />
     <Compile Include="Assets/Test/UIRouterTest/DelegateVsReflectionTest.cs" />
+    <Compile Include="Assets/Test/AutoInjectTest/AutoInjectComponentExpression.cs" />
+    <Compile Include="Assets/Test/AutoInjectTest/AutoInjectTest.cs" />
+    <Compile Include="Assets/LiteFramework/Core/Attributes/AutoWrite.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

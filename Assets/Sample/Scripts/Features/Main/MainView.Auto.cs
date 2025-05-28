@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
-using LiteFramework.Utility;
 using LiteFramework.Core.Module.UI;
 using TMPro;
+using LiteFramework.Core.Utility;
 namespace LiteFramework.Sample
 {
 	public partial class MainView : BaseUIView<MainPresenter>

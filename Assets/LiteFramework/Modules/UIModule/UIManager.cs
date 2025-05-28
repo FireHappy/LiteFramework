@@ -1,8 +1,7 @@
-using LiteFramework.Utility;
-using LiteFramework.Core.MVP;
 using UnityEngine;
 using VContainer;
 using LiteFramework.Core.Module.UI;
+using LiteFramework.Core.Utility;
 
 namespace LiteFramework.Module.UI
 {

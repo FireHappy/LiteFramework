@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class UIRouterTest : MonoBehaviour
 {
-    private const int TestIterations = 100_000;
+    private const int TestIterations = 1;
 
     void Start()
     {

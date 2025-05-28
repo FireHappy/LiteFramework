@@ -1,20 +1,17 @@
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Reflection;
 using UnityEngine;
 
 namespace LiteFramework.Core.Utility
 {
-    /// <summary>
-    /// 自动注入组件优化版本
-    /// </summary>
-    public static class AutoInjectComponent
+
+    public static class AutoInjectComponentExpression
     {
-        /// <summary>
-        /// 自动注入组件（优化版）
-        /// </summary>
-        /// <param name="root">UI 根节点</param>
-        /// <param name="target">目标对象</param>
+        // 缓存字段赋值的委托
+        private static readonly Dictionary<FieldInfo, Action<object, object>> FieldSetterCache = new();
+
         public static void AutoInject(Transform root, object target)
         {
             if (root == null || target == null)
@@ -24,8 +21,6 @@ namespace LiteFramework.Core.Utility
             }
 
             var targetType = target.GetType();
-
-            // 1. 获取所有带 Autowrited 特性的字段
             var allFields = targetType.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
             var fieldsToInject = new Dictionary<FieldInfo, string>();
 
@@ -35,15 +30,13 @@ namespace LiteFramework.Core.Utility
                 if (attribute != null)
                 {
                     var targetName = string.IsNullOrEmpty(attribute.targetObjName) ? field.Name : attribute.targetObjName;
-                    fieldsToInject[field] = targetName.ToLower(); // 忽略大小写
+                    fieldsToInject[field] = targetName.ToLower();
                 }
             }
 
-            // 2. 扁平化所有子节点，构建字典：name → transform
             var nodeMap = new Dictionary<string, Transform>(StringComparer.OrdinalIgnoreCase);
             FlattenHierarchy(root, nodeMap);
 
-            // 3. 匹配字段并赋值
             foreach (var pair in fieldsToInject)
             {
                 var field = pair.Key;
@@ -52,23 +45,24 @@ namespace LiteFramework.Core.Utility
                 if (nodeMap.TryGetValue(searchName, out var node))
                 {
                     var fieldType = field.FieldType;
+                    object value = null;
 
                     if (fieldType == typeof(GameObject))
                     {
-                        field.SetValue(target, node.gameObject);
+                        value = node.gameObject;
                     }
                     else
                     {
-                        var component = node.GetComponent(fieldType);
-                        if (component != null)
-                        {
-                            field.SetValue(target, component);
-                        }
-                        else
+                        value = node.GetComponent(fieldType);
+                        if (value == null)
                         {
                             Debug.LogWarning($"AutoInjectComponent: [{field.Name}] 找到了节点但没有对应组件：{fieldType.Name}");
+                            continue;
                         }
                     }
+
+                    // 表达式树赋值
+                    GetFieldSetter(field)(target, value);
                 }
                 else
                 {
@@ -77,12 +71,9 @@ namespace LiteFramework.Core.Utility
             }
         }
 
-        /// <summary>
-        /// 扁平化所有子节点
-        /// </summary>
         private static void FlattenHierarchy(Transform root, Dictionary<string, Transform> map)
         {
-            Queue<Transform> queue = new Queue<Transform>();
+            Queue<Transform> queue = new();
             queue.Enqueue(root);
 
             while (queue.Count > 0)
@@ -99,6 +90,30 @@ namespace LiteFramework.Core.Utility
                     queue.Enqueue(child);
                 }
             }
+        }
+
+        /// <summary>
+        /// 创建并缓存字段的赋值表达式委托
+        /// </summary>
+        private static Action<object, object> GetFieldSetter(FieldInfo fieldInfo)
+        {
+            if (FieldSetterCache.TryGetValue(fieldInfo, out var setter))
+                return setter;
+
+            var targetExp = Expression.Parameter(typeof(object), "target");
+            var valueExp = Expression.Parameter(typeof(object), "value");
+
+            var castTarget = Expression.Convert(targetExp, fieldInfo.DeclaringType);
+            var castValue = Expression.Convert(valueExp, fieldInfo.FieldType);
+
+            var fieldExp = Expression.Field(castTarget, fieldInfo);
+            var assignExp = Expression.Assign(fieldExp, castValue);
+
+            var lambda = Expression.Lambda<Action<object, object>>(assignExp, targetExp, valueExp);
+            setter = lambda.Compile();
+
+            FieldSetterCache[fieldInfo] = setter;
+            return setter;
         }
     }
 }

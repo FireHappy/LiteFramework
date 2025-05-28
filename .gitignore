@@ -3,3 +3,5 @@
 **Temp
 **Log
 *.DS_Store
+*.csproj
+*.sln

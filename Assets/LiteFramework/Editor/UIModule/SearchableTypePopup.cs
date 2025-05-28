@@ -35,7 +35,7 @@ namespace LiteFramework.EditorTools
         private void OnGUI()
         {
             if (searchFieldStyle == null)
-                searchFieldStyle = GUI.skin.FindStyle("ToolbarSeachTextField");
+                searchFieldStyle = GUI.skin.FindStyle("ToolbarSearchTextField");
 
             EditorGUILayout.BeginHorizontal(GUI.skin.FindStyle("Toolbar"));
             searchText = EditorGUILayout.TextField(searchText, searchFieldStyle);

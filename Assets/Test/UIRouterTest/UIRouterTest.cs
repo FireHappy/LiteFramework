@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class UIRouterTest : MonoBehaviour
 {
-    private const int TestIterations = 1;
+    public int TestIterations = 1_000;
 
     void Start()
     {
@@ -26,16 +26,27 @@ public class UIRouterTest : MonoBehaviour
             routerInvoke.Open<DummyView>();
         }
         sw.Stop();
-        UnityEngine.Debug.Log($"Reflection Invoke (Slow): {sw.ElapsedMilliseconds} ms");
+        UnityEngine.Debug.Log($"Reflection Invoke : {sw.ElapsedMilliseconds} ms");
 
         // 测试快的表达式树方案
         sw.Reset();
+
         sw.Start();
         for (int i = 0; i < TestIterations; i++)
         {
             routerExpress.Open<DummyView>();
         }
         sw.Stop();
-        UnityEngine.Debug.Log($"Expression Tree (Fast): {sw.ElapsedMilliseconds} ms");
+        UnityEngine.Debug.Log($"Expression Tree : {sw.ElapsedMilliseconds} ms");
+
+        //静态调用
+        sw.Reset();
+        sw.Start();
+        for (int i = 0; i < TestIterations; i++)
+        {
+            manager.OpenUI<DummyPresenter, DummyView>();
+        }
+        sw.Stop();
+        UnityEngine.Debug.Log($" Static Invoke : {sw.ElapsedMilliseconds} ms");
     }
 }

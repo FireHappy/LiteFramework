@@ -3,7 +3,7 @@ using VContainer;
 using VContainer.Unity;
 using System.Diagnostics;
 
-public class VContainerResolveBenchmark : MonoBehaviour
+public class VContainerResolveTest : MonoBehaviour
 {
     private IObjectResolver container;
 

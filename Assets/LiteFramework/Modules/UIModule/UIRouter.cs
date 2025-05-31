@@ -4,6 +4,7 @@ using System.Linq.Expressions;
 using UnityEngine;
 using LiteFramework.Core.Module.UI;
 using LiteFramework.Core.MVP;
+using System.Reflection;
 
 namespace LiteFramework.Module.UI
 {
@@ -56,6 +57,15 @@ namespace LiteFramework.Module.UI
             if (PresenterTypeCache.TryGetValue(viewType, out var cachedType))
                 return cachedType;
 
+            // ✅ 优先读取特性绑定
+            var attr = viewType.GetCustomAttribute<BindPresenterAttribute>();
+            if (attr != null)
+            {
+                PresenterTypeCache[viewType] = attr.PresenterType;
+                return attr.PresenterType;
+            }
+
+            // ✅ 自动推导：从 BaseUIView<TPresenter> 泛型继承结构中找出
             var baseType = viewType.BaseType;
             while (baseType != null)
             {
@@ -69,7 +79,9 @@ namespace LiteFramework.Module.UI
                 baseType = baseType.BaseType;
             }
 
-            return null;
+            throw new InvalidOperationException(
+            $"无法推导 {viewType.Name} 的 Presenter 类型。\n" +
+            $"请为其添加 [BindPresenter(typeof(XPresenter))] 特性，或继承 BaseUIView<TPresenter>。");
         }
 
         private Action<IUIManager, UIType, Transform> GetOpenDelegate(Type presenterType, Type viewType)

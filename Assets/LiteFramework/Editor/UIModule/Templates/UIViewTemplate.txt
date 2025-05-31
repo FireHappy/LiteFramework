@@ -6,6 +6,7 @@ using TMPro;
 
 namespace {NAMESPACE}
 {
+    [BindPresenter(typeof({UI_NAME}Presenter))]
     public partial class {UI_NAME}View : BaseUIView<{UI_NAME}Presenter>
     {
         protected override void OnBind()

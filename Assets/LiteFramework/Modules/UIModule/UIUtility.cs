@@ -1,3 +1,4 @@
+using System;
 using LiteFramework.Core.MVP;
 using UnityEngine;
 
@@ -25,15 +26,21 @@ namespace LiteFramework.Module.UI
         public static void DestroyUI(Transform uiTransform)
         {
 #if UNITY_EDITOR
-            Object.DestroyImmediate(uiTransform.gameObject);
+            UnityEngine.Object.DestroyImmediate(uiTransform.gameObject);
 #else
-        Object.Destroy(uiTransform.gameObject);
+            UnityEngine.Object.Destroy(uiTransform.gameObject);
 #endif
         }
 
         public static Transform FindUI<T>(Transform parent)
         {
             return parent.Find(typeof(T).Name);
+        }
+
+
+        public static Transform FindUI(Type viewType, Transform parent)
+        {
+            return parent.Find(viewType.Name);
         }
     }
 

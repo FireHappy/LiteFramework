@@ -6,6 +6,7 @@ using TMPro;
 
 namespace LiteFramework.Sample
 {
+    [BindPresenter(typeof(SettingPresenter))]
     public partial class SettingView : BaseUIView<SettingPresenter>
     {
         protected override void OnBind()

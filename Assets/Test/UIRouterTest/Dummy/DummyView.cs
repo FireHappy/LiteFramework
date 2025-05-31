@@ -5,6 +5,7 @@ using TMPro;
 
 namespace LiteFramework.Sample
 {
+    [BindPresenter(typeof(DummyPresenter))]
     public partial class DummyView : BaseUIView<DummyPresenter>
     {
         protected override void OnBind()

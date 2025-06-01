@@ -20,24 +20,24 @@ public class UIRouterTest : MonoBehaviour
         Stopwatch sw = new Stopwatch();
 
         // 测试慢的反射方案
-        sw.Reset();
-        sw.Start();
-        for (int i = 0; i < TestIterations; i++)
-        {
-            routerInvoke.Open<DummyView>();
-        }
-        sw.Stop();
-        UnityEngine.Debug.Log($"Reflection Invoke : {sw.ElapsedMilliseconds} ms");
-
-        // 测试快的表达式树方案
         // sw.Reset();
         // sw.Start();
         // for (int i = 0; i < TestIterations; i++)
         // {
-        //     routerExpress.Open<DummyView>();
+        //     routerInvoke.Open<DummyView>();
         // }
         // sw.Stop();
-        // UnityEngine.Debug.Log($"Expression Tree : {sw.ElapsedMilliseconds} ms");
+        // UnityEngine.Debug.Log($"Reflection Invoke : {sw.ElapsedMilliseconds} ms");
+
+        // 测试快的表达式树方案
+        sw.Reset();
+        sw.Start();
+        for (int i = 0; i < TestIterations; i++)
+        {
+            routerExpress.Open<DummyView>();
+        }
+        sw.Stop();
+        UnityEngine.Debug.Log($"Expression Tree : {sw.ElapsedMilliseconds} ms");
 
         //静态调用
         sw.Reset();

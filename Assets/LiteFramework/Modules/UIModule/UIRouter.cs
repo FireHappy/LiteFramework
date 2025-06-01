@@ -5,6 +5,7 @@ using System.Reflection;
 using UnityEngine;
 using LiteFramework.Core.Module.UI;
 using LiteFramework.Core.MVP;
+using LiteFramework.Generated;
 
 namespace LiteFramework.Module.UI
 {
@@ -46,6 +47,13 @@ namespace LiteFramework.Module.UI
                 return;
             }
 
+            Action<IUIManager, UIType, Transform> del;
+            if (UIRouterMethodMapping.TryGetOpenDelegate(presenterType, typeof(TView), out del))
+            {
+                del(uiManager, type, parent);
+                return;
+            }
+
             var openDel = GetOpenDelegate(presenterType, typeof(TView));
             openDel(uiManager, type, parent);
         }
@@ -68,16 +76,15 @@ namespace LiteFramework.Module.UI
         {
             var viewType = typeof(TView);
 
-            // ✅ 优先读取缓存
-            if (PresenterTypeCache.TryGetValue(viewType, out var cachedType))
-                return cachedType;
-
             // ✅ 优先读取手动注册的映射
             if (ManualViewToPresenterMap.TryGetValue(viewType, out var registeredType))
             {
-                PresenterTypeCache[viewType] = registeredType;
                 return registeredType;
             }
+
+            // ✅ 优先读取缓存
+            if (PresenterTypeCache.TryGetValue(viewType, out var cachedType))
+                return cachedType;
 
             // ✅ 其次读取特性绑定
             var attr = viewType.GetCustomAttribute<BindPresenterAttribute>();
@@ -108,6 +115,7 @@ namespace LiteFramework.Module.UI
 
         private Action<IUIManager, UIType, Transform> GetOpenDelegate(Type presenterType, Type viewType)
         {
+
             var key = (presenterType, viewType);
             if (OpenDelegates.TryGetValue(key, out var dlg))
                 return dlg;
@@ -152,6 +160,12 @@ namespace LiteFramework.Module.UI
             dlg = lambda.Compile();
             CloseDelegates[key] = dlg;
             return dlg;
+        }
+
+
+        public static (Type presenterType, Type viewType) Resolve<TView>()
+        {
+            return (typeof(IPresenter), typeof(IView));
         }
     }
 }

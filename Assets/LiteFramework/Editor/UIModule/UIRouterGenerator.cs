@@ -41,11 +41,6 @@ namespace LiteFramework.EditorTools
             sb.AppendLine("    public static class UIRouterRegister");
             sb.AppendLine("    {");
 
-            // 委托字典字段
-            sb.AppendLine("        private static readonly Dictionary<(Type, Type), Action<IUIManager, UIType, Transform>> OpenDelegates = new();");
-            sb.AppendLine("        private static readonly Dictionary<(Type, Type), Action<IUIManager, UIType, Transform>> CloseDelegates = new();");
-            sb.AppendLine();
-
             // 注册方法，带 RuntimeInitializeOnLoadMethod
             sb.AppendLine("        [RuntimeInitializeOnLoadMethod]");
             sb.AppendLine("        static void Register()");
@@ -66,22 +61,9 @@ namespace LiteFramework.EditorTools
 
                 // 注册代码
                 sb.AppendLine($"            UIRouter.Register<{presenterFull}, {viewFull}>();");
-
-                // 委托字典赋值
-                sb.AppendLine($"            OpenDelegates[(typeof({presenterFull}), typeof({viewFull}))] = (mgr, type, parent) => mgr.OpenUI<{presenterFull}, {viewFull}>(type, parent);");
-                sb.AppendLine($"            CloseDelegates[(typeof({presenterFull}), typeof({viewFull}))] = (mgr, type, parent) => mgr.CloseUI<{presenterFull}, {viewFull}>(type, parent);");
             }
 
             sb.AppendLine("        }");
-
-            // TryGet 方法
-            sb.AppendLine();
-            sb.AppendLine("        public static bool TryGetOpenDelegate(Type presenter, Type view, out Action<IUIManager, UIType, Transform> del)");
-            sb.AppendLine("            => OpenDelegates.TryGetValue((presenter, view), out del);");
-            sb.AppendLine();
-            sb.AppendLine("        public static bool TryGetCloseDelegate(Type presenter, Type view, out Action<IUIManager, UIType, Transform> del)");
-            sb.AppendLine("            => CloseDelegates.TryGetValue((presenter, view), out del);");
-
             sb.AppendLine("    }"); // 类结束
             sb.AppendLine("}"); // 命名空间结束
 

@@ -5,7 +5,6 @@ using System.Reflection;
 using UnityEngine;
 using LiteFramework.Core.Module.UI;
 using LiteFramework.Core.MVP;
-using LiteFramework.Generated;
 
 namespace LiteFramework.Module.UI
 {
@@ -22,15 +21,15 @@ namespace LiteFramework.Module.UI
         }
 
         public static void Register<TPresenter, TView>()
-            where TPresenter : class, IPresenter
-            where TView : class, IView
+            where TPresenter : BaseUIPresenter<TView>
+            where TView : BaseUIView<TPresenter>
         {
             PresenterTypeCache[typeof(TView)] = typeof(TPresenter);
-        }
-
-        public static void RegisterDel<IUIManager, TView>(Transform parent)
-        {
-
+            var key = (typeof(TPresenter), typeof(TView));
+            OpenDelegates[key] = (mgr, type, parent) =>
+                mgr.OpenUI<TPresenter, TView>(type, parent);
+            CloseDelegates[key] = (mgr, type, parent) =>
+                mgr.CloseUI<TPresenter, TView>(type, parent);
         }
 
         public void Open<TView>(UIType type = UIType.Panel, Transform parent = null)
@@ -40,13 +39,6 @@ namespace LiteFramework.Module.UI
             if (presenterType == null)
             {
                 Debug.LogError($"UIRouter.Open -> Failed to resolve Presenter type for view {typeof(TView).Name}");
-                return;
-            }
-
-            Action<IUIManager, UIType, Transform> del;
-            if (UIRouterMethodMapping.TryGetOpenDelegate(presenterType, typeof(TView), out del))
-            {
-                del(uiManager, type, parent);
                 return;
             }
 
@@ -152,10 +144,5 @@ namespace LiteFramework.Module.UI
             return dlg;
         }
 
-
-        public static (Type presenterType, Type viewType) Resolve<TView>()
-        {
-            return (typeof(IPresenter), typeof(IView));
-        }
     }
 }

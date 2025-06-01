@@ -1,6 +1,4 @@
 // 自动生成，请勿手动修改
-using System;
-using System.Collections.Generic;
 using LiteFramework.Module.UI;
 using UnityEngine;
 

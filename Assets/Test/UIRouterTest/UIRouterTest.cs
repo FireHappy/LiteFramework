@@ -11,33 +11,21 @@ public class UIRouterTest : MonoBehaviour
     void Start()
     {
         var manager = new DummyUIManager();
-
-        var routerInvoke = new UIRouterInvoke(manager);     // 使用 MethodInfo.Invoke
-        var routerExpress = new UIRouter(manager);     // 使用 表达式树委托
+        var router = new UIRouter(manager);     // 使用泛型委托缓存，逆天的牛逼方案
 
         UnityEngine.Debug.Log("---- UI Router Performance Test ----");
 
         Stopwatch sw = new Stopwatch();
 
-        // 测试慢的反射方案
-        // sw.Reset();
-        // sw.Start();
-        // for (int i = 0; i < TestIterations; i++)
-        // {
-        //     routerInvoke.Open<DummyView>();
-        // }
-        // sw.Stop();
-        // UnityEngine.Debug.Log($"Reflection Invoke : {sw.ElapsedMilliseconds} ms");
-
-        // 测试快的表达式树方案
+        // 测试路由调用
         sw.Reset();
         sw.Start();
         for (int i = 0; i < TestIterations; i++)
         {
-            routerExpress.Open<DummyView>();
+            router.Open<DummyView>();
         }
         sw.Stop();
-        UnityEngine.Debug.Log($"Expression Tree : {sw.ElapsedMilliseconds} ms");
+        UnityEngine.Debug.Log($"UIRouter Invoke: {sw.ElapsedMilliseconds} ms");
 
         //静态调用
         sw.Reset();

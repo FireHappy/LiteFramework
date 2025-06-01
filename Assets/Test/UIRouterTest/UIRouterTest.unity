@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a592c8088dfcf4490bd56f75d779320e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TestIterations: 100
+  TestIterations: 1000
 --- !u!114 &1982022598
 MonoBehaviour:
   m_ObjectHideFlags: 0

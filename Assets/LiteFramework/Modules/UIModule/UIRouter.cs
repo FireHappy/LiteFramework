@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Reflection;
 using UnityEngine;
 using LiteFramework.Core.Module.UI;
 using LiteFramework.Core.MVP;
-using System.Reflection;
 
 namespace LiteFramework.Module.UI
 {
@@ -12,6 +12,10 @@ namespace LiteFramework.Module.UI
     {
         private readonly IUIManager uiManager;
 
+        // ✅ 手动注册的映射关系
+        private static readonly Dictionary<Type, Type> ManualViewToPresenterMap = new();
+
+        // ✅ 缓存 Presenter 类型（无论从注册、特性还是推导而来）
         private static readonly Dictionary<Type, Type> PresenterTypeCache = new();
 
         private static readonly Dictionary<(Type presenter, Type view), Action<IUIManager, UIType, Transform>> OpenDelegates = new();
@@ -20,6 +24,16 @@ namespace LiteFramework.Module.UI
         public UIRouter(IUIManager uiManager)
         {
             this.uiManager = uiManager;
+        }
+
+        /// <summary>
+        /// ✅ 手动注册 View -> Presenter 映射（优先级最高）
+        /// </summary>
+        public static void Register<TPresenter, TView>()
+            where TPresenter : class, IPresenter
+            where TView : class, IView
+        {
+            ManualViewToPresenterMap[typeof(TView)] = typeof(TPresenter);
         }
 
         public void Open<TView>(UIType type = UIType.Panel, Transform parent = null)
@@ -54,10 +68,18 @@ namespace LiteFramework.Module.UI
         {
             var viewType = typeof(TView);
 
+            // ✅ 优先读取缓存
             if (PresenterTypeCache.TryGetValue(viewType, out var cachedType))
                 return cachedType;
 
-            // ✅ 优先读取特性绑定
+            // ✅ 优先读取手动注册的映射
+            if (ManualViewToPresenterMap.TryGetValue(viewType, out var registeredType))
+            {
+                PresenterTypeCache[viewType] = registeredType;
+                return registeredType;
+            }
+
+            // ✅ 其次读取特性绑定
             var attr = viewType.GetCustomAttribute<BindPresenterAttribute>();
             if (attr != null)
             {
@@ -65,7 +87,7 @@ namespace LiteFramework.Module.UI
                 return attr.PresenterType;
             }
 
-            // ✅ 自动推导：从 BaseUIView<TPresenter> 泛型继承结构中找出
+            // ✅ 最后推导自 BaseUIView<TPresenter>
             var baseType = viewType.BaseType;
             while (baseType != null)
             {
@@ -80,17 +102,15 @@ namespace LiteFramework.Module.UI
             }
 
             throw new InvalidOperationException(
-            $"无法推导 {viewType.Name} 的 Presenter 类型。\n" +
-            $"请为其添加 [BindPresenter(typeof(XPresenter))] 特性，或继承 BaseUIView<TPresenter>。");
+                $"无法推导 {viewType.Name} 的 Presenter 类型。\n" +
+                $"请使用 [BindPresenter(typeof(XPresenter))] 或 BaseUIView<XPresenter> 或手动注册 UIRouter.Register<XPresenter, {viewType.Name}>。");
         }
 
         private Action<IUIManager, UIType, Transform> GetOpenDelegate(Type presenterType, Type viewType)
         {
             var key = (presenterType, viewType);
             if (OpenDelegates.TryGetValue(key, out var dlg))
-            {
                 return dlg;
-            }
 
             var method = typeof(IUIManager).GetMethod("OpenUI");
             if (method == null)
@@ -98,17 +118,14 @@ namespace LiteFramework.Module.UI
 
             var genericMethod = method.MakeGenericMethod(presenterType, viewType);
 
-            // 构建参数表达式
             var paramManager = Expression.Parameter(typeof(IUIManager), "manager");
             var paramType = Expression.Parameter(typeof(UIType), "type");
             var paramParent = Expression.Parameter(typeof(Transform), "parent");
 
-            // manager.OpenUI<Presenter, View>(type, parent)
             var call = Expression.Call(paramManager, genericMethod, paramType, paramParent);
-
             var lambda = Expression.Lambda<Action<IUIManager, UIType, Transform>>(call, paramManager, paramType, paramParent);
-            dlg = lambda.Compile();
 
+            dlg = lambda.Compile();
             OpenDelegates[key] = dlg;
             return dlg;
         }
@@ -117,9 +134,7 @@ namespace LiteFramework.Module.UI
         {
             var key = (presenterType, viewType);
             if (CloseDelegates.TryGetValue(key, out var dlg))
-            {
                 return dlg;
-            }
 
             var method = typeof(IUIManager).GetMethod("CloseUI");
             if (method == null)
@@ -132,10 +147,9 @@ namespace LiteFramework.Module.UI
             var paramParent = Expression.Parameter(typeof(Transform), "parent");
 
             var call = Expression.Call(paramManager, genericMethod, paramType, paramParent);
-
             var lambda = Expression.Lambda<Action<IUIManager, UIType, Transform>>(call, paramManager, paramType, paramParent);
-            dlg = lambda.Compile();
 
+            dlg = lambda.Compile();
             CloseDelegates[key] = dlg;
             return dlg;
         }

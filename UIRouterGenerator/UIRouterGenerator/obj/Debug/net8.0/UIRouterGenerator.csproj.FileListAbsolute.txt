@@ -1,0 +1,13 @@
+/Users/chenlin/projects/UnityProjects/LFramework/UIRouterGenerator/UIRouterGenerator/bin/Debug/net8.0/UIRouterGenerator.deps.json
+/Users/chenlin/projects/UnityProjects/LFramework/UIRouterGenerator/UIRouterGenerator/bin/Debug/net8.0/UIRouterGenerator.dll
+/Users/chenlin/projects/UnityProjects/LFramework/UIRouterGenerator/UIRouterGenerator/bin/Debug/net8.0/UIRouterGenerator.pdb
+/Users/chenlin/projects/UnityProjects/LFramework/UIRouterGenerator/UIRouterGenerator/obj/Debug/net8.0/UIRouterGenerator.csproj.AssemblyReference.cache
+/Users/chenlin/projects/UnityProjects/LFramework/UIRouterGenerator/UIRouterGenerator/obj/Debug/net8.0/UIRouterGenerator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/chenlin/projects/UnityProjects/LFramework/UIRouterGenerator/UIRouterGenerator/obj/Debug/net8.0/UIRouterGenerator.AssemblyInfoInputs.cache
+/Users/chenlin/projects/UnityProjects/LFramework/UIRouterGenerator/UIRouterGenerator/obj/Debug/net8.0/UIRouterGenerator.AssemblyInfo.cs
+/Users/chenlin/projects/UnityProjects/LFramework/UIRouterGenerator/UIRouterGenerator/obj/Debug/net8.0/UIRouterGenerator.csproj.CoreCompileInputs.cache
+/Users/chenlin/projects/UnityProjects/LFramework/UIRouterGenerator/UIRouterGenerator/obj/Debug/net8.0/UIRouterGenerator.sourcelink.json
+/Users/chenlin/projects/UnityProjects/LFramework/UIRouterGenerator/UIRouterGenerator/obj/Debug/net8.0/UIRouterGenerator.dll
+/Users/chenlin/projects/UnityProjects/LFramework/UIRouterGenerator/UIRouterGenerator/obj/Debug/net8.0/refint/UIRouterGenerator.dll
+/Users/chenlin/projects/UnityProjects/LFramework/UIRouterGenerator/UIRouterGenerator/obj/Debug/net8.0/UIRouterGenerator.pdb
+/Users/chenlin/projects/UnityProjects/LFramework/UIRouterGenerator/UIRouterGenerator/obj/Debug/net8.0/ref/UIRouterGenerator.dll

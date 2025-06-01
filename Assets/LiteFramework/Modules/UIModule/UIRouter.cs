@@ -12,29 +12,25 @@ namespace LiteFramework.Module.UI
     public class UIRouter
     {
         private readonly IUIManager uiManager;
-
-        // ✅ 手动注册的映射关系
-        private static readonly Dictionary<Type, Type> ManualViewToPresenterMap = new();
-
-        // ✅ 缓存 Presenter 类型（无论从注册、特性还是推导而来）
         private static readonly Dictionary<Type, Type> PresenterTypeCache = new();
-
-        private static readonly Dictionary<(Type presenter, Type view), Action<IUIManager, UIType, Transform>> OpenDelegates = new();
-        private static readonly Dictionary<(Type presenter, Type view), Action<IUIManager, UIType, Transform>> CloseDelegates = new();
+        private static readonly Dictionary<(Type, Type), Action<IUIManager, UIType, Transform>> OpenDelegates = new();
+        private static readonly Dictionary<(Type, Type), Action<IUIManager, UIType, Transform>> CloseDelegates = new();
 
         public UIRouter(IUIManager uiManager)
         {
             this.uiManager = uiManager;
         }
 
-        /// <summary>
-        /// ✅ 手动注册 View -> Presenter 映射（优先级最高）
-        /// </summary>
         public static void Register<TPresenter, TView>()
             where TPresenter : class, IPresenter
             where TView : class, IView
         {
-            ManualViewToPresenterMap[typeof(TView)] = typeof(TPresenter);
+            PresenterTypeCache[typeof(TView)] = typeof(TPresenter);
+        }
+
+        public static void RegisterDel<IUIManager, TView>(Transform parent)
+        {
+
         }
 
         public void Open<TView>(UIType type = UIType.Panel, Transform parent = null)
@@ -76,17 +72,11 @@ namespace LiteFramework.Module.UI
         {
             var viewType = typeof(TView);
 
-            // ✅ 优先读取手动注册的映射
-            if (ManualViewToPresenterMap.TryGetValue(viewType, out var registeredType))
-            {
-                return registeredType;
-            }
-
-            // ✅ 优先读取缓存
+            // 优先读取缓存
             if (PresenterTypeCache.TryGetValue(viewType, out var cachedType))
                 return cachedType;
 
-            // ✅ 其次读取特性绑定
+            // 其次读取特性绑定
             var attr = viewType.GetCustomAttribute<BindPresenterAttribute>();
             if (attr != null)
             {
@@ -94,7 +84,7 @@ namespace LiteFramework.Module.UI
                 return attr.PresenterType;
             }
 
-            // ✅ 最后推导自 BaseUIView<TPresenter>
+            // 最后推导自 BaseUIView<TPresenter>
             var baseType = viewType.BaseType;
             while (baseType != null)
             {

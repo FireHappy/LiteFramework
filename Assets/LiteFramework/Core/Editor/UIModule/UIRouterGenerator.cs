@@ -13,8 +13,7 @@ namespace LiteFramework.EditorTools
 {
     public static class UIRouterGeneratorEditor
     {
-        public const string OutputPath = "Assets/Scripts/Generated/UIRouterMappings.cs";
-        public static void GenerateRouterMappings()
+        public static void GenerateRouterRegister(string outputPath)
         {
             var assemblies = AppDomain.CurrentDomain.GetAssemblies()
                 .Where(a => !a.FullName.StartsWith("Unity") && !a.FullName.StartsWith("System"));
@@ -31,9 +30,9 @@ namespace LiteFramework.EditorTools
             sb.AppendLine();
             sb.AppendLine("namespace LiteFramework.Generated");
             sb.AppendLine("{");
-            sb.AppendLine("    public static class UIRouterMappings");
+            sb.AppendLine("    public static class UIRouterRegister");
             sb.AppendLine("    {");
-            sb.AppendLine("        static UIRouterMappings()");
+            sb.AppendLine("        static Register()");
             sb.AppendLine("        {");
 
             foreach (var view in viewTypes)
@@ -52,10 +51,10 @@ namespace LiteFramework.EditorTools
             sb.AppendLine("    }");
             sb.AppendLine("}");
 
-            Directory.CreateDirectory(Path.GetDirectoryName(OutputPath)!);
-            File.WriteAllText(OutputPath, sb.ToString());
+            Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
+            File.WriteAllText(outputPath, sb.ToString());
             AssetDatabase.Refresh();
-            Debug.Log($"✅ UIRouterMappings.cs 生成完毕，共生成 {viewTypes.Count} 条映射。");
+            Debug.Log($"✅ UIRouterRegister.cs 生成完毕，共生成 {viewTypes.Count} 条映射。");
         }
 
         private static Type GetPresenterFromView(Type viewType)

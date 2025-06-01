@@ -77,6 +77,8 @@ public static class UIPrefabCodeGenerator
         }
 
         AssetDatabase.Refresh();
+        UIRouterGeneratorEditor.GenerateRouterRegister(config.outputRootPath);
+        AssetDatabase.Refresh();
         EditorUtility.DisplayDialog("Generate success!!!", $"Generate {uiName}  MVP code success.", "Sure");
     }
 

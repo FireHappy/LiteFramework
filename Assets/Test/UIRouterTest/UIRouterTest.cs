@@ -35,6 +35,6 @@ public class UIRouterTest : MonoBehaviour
             manager.OpenUI<DummyPresenter, DummyView>();
         }
         sw.Stop();
-        UnityEngine.Debug.Log($" Static Invoke : {sw.ElapsedMilliseconds} ms");
+        UnityEngine.Debug.Log($"Static Invoke : {sw.ElapsedMilliseconds} ms");
     }
 }

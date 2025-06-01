@@ -20,6 +20,7 @@ namespace LiteFramework.Module.UI
             this.uiManager = uiManager;
         }
 
+
         public static void Register<TPresenter, TView>()
             where TPresenter : BaseUIPresenter<TView>
             where TView : BaseUIView<TPresenter>
@@ -57,6 +58,20 @@ namespace LiteFramework.Module.UI
                 return;
             }
             action(uiManager, type, parent);
+        }
+
+        public void OpenUI<TPresenter, TView>(UIType type = UIType.Panel, Transform parent = null)
+            where TPresenter : BaseUIPresenter<TView>
+            where TView : BaseUIView<TPresenter>
+        {
+            uiManager.OpenUI<TPresenter, TView>(type, parent);
+        }
+
+        public void CloseUI<TPresenter, TView>(UIType type = UIType.Panel, Transform parent = null)
+            where TPresenter : BaseUIPresenter<TView>
+            where TView : BaseUIView<TPresenter>
+        {
+            uiManager.CloseUI<TPresenter, TView>(type, parent);
         }
     }
 }

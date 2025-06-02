@@ -12,7 +12,6 @@ namespace LiteFramework.EditorTools
     {
         private SerializedProperty mappings;
         private SerializedProperty outputRootPathProp;
-        private SerializedProperty templateRootPathProp;
         private SerializedProperty nameSpaceProp;
 
         private List<Type> availableTypes;
@@ -26,7 +25,6 @@ namespace LiteFramework.EditorTools
         {
             mappings = serializedObject.FindProperty("mappings");
             outputRootPathProp = serializedObject.FindProperty("outputRootPath");
-            templateRootPathProp = serializedObject.FindProperty("templateRootPath");
             nameSpaceProp = serializedObject.FindProperty("nameSpace");
 
             availableTypes = AppDomain.CurrentDomain.GetAssemblies()
@@ -47,9 +45,6 @@ namespace LiteFramework.EditorTools
 
             // 输出路径选择
             DrawFolderPathField("输出路径", outputRootPathProp);
-
-            // 模板路径选择
-            DrawFolderPathField("模板路径", templateRootPathProp);
 
             //绘制命名空间
             DrawField("命名空间", nameSpaceProp);

@@ -17,6 +17,11 @@ namespace LiteFramework.EditorTools
 
         private List<Type> availableTypes;
 
+        // 存储每个按钮的位置
+        private Dictionary<int, Rect> buttonRects = new Dictionary<int, Rect>();
+        // 记录当前被点击的按钮索引
+        private int clickedButtonIndex = -1;
+
         private void OnEnable()
         {
             mappings = serializedObject.FindProperty("mappings");
@@ -29,6 +34,9 @@ namespace LiteFramework.EditorTools
                 .Where(t => typeof(Component).IsAssignableFrom(t) && !t.IsAbstract && t.IsPublic)
                 .OrderBy(t => t.FullName)
                 .ToList();
+
+            buttonRects.Clear();
+            clickedButtonIndex = -1;
         }
 
         public override void OnInspectorGUI()
@@ -62,13 +70,49 @@ namespace LiteFramework.EditorTools
                 // 显示当前类型名（简短）
                 string currentTypeShort = "(未设置)";
                 var currentType = Type.GetType(typeNameProp.stringValue);
-                if (currentType != null) currentTypeShort = currentType.FullName;
+                if (currentType != null) currentTypeShort = currentType.Name; // 使用短名称显示
 
+                // 绘制按钮
                 if (GUILayout.Button(currentTypeShort, EditorStyles.popup))
                 {
-                    var buttonRect = GUILayoutUtility.GetLastRect();
-                    var screenPos = GUIUtility.GUIToScreenPoint(new Vector2(buttonRect.x, buttonRect.y));
-                    var dropdownRect = new Rect(screenPos.x, screenPos.y + buttonRect.height, buttonRect.width, 300); // 下方显示
+                    clickedButtonIndex = i;
+                }
+
+                // 在绘制后立即获取按钮位置（在事件处理之前）
+                Rect buttonRect = GUILayoutUtility.GetLastRect();
+                buttonRects[i] = buttonRect;
+
+                if (GUILayout.Button("X", GUILayout.Width(25)))
+                {
+                    mappings.DeleteArrayElementAtIndex(i);
+                    // 删除后需要重置索引
+                    clickedButtonIndex = -1;
+                    buttonRects.Clear();
+                    break; // 跳出循环避免索引错误
+                }
+
+                EditorGUILayout.EndHorizontal();
+            }
+
+            // 在布局完成后处理点击事件
+            if (clickedButtonIndex >= 0 && Event.current.type == EventType.Repaint)
+            {
+                if (buttonRects.TryGetValue(clickedButtonIndex, out Rect buttonRect))
+                {
+                    var element = mappings.GetArrayElementAtIndex(clickedButtonIndex);
+                    var typeNameProp = element.FindPropertyRelative("componentType").FindPropertyRelative("typeName");
+
+                    // 转换为屏幕坐标
+                    Rect screenRect = GUIUtility.GUIToScreenRect(buttonRect);
+
+                    // 计算弹窗位置（按钮正下方）
+                    float maxHeight = Mathf.Min(300, Screen.height - screenRect.yMax - 20);
+                    var dropdownRect = new Rect(
+                        screenRect.x,
+                        screenRect.yMax,
+                        screenRect.width,
+                        maxHeight
+                    );
 
                     SearchableTypePopup.Show(dropdownRect, availableTypes, typeNameProp.stringValue, selected =>
                     {
@@ -77,17 +121,15 @@ namespace LiteFramework.EditorTools
                     });
                 }
 
-                if (GUILayout.Button("X", GUILayout.Width(25)))
-                {
-                    mappings.DeleteArrayElementAtIndex(i);
-                }
-
-                EditorGUILayout.EndHorizontal();
+                clickedButtonIndex = -1; // 重置点击状态
             }
 
             if (GUILayout.Button("+ 添加新映射"))
             {
                 mappings.arraySize++;
+                // 添加新元素后重置状态
+                clickedButtonIndex = -1;
+                buttonRects.Clear();
             }
 
             serializedObject.ApplyModifiedProperties();

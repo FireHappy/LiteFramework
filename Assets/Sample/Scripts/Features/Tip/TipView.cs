@@ -3,10 +3,10 @@ using UnityEngine.UI;
 using LiteFramework.Core.Module.UI;
 using TMPro;
 
-namespace {NAMESPACE}
+namespace LiteFramework.Sample
 {
-    [BindPresenter(typeof({UI_NAME}Presenter))]
-    public partial class {UI_NAME}View : BaseUIView<{UI_NAME}Presenter>
+    [BindPresenter(typeof(TipPresenter))]
+    public partial class TipView : BaseUIView<TipPresenter>
     {
         protected override void OnBind()
         {

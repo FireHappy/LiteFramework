@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 534
+    x: 314
     y: 66
-    width: 670
+    width: 803
     height: 573
   m_ShowMode: 0
   m_Title: NuGet For Unity
-  m_RootView: {fileID: 7}
+  m_RootView: {fileID: 6}
   m_MinSize: {x: 100, y: 121}
   m_MaxSize: {x: 4000, y: 4021}
   m_Maximized: 0
@@ -38,13 +38,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 66
+    x: 1597
+    y: 88
     width: 1440
     height: 792
   m_ShowMode: 0
   m_Title: Package Manager
-  m_RootView: {fileID: 9}
+  m_RootView: {fileID: 8}
   m_MinSize: {x: 800, y: 271}
   m_MaxSize: {x: 4000, y: 4021}
   m_Maximized: 0
@@ -63,40 +63,16 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 138
-    y: 92
+    y: 64
     width: 1268
     height: 781
   m_ShowMode: 0
   m_Title: Project Settings
-  m_RootView: {fileID: 11}
+  m_RootView: {fileID: 10}
   m_MinSize: {x: 310, y: 221}
   m_MaxSize: {x: 4000, y: 4021}
   m_Maximized: 0
 --- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PixelRect:
-    serializedVersion: 2
-    x: 570
-    y: 109
-    width: 786
-    height: 726
-  m_ShowMode: 0
-  m_Title: Build Settings
-  m_RootView: {fileID: 13}
-  m_MinSize: {x: 640, y: 601}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_Maximized: 0
---- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,16 +87,16 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 66
-    width: 1512
-    height: 861
+    y: 53
+    width: 1440
+    height: 792
   m_ShowMode: 4
-  m_Title: Console
-  m_RootView: {fileID: 19}
+  m_Title: Hierarchy
+  m_RootView: {fileID: 11}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
---- !u!114 &6
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,16 +113,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 670
+    width: 803
     height: 573
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 27}
-  m_Panes:
-  - {fileID: 27}
+  m_MinSize: {x: 100, y: 121}
+  m_MaxSize: {x: 4000, y: 4021}
+  m_ActualView: {fileID: 0}
+  m_Panes: []
   m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &7
+  m_LastSelected: -1
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,18 +134,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 6}
+  - {fileID: 5}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 670
+    width: 803
     height: 573
   m_MinSize: {x: 100, y: 121}
   m_MaxSize: {x: 4000, y: 4021}
   vertical: 0
-  controlID: 8204
---- !u!114 &8
+  controlID: 17
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,12 +166,12 @@ MonoBehaviour:
     height: 792
   m_MinSize: {x: 800, y: 250}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 28}
+  m_ActualView: {fileID: 24}
   m_Panes:
-  - {fileID: 28}
+  - {fileID: 24}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &9
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 8}
+  - {fileID: 7}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -219,8 +194,8 @@ MonoBehaviour:
   m_MinSize: {x: 800, y: 271}
   m_MaxSize: {x: 4000, y: 4021}
   vertical: 0
-  controlID: 7423
---- !u!114 &10
+  controlID: 125
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -239,14 +214,14 @@ MonoBehaviour:
     y: 0
     width: 1268
     height: 781
-  m_MinSize: {x: 310, y: 221}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_ActualView: {fileID: 29}
+  m_MinSize: {x: 310, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 25}
   m_Panes:
-  - {fileID: 29}
+  - {fileID: 25}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &11
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 10}
+  - {fileID: 9}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -269,187 +244,8 @@ MonoBehaviour:
   m_MinSize: {x: 310, y: 221}
   m_MaxSize: {x: 4000, y: 4021}
   vertical: 0
-  controlID: 6812
---- !u!114 &12
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: BuildPlayerWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 786
-    height: 726
-  m_MinSize: {x: 640, y: 580}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 30}
-  m_Panes:
-  - {fileID: 30}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &13
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 12}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 786
-    height: 726
-  m_MinSize: {x: 640, y: 601}
-  m_MaxSize: {x: 4000, y: 4021}
-  vertical: 0
-  controlID: 6733
---- !u!114 &14
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 695
-    y: 0
-    width: 153
-    height: 375
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 36}
-  m_Panes:
-  - {fileID: 36}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &15
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 16}
-  - {fileID: 14}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 848
-    height: 375
-  m_MinSize: {x: 200, y: 50}
-  m_MaxSize: {x: 16192, y: 8096}
-  vertical: 0
-  controlID: 130
---- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 695
-    height: 375
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 35}
-  m_Panes:
-  - {fileID: 35}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 375
-    width: 848
-    height: 436
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 32}
-  m_Panes:
-  - {fileID: 32}
-  - {fileID: 31}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &18
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 15}
-  - {fileID: 17}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 848
-    height: 811
-  m_MinSize: {x: 200, y: 100}
-  m_MaxSize: {x: 16192, y: 16192}
-  vertical: 1
-  controlID: 129
---- !u!114 &19
+  controlID: 132
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -462,22 +258,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 20}
-  - {fileID: 21}
-  - {fileID: 22}
+  - {fileID: 12}
+  - {fileID: 14}
+  - {fileID: 13}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1512
-    height: 861
+    width: 1440
+    height: 792
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &20
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -494,38 +290,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1512
+    width: 1440
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &21
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 18}
-  - {fileID: 23}
-  - {fileID: 24}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 30
-    width: 1512
-    height: 811
-  m_MinSize: {x: 400, y: 100}
-  m_MaxSize: {x: 32384, y: 16192}
-  vertical: 0
-  controlID: 128
---- !u!114 &22
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -541,12 +311,12 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 841
-    width: 1512
+    y: 772
+    width: 1440
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &23
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -559,97 +329,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 25}
-  - {fileID: 26}
-  m_Position:
-    serializedVersion: 2
-    x: 848
-    y: 0
-    width: 407
-    height: 811
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 8096, y: 16192}
-  vertical: 1
-  controlID: 220
---- !u!114 &24
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1255
-    y: 0
-    width: 257
-    height: 811
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 33}
-  m_Panes:
-  - {fileID: 33}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &25
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
+  - {fileID: 15}
+  - {fileID: 20}
+  - {fileID: 23}
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 407
-    height: 190
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 37}
-  m_Panes:
-  - {fileID: 37}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &26
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 190
-    width: 407
-    height: 621
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 34}
-  m_Panes:
-  - {fileID: 34}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &27
+    y: 30
+    width: 1440
+    height: 742
+  m_MinSize: {x: 400, y: 100}
+  m_MaxSize: {x: 32384, y: 16192}
+  vertical: 0
+  controlID: 48506
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -658,2903 +351,229 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 38775846, guid: 8dc1be91775c4bb469f6b74cef450eaa, type: 3}
-  m_Name: NuGetForUnity
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: NuGet For Unity
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
+  m_Children:
+  - {fileID: 16}
+  - {fileID: 19}
+  m_Position:
     serializedVersion: 2
-    x: 534
-    y: 66
-    width: 670
-    height: 552
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  defaultIcon: {fileID: 2800000, guid: eec19781926cd2248b7c9abfde8db555, type: 3}
-  hasRefreshed: 1
-  numberToSkip: 0
-  serializableAvailablePackages:
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.CSharp
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 1
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.csharp/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.8.2
-      - <FullVersion>k__BackingField: 2.8.0
-      - <FullVersion>k__BackingField: 2.7.0
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 2.4.0
-      - <FullVersion>k__BackingField: 2.3.2
-      - <FullVersion>k__BackingField: 2.3.1
-      - <FullVersion>k__BackingField: 2.3.0
-      - <FullVersion>k__BackingField: 2.2.0
-      - <FullVersion>k__BackingField: 2.1.0
-      - <FullVersion>k__BackingField: 2.0.0
-      - <FullVersion>k__BackingField: 1.3.2
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.2
-      - <FullVersion>k__BackingField: 1.2.1
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.1
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.1
-      - <FullVersion>k__BackingField: 1.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: ".NET Compiler Platform (\"Roslyn\") support
-        for C#, Microsoft.CodeAnalysis.CSharp.dll.\n    \n      More details at https://aka.ms/roslyn-packages\n     
-        This package was built from the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 1047765530
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.CSharp
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.CSharp.Workspaces
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.csharp.workspaces/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.8.2
-      - <FullVersion>k__BackingField: 2.8.0
-      - <FullVersion>k__BackingField: 2.7.0
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 2.4.0
-      - <FullVersion>k__BackingField: 2.3.2
-      - <FullVersion>k__BackingField: 2.3.1
-      - <FullVersion>k__BackingField: 2.3.0
-      - <FullVersion>k__BackingField: 2.2.0
-      - <FullVersion>k__BackingField: 2.1.0
-      - <FullVersion>k__BackingField: 2.0.0
-      - <FullVersion>k__BackingField: 1.3.2
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.2
-      - <FullVersion>k__BackingField: 1.2.1
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.1
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.1
-      - <FullVersion>k__BackingField: 1.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: ".NET Compiler Platform (\"Roslyn\") support
-        for analyzing C# projects and solutions.\n    \n      More details at https://aka.ms/roslyn-packages\n     
-        This package was built from the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 423054957
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp.Workspaces/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.CSharp.Workspaces
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.Analyzers
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.analyzers/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.3.4
-      - <FullVersion>k__BackingField: 3.3.3
-      - <FullVersion>k__BackingField: 3.3.2
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.3.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.9.8
-      - <FullVersion>k__BackingField: 2.9.7
-      - <FullVersion>k__BackingField: 2.9.6
-      - <FullVersion>k__BackingField: 2.9.5
-      - <FullVersion>k__BackingField: 2.9.4
-      - <FullVersion>k__BackingField: 2.9.3
-      - <FullVersion>k__BackingField: 2.9.2
-      - <FullVersion>k__BackingField: 2.9.1
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.6.3
-      - <FullVersion>k__BackingField: 2.6.2
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: Analyzers for consumers of Microsoft.CodeAnalysis
-        NuGet package, i.e. extensions and applications built on top of .NET Compiler
-        Platform (Roslyn). This package is included as a development dependency of
-        Microsoft.CodeAnalysis NuGet package and does not need to be installed separately
-        if you are referencing Microsoft.CodeAnalysis NuGet package.
-      <TotalDownloads>k__BackingField: 995720210
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.Analyzers/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.Analyzers
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.Common
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.common/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.8.2
-      - <FullVersion>k__BackingField: 2.8.0
-      - <FullVersion>k__BackingField: 2.7.0
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 2.4.0
-      - <FullVersion>k__BackingField: 2.3.2
-      - <FullVersion>k__BackingField: 2.3.1
-      - <FullVersion>k__BackingField: 2.3.0
-      - <FullVersion>k__BackingField: 2.2.0
-      - <FullVersion>k__BackingField: 2.1.0
-      - <FullVersion>k__BackingField: 2.0.0
-      - <FullVersion>k__BackingField: 1.3.2
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.2
-      - <FullVersion>k__BackingField: 1.2.1
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.1
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.1
-      - <FullVersion>k__BackingField: 1.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: "A shared package used by the Microsoft .NET
-        Compiler Platform (\"Roslyn\").\n      Do not install this package manually,
-        it will be added as a prerequisite by other packages that require it.\n   
-        \n      More details at https://aka.ms/roslyn-packages\n      This package
-        was built from the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 1138078044
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.Common/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.Common
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.CSharp.Scripting
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.csharp.scripting/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.8.2
-      - <FullVersion>k__BackingField: 2.8.0
-      - <FullVersion>k__BackingField: 2.7.0
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 2.4.0
-      - <FullVersion>k__BackingField: 2.3.2
-      - <FullVersion>k__BackingField: 2.3.1
-      - <FullVersion>k__BackingField: 2.3.0
-      - <FullVersion>k__BackingField: 2.2.0
-      - <FullVersion>k__BackingField: 2.1.0
-      - <FullVersion>k__BackingField: 2.0.0
-      - <FullVersion>k__BackingField: 1.3.2
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.2
-      - <FullVersion>k__BackingField: 1.2.1
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.1
-      - <FullVersion>k__BackingField: 1.1.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: "Microsoft .NET Compiler Platform (\"Roslyn\")
-        CSharp scripting package.\n    \n      More details at https://aka.ms/roslyn-packages\n     
-        This package was built from the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 81783516
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp.Scripting/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.CSharp.Scripting
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.CSharp.Features
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.csharp.features/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.8.2
-      - <FullVersion>k__BackingField: 2.8.0
-      - <FullVersion>k__BackingField: 2.7.0
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 2.4.0
-      - <FullVersion>k__BackingField: 2.3.2
-      - <FullVersion>k__BackingField: 2.3.1
-      - <FullVersion>k__BackingField: 2.3.0
-      - <FullVersion>k__BackingField: 2.2.0
-      - <FullVersion>k__BackingField: 2.1.0
-      - <FullVersion>k__BackingField: 2.0.0
-      - <FullVersion>k__BackingField: 1.3.2
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.2
-      - <FullVersion>k__BackingField: 1.2.1
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.1
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: ".NET Compiler Platform (\"Roslyn\") support
-        for creating C# editing experiences.\n    \n      More details at https://aka.ms/roslyn-packages\n     
-        This package was built from the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 74003215
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp.Features/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.CSharp.Features
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.Workspaces.Common
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.workspaces.common/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.8.2
-      - <FullVersion>k__BackingField: 2.8.0
-      - <FullVersion>k__BackingField: 2.7.0
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 2.4.0
-      - <FullVersion>k__BackingField: 2.3.2
-      - <FullVersion>k__BackingField: 2.3.1
-      - <FullVersion>k__BackingField: 2.3.0
-      - <FullVersion>k__BackingField: 2.2.0
-      - <FullVersion>k__BackingField: 2.1.0
-      - <FullVersion>k__BackingField: 2.0.0
-      - <FullVersion>k__BackingField: 1.3.2
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.2
-      - <FullVersion>k__BackingField: 1.2.1
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.1
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.1
-      - <FullVersion>k__BackingField: 1.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: "A shared package used by the .NET Compiler Platform
-        (\"Roslyn\") including support for analyzing projects and solutions.\n     
-        Do not install this package manually, it will be added as a prerequisite
-        by other packages that require it.\n    \n      More details at https://aka.ms/roslyn-packages\n     
-        This package was built from the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 433217359
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.Workspaces.Common/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.Workspaces.Common
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.VisualBasic
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.visualbasic/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.8.2
-      - <FullVersion>k__BackingField: 2.8.0
-      - <FullVersion>k__BackingField: 2.7.0
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 2.4.0
-      - <FullVersion>k__BackingField: 2.3.2
-      - <FullVersion>k__BackingField: 2.3.1
-      - <FullVersion>k__BackingField: 2.3.0
-      - <FullVersion>k__BackingField: 2.2.0
-      - <FullVersion>k__BackingField: 2.1.0
-      - <FullVersion>k__BackingField: 2.0.0
-      - <FullVersion>k__BackingField: 1.3.2
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.2
-      - <FullVersion>k__BackingField: 1.2.1
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.1
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.1
-      - <FullVersion>k__BackingField: 1.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: ".NET Compiler Platform (\"Roslyn\") support
-        for Visual Basic, Microsoft.CodeAnalysis.VisualBasic.dll.\n    \n      More
-        details at https://aka.ms/roslyn-packages\n      This package was built from
-        the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 251197893
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.VisualBasic/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.VisualBasic
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.Scripting.Common
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.scripting.common/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.8.2
-      - <FullVersion>k__BackingField: 2.8.0
-      - <FullVersion>k__BackingField: 2.7.0
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 2.4.0
-      - <FullVersion>k__BackingField: 2.3.2
-      - <FullVersion>k__BackingField: 2.3.1
-      - <FullVersion>k__BackingField: 2.3.0
-      - <FullVersion>k__BackingField: 2.2.0
-      - <FullVersion>k__BackingField: 2.1.0
-      - <FullVersion>k__BackingField: 2.0.0
-      - <FullVersion>k__BackingField: 1.3.2
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.2
-      - <FullVersion>k__BackingField: 1.2.1
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.1
-      - <FullVersion>k__BackingField: 1.1.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: "Microsoft .NET Compiler Platform (\"Roslyn\")
-        shared scripting package.\n      Do not install this package manually, it
-        will be added as a prerequisite by other packages that require it.\n    \n     
-        More details at https://aka.ms/roslyn-packages\n      This package was built
-        from the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 113596823
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.Scripting.Common/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.Scripting.Common
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.Features
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.features/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.8.2
-      - <FullVersion>k__BackingField: 2.8.0
-      - <FullVersion>k__BackingField: 2.7.0
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 2.4.0
-      - <FullVersion>k__BackingField: 2.3.2
-      - <FullVersion>k__BackingField: 2.3.1
-      - <FullVersion>k__BackingField: 2.3.0
-      - <FullVersion>k__BackingField: 2.2.0
-      - <FullVersion>k__BackingField: 2.1.0
-      - <FullVersion>k__BackingField: 2.0.0
-      - <FullVersion>k__BackingField: 1.3.2
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.2
-      - <FullVersion>k__BackingField: 1.2.1
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.1
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.1
-      - <FullVersion>k__BackingField: 1.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: ".NET Compiler Platform (\"Roslyn\") support
-        for creating editing experiences.\n    \n      More details at https://aka.ms/roslyn-packages\n     
-        This package was built from the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 75396271
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.Features/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.Features
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.8.2
-      - <FullVersion>k__BackingField: 2.8.0
-      - <FullVersion>k__BackingField: 2.7.0
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 2.4.0
-      - <FullVersion>k__BackingField: 2.3.2
-      - <FullVersion>k__BackingField: 2.3.1
-      - <FullVersion>k__BackingField: 2.3.0
-      - <FullVersion>k__BackingField: 2.2.0
-      - <FullVersion>k__BackingField: 2.1.0
-      - <FullVersion>k__BackingField: 2.0.0
-      - <FullVersion>k__BackingField: 1.3.2
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.2
-      - <FullVersion>k__BackingField: 1.2.1
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.1
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.1
-      - <FullVersion>k__BackingField: 1.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: ".NET Compiler Platform (\"Roslyn\").\n\n     
-        This is the all-in-one package (a superset of all assemblies). You can install
-        any of these sub-packages if you only want part of the functionality:\n     
-        - \"Microsoft.CodeAnalysis.CSharp.Workspaces\" (C# compiler + services)\n     
-        - \"Microsoft.CodeAnalysis.VisualBasic.Workspaces\" (VB compiler + services)\n     
-        - \"Microsoft.CodeAnalysis.Compilers\" (both compilers)\n      - \"Microsoft.CodeAnalysis.CSharp\"
-        (only the C# compiler)\n      - \"Microsoft.CodeAnalysis.VisualBasic (only
-        the VB compiler)\n    \n      More details at https://aka.ms/roslyn-packages\n     
-        This package was built from the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 63726170
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.VisualBasic.Workspaces
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.visualbasic.workspaces/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.8.2
-      - <FullVersion>k__BackingField: 2.8.0
-      - <FullVersion>k__BackingField: 2.7.0
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 2.4.0
-      - <FullVersion>k__BackingField: 2.3.2
-      - <FullVersion>k__BackingField: 2.3.1
-      - <FullVersion>k__BackingField: 2.3.0
-      - <FullVersion>k__BackingField: 2.2.0
-      - <FullVersion>k__BackingField: 2.1.0
-      - <FullVersion>k__BackingField: 2.0.0
-      - <FullVersion>k__BackingField: 1.3.2
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.2
-      - <FullVersion>k__BackingField: 1.2.1
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.1
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.1
-      - <FullVersion>k__BackingField: 1.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: ".NET Compiler Platform (\"Roslyn\") support
-        for analyzing Visual Basic projects and solutions.\n    \n      More details
-        at https://aka.ms/roslyn-packages\n      This package was built from the
-        source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 106404737
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.VisualBasic.Workspaces/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.VisualBasic.Workspaces
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.AnalyzerUtilities
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.analyzerutilities/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 3.3.4
-      - <FullVersion>k__BackingField: 3.3.3
-      - <FullVersion>k__BackingField: 3.3.2
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.3.0
-      - <FullVersion>k__BackingField: 3.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: "Analyzer utilities for various analyses, including
-        Dataflow analysis based on ControlFlowGraph API in Microsoft.CodeAnalysis.\n     
-        More details at https://aka.ms/roslyn-packages\n      This package was built
-        from the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 72080312
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.AnalyzerUtilities/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.AnalyzerUtilities
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.Workspaces.MSBuild
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.workspaces.msbuild/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: ".NET Compiler Platform (\"Roslyn\") support
-        for analyzing MSBuild projects and solutions. This should be used with at
-        least one\n      of the following packages to add the appropriate language
-        support:\n      - Microsoft.CodeAnalysis.CSharp.Workspaces\n      - Microsoft.CodeAnalysis.VisualBasic.Workspaces\n   
-        \n      More details at https://aka.ms/roslyn-packages\n      This package
-        was built from the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 65919119
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.Workspaces.MSBuild/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.Workspaces.MSBuild
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.FxCopAnalyzers
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 3.3.2
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: 
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 3.3.2
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.3.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.9.12
-      - <FullVersion>k__BackingField: 2.9.11
-      - <FullVersion>k__BackingField: 2.9.10
-      - <FullVersion>k__BackingField: 2.9.9
-      - <FullVersion>k__BackingField: 2.9.8
-      - <FullVersion>k__BackingField: 2.9.7
-      - <FullVersion>k__BackingField: 2.9.6
-      - <FullVersion>k__BackingField: 2.9.5
-      - <FullVersion>k__BackingField: 2.9.4
-      - <FullVersion>k__BackingField: 2.9.3
-      - <FullVersion>k__BackingField: 2.9.2
-      - <FullVersion>k__BackingField: 2.9.1
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.6.4
-      - <FullVersion>k__BackingField: 2.6.3
-      - <FullVersion>k__BackingField: 2.6.2
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.1
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: Microsoft recommended code quality rules and
-        .NET API usage rules, including the most important FxCop rules, implemented
-        as analyzers using the .NET Compiler Platform (Roslyn). These analyzers check
-        your code for security, performance, and design issues, among others. The
-        documentation for FxCop analyzers can be found at https://docs.microsoft.com/visualstudio/code-quality/install-fxcop-analyzers
-      <TotalDownloads>k__BackingField: 65238409
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/3.3.2/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn-analyzers
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.FxCopAnalyzers
-      <DownloadUrl>k__BackingField: 
-  serializableToInstallPackages: []
-  serializableUpdatePackages:
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.Analyzers
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.analyzers/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.3.4
-      - <FullVersion>k__BackingField: 3.3.3
-      - <FullVersion>k__BackingField: 3.3.2
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.3.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.9.8
-      - <FullVersion>k__BackingField: 2.9.7
-      - <FullVersion>k__BackingField: 2.9.6
-      - <FullVersion>k__BackingField: 2.9.5
-      - <FullVersion>k__BackingField: 2.9.4
-      - <FullVersion>k__BackingField: 2.9.3
-      - <FullVersion>k__BackingField: 2.9.2
-      - <FullVersion>k__BackingField: 2.9.1
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.6.3
-      - <FullVersion>k__BackingField: 2.6.2
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: Analyzers for consumers of Microsoft.CodeAnalysis
-        NuGet package, i.e. extensions and applications built on top of .NET Compiler
-        Platform (Roslyn). This package is included as a development dependency of
-        Microsoft.CodeAnalysis NuGet package and does not need to be installed separately
-        if you are referencing Microsoft.CodeAnalysis NuGet package.
-      <TotalDownloads>k__BackingField: 995720210
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.Analyzers/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.Analyzers
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.Common
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.common/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.8.2
-      - <FullVersion>k__BackingField: 2.8.0
-      - <FullVersion>k__BackingField: 2.7.0
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 2.4.0
-      - <FullVersion>k__BackingField: 2.3.2
-      - <FullVersion>k__BackingField: 2.3.1
-      - <FullVersion>k__BackingField: 2.3.0
-      - <FullVersion>k__BackingField: 2.2.0
-      - <FullVersion>k__BackingField: 2.1.0
-      - <FullVersion>k__BackingField: 2.0.0
-      - <FullVersion>k__BackingField: 1.3.2
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.2
-      - <FullVersion>k__BackingField: 1.2.1
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.1
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.1
-      - <FullVersion>k__BackingField: 1.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: "A shared package used by the Microsoft .NET
-        Compiler Platform (\"Roslyn\").\n      Do not install this package manually,
-        it will be added as a prerequisite by other packages that require it.\n   
-        \n      More details at https://aka.ms/roslyn-packages\n      This package
-        was built from the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 1138078044
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.Common/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.Common
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: Microsoft.CodeAnalysis.CSharp
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 4.14.0
-      <IsManuallyInstalled>k__BackingField: 1
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.csharp/4.14.0/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 4.14.0
-      - <FullVersion>k__BackingField: 4.13.0
-      - <FullVersion>k__BackingField: 4.12.0
-      - <FullVersion>k__BackingField: 4.11.0
-      - <FullVersion>k__BackingField: 4.10.0
-      - <FullVersion>k__BackingField: 4.9.2
-      - <FullVersion>k__BackingField: 4.8.0
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.1
-      - <FullVersion>k__BackingField: 4.2.0
-      - <FullVersion>k__BackingField: 4.1.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 3.11.0
-      - <FullVersion>k__BackingField: 3.10.0
-      - <FullVersion>k__BackingField: 3.9.0
-      - <FullVersion>k__BackingField: 3.8.0
-      - <FullVersion>k__BackingField: 3.7.0
-      - <FullVersion>k__BackingField: 3.6.0
-      - <FullVersion>k__BackingField: 3.5.0
-      - <FullVersion>k__BackingField: 3.4.0
-      - <FullVersion>k__BackingField: 3.3.1
-      - <FullVersion>k__BackingField: 3.2.1
-      - <FullVersion>k__BackingField: 3.2.0
-      - <FullVersion>k__BackingField: 3.1.0
-      - <FullVersion>k__BackingField: 3.0.0
-      - <FullVersion>k__BackingField: 2.10.0
-      - <FullVersion>k__BackingField: 2.9.0
-      - <FullVersion>k__BackingField: 2.8.2
-      - <FullVersion>k__BackingField: 2.8.0
-      - <FullVersion>k__BackingField: 2.7.0
-      - <FullVersion>k__BackingField: 2.6.1
-      - <FullVersion>k__BackingField: 2.6.0
-      - <FullVersion>k__BackingField: 2.4.0
-      - <FullVersion>k__BackingField: 2.3.2
-      - <FullVersion>k__BackingField: 2.3.1
-      - <FullVersion>k__BackingField: 2.3.0
-      - <FullVersion>k__BackingField: 2.2.0
-      - <FullVersion>k__BackingField: 2.1.0
-      - <FullVersion>k__BackingField: 2.0.0
-      - <FullVersion>k__BackingField: 1.3.2
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.2
-      - <FullVersion>k__BackingField: 1.2.1
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.1
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.1
-      - <FullVersion>k__BackingField: 1.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: ".NET Compiler Platform (\"Roslyn\") support
-        for C#, Microsoft.CodeAnalysis.CSharp.dll.\n    \n      More details at https://aka.ms/roslyn-packages\n     
-        This package was built from the source at https://github.com/dotnet/roslyn/commit/8edf7bcd4f1594c3d68a6a567469f41dbd33dd1b."
-      <TotalDownloads>k__BackingField: 1047765530
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp/4.14.0/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/roslyn
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: Microsoft.CodeAnalysis.CSharp
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: System.Collections.Immutable
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 9.0.5
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/system.collections.immutable/9.0.5/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 9.0.5
-      - <FullVersion>k__BackingField: 9.0.4
-      - <FullVersion>k__BackingField: 9.0.3
-      - <FullVersion>k__BackingField: 9.0.2
-      - <FullVersion>k__BackingField: 9.0.1
-      - <FullVersion>k__BackingField: 9.0.0
-      - <FullVersion>k__BackingField: 8.0.0
-      - <FullVersion>k__BackingField: 7.0.0
-      - <FullVersion>k__BackingField: 6.0.1
-      - <FullVersion>k__BackingField: 6.0.0
-      - <FullVersion>k__BackingField: 5.0.0
-      - <FullVersion>k__BackingField: 1.7.1
-      - <FullVersion>k__BackingField: 1.7.0
-      - <FullVersion>k__BackingField: 1.6.0
-      - <FullVersion>k__BackingField: 1.5.0
-      - <FullVersion>k__BackingField: 1.4.0
-      - <FullVersion>k__BackingField: 1.3.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.37
-      - <FullVersion>k__BackingField: 1.1.36
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: 'This package provides collections that are thread
-        safe and guaranteed to never change their contents, also known as immutable
-        collections. Like strings, any methods that perform modifications will not
-        change the existing instance but instead return a new instance. For efficiency
-        reasons, the implementation uses a sharing mechanism to ensure that newly
-        created instances share as much data as possible with the previous instance
-        while ensuring that operations have a predictable time complexity.
-
-
-        The
-        System.Collections.Immutable library is built-in as part of the shared framework
-        in .NET Runtime. The package can be installed when you need to use it in
-        other target frameworks.'
-      <TotalDownloads>k__BackingField: 2918284288
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/System.Collections.Immutable/9.0.5/license
-      <ProjectUrl>k__BackingField: https://dot.net/
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: System.Collections.Immutable
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: System.Reflection.Metadata
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 9.0.5
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/system.reflection.metadata/9.0.5/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 9.0.5
-      - <FullVersion>k__BackingField: 9.0.4
-      - <FullVersion>k__BackingField: 9.0.3
-      - <FullVersion>k__BackingField: 9.0.2
-      - <FullVersion>k__BackingField: 9.0.1
-      - <FullVersion>k__BackingField: 9.0.0
-      - <FullVersion>k__BackingField: 8.0.1
-      - <FullVersion>k__BackingField: 8.0.0
-      - <FullVersion>k__BackingField: 7.0.2
-      - <FullVersion>k__BackingField: 7.0.1
-      - <FullVersion>k__BackingField: 7.0.0
-      - <FullVersion>k__BackingField: 6.0.2
-      - <FullVersion>k__BackingField: 6.0.1
-      - <FullVersion>k__BackingField: 6.0.0
-      - <FullVersion>k__BackingField: 5.0.0
-      - <FullVersion>k__BackingField: 1.8.1
-      - <FullVersion>k__BackingField: 1.8.0
-      - <FullVersion>k__BackingField: 1.7.0
-      - <FullVersion>k__BackingField: 1.6.0
-      - <FullVersion>k__BackingField: 1.5.0
-      - <FullVersion>k__BackingField: 1.4.2
-      - <FullVersion>k__BackingField: 1.4.1
-      - <FullVersion>k__BackingField: 1.3.0
-      - <FullVersion>k__BackingField: 1.2.0
-      - <FullVersion>k__BackingField: 1.1.0
-      - <FullVersion>k__BackingField: 1.0.22
-      - <FullVersion>k__BackingField: 1.0.21
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: 'This package provides a low-level .NET (ECMA-335)
-        metadata reader and writer. It''s geared for performance and is the ideal
-        choice for building higher-level libraries that intend to provide their own
-        object model, such as compilers. The metadata format is defined by the ECMA-335
-        - Common Language Infrastructure (CLI) specification.
-
-
-        The System.Reflection.Metadata
-        library is built-in as part of the shared framework in .NET Runtime. The
-        package can be installed when you need to use it in other target frameworks.'
-      <TotalDownloads>k__BackingField: 2310680526
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/System.Reflection.Metadata/9.0.5/license
-      <ProjectUrl>k__BackingField: https://dot.net/
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: System.Reflection.Metadata
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: System.Runtime.CompilerServices.Unsafe
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 6.1.2
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/system.runtime.compilerservices.unsafe/6.1.2/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 6.1.2
-      - <FullVersion>k__BackingField: 6.1.1
-      - <FullVersion>k__BackingField: 6.1.0
-      - <FullVersion>k__BackingField: 6.0.0
-      - <FullVersion>k__BackingField: 5.0.0
-      - <FullVersion>k__BackingField: 4.7.1
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.3
-      - <FullVersion>k__BackingField: 4.5.2
-      - <FullVersion>k__BackingField: 4.5.1
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.0
-      - <FullVersion>k__BackingField: 4.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: Provides the System.Runtime.CompilerServices.Unsafe
-        class, which provides generic, low-level functionality for manipulating pointers.
-      <TotalDownloads>k__BackingField: 6252295461
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/System.Runtime.CompilerServices.Unsafe/6.1.2/license
-      <ProjectUrl>k__BackingField: https://github.com/dotnet/maintenance-packages
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: System.Runtime.CompilerServices.Unsafe
-      <DownloadUrl>k__BackingField: 
-  - packageLocal:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSource:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageType: 2
-    packageV2:
-      <Id>k__BackingField: 
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 
-      <IsManuallyInstalled>k__BackingField: 0
-      icon: {fileID: 0}
-      <DownloadUrl>k__BackingField: 
-      <IconUrl>k__BackingField: 
-      <RepositoryBranch>k__BackingField: 
-      <Dependencies>k__BackingField: []
-      <Authors>k__BackingField: []
-      <Description>k__BackingField: 
-      <TotalDownloads>k__BackingField: 0
-      <LicenseUrl>k__BackingField: 
-      <ProjectUrl>k__BackingField: 
-      <ReleaseNotes>k__BackingField: 
-      <RepositoryCommit>k__BackingField: 
-      <RepositoryType>k__BackingField: 0
-      <RepositoryUrl>k__BackingField: 
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: 
-      packageSourceV2:
-        <Name>k__BackingField: 
-        <SavedPath>k__BackingField: 
-        <SavedProtocolVersion>k__BackingField: 
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 0
-        <IsEnabled>k__BackingField: 0
-      versions: []
-    packageV3:
-      <Id>k__BackingField: System.Text.Encoding.CodePages
-      <PackageVersion>k__BackingField:
-        <FullVersion>k__BackingField: 9.0.5
-      <IsManuallyInstalled>k__BackingField: 0
-      dependencies: []
-      dependenciesFetched: 0
-      icon: {fileID: 0}
-      iconUrl: https://api.nuget.org/v3-flatcontainer/system.text.encoding.codepages/9.0.5/icon
-      packageSource:
-        <Name>k__BackingField: nuget.org
-        <SavedPath>k__BackingField: https://api.nuget.org/v3/index.json
-        <SavedProtocolVersion>k__BackingField: 
-        <UpdateSearchBatchSize>k__BackingField: 20
-        <SavedUserName>k__BackingField: 
-        <SavedPassword>k__BackingField: 
-        <CredentialsStoredInExternalFile>k__BackingField: 0
-        <EnableCredentialProvider>k__BackingField: 1
-        <IsEnabled>k__BackingField: 1
-      <Versions>k__BackingField:
-      - <FullVersion>k__BackingField: 9.0.5
-      - <FullVersion>k__BackingField: 9.0.4
-      - <FullVersion>k__BackingField: 9.0.3
-      - <FullVersion>k__BackingField: 9.0.2
-      - <FullVersion>k__BackingField: 9.0.1
-      - <FullVersion>k__BackingField: 9.0.0
-      - <FullVersion>k__BackingField: 8.0.0
-      - <FullVersion>k__BackingField: 7.0.0
-      - <FullVersion>k__BackingField: 6.0.1
-      - <FullVersion>k__BackingField: 6.0.0
-      - <FullVersion>k__BackingField: 5.0.0
-      - <FullVersion>k__BackingField: 4.7.1
-      - <FullVersion>k__BackingField: 4.7.0
-      - <FullVersion>k__BackingField: 4.6.0
-      - <FullVersion>k__BackingField: 4.5.1
-      - <FullVersion>k__BackingField: 4.5.0
-      - <FullVersion>k__BackingField: 4.4.0
-      - <FullVersion>k__BackingField: 4.3.0
-      - <FullVersion>k__BackingField: 4.0.1
-      - <FullVersion>k__BackingField: 4.0.0
-      <Authors>k__BackingField:
-      - Microsoft
-      <Description>k__BackingField: 'Provides support for code-page based encodings,
-        including Windows-1252, Shift-JIS, and GB2312.
-
-
-        Commonly Used Types:
-
-        System.Text.CodePagesEncodingProvider'
-      <TotalDownloads>k__BackingField: 2637340503
-      <LicenseUrl>k__BackingField: https://www.nuget.org/packages/System.Text.Encoding.CodePages/9.0.5/license
-      <ProjectUrl>k__BackingField: https://dot.net/
-      <Summary>k__BackingField: 
-      <Title>k__BackingField: System.Text.Encoding.CodePages
-      <DownloadUrl>k__BackingField: 
---- !u!114 &28
+    x: 0
+    y: 0
+    width: 626
+    height: 742
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 48507
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 17}
+  - {fileID: 18}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 626
+    height: 372
+  m_MinSize: {x: 200, y: 50}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 48508
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: GameView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 212
+    height: 372
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 26}
+  m_Panes:
+  - {fileID: 26}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 212
+    y: 0
+    width: 414
+    height: 372
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 27}
+  m_Panes:
+  - {fileID: 27}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &19
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ConsoleWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 372
+    width: 626
+    height: 370
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 28}
+  m_Panes:
+  - {fileID: 28}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 21}
+  - {fileID: 22}
+  m_Position:
+    serializedVersion: 2
+    x: 626
+    y: 0
+    width: 477
+    height: 742
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 8096, y: 16192}
+  vertical: 1
+  controlID: 48552
+--- !u!114 &21
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 477
+    height: 223
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 29}
+  m_Panes:
+  - {fileID: 29}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &22
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 223
+    width: 477
+    height: 519
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 30}
+  m_Panes:
+  - {fileID: 30}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &23
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1103
+    y: 0
+    width: 337
+    height: 742
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 31}
+  m_Panes:
+  - {fileID: 31}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3574,8 +593,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 66
+    x: 1597
+    y: 88
     width: 1440
     height: 771
   m_SerializedDataModeController:
@@ -3588,7 +607,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &29
+--- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3609,7 +628,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 138
-    y: 92
+    y: 64
     width: 1268
     height: 760
   m_SerializedDataModeController:
@@ -3649,1256 +668,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
---- !u!114 &30
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12043, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 640, y: 580}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Build Settings
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 570
-    y: 109
-    width: 786
-    height: 705
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
---- !u!114 &31
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12070, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 900, y: 216}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Profiler
-    m_Image: {fileID: 2169972056302973491, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 471
-    width: 847
-    height: 415
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_Recording: 1
-  m_ActiveNativePlatformSupportModuleName: 
-  m_AllModules:
-  - rid: 4815275396947771392
-  - rid: 4815275396947771393
-  - rid: 4815275396947771394
-  - rid: 4815275396947771395
-  - rid: 4815275396947771396
-  - rid: 4815275396947771397
-  - rid: 4815275396947771398
-  - rid: 4815275396947771399
-  - rid: 4815275396947771402
-  - rid: 4815275396947771403
-  - rid: 4815275396947771404
-  - rid: 4815275396947771405
-  - rid: 4815275396947771406
-  - rid: 4815275396947771407
-  m_CallstackRecordMode: 1
-  m_ClearOnPlay: 1
-  references:
-    version: 2
-    RefIds:
-    - rid: 4815275396947771392
-      type: {class: CPUProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.CPUProfilerModule, UnityEditor.CoreModule,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-        m_ViewType: 2
-        updateViewLive: 0
-        m_CurrentFrameIndex: -1
-        m_HierarchyOverruledThreadFromSelection: 0
-        m_ProfilerViewFilteringOptions: 1
-        m_FrameDataHierarchyView:
-          m_Serialized: 1
-          m_TreeViewState:
-            scrollPos: {x: 0, y: 2}
-            m_SelectedIDs: 
-            m_LastClickedID: 0
-            m_ExpandedIDs: 0400000041000000440000008e0000008f000000a30000005b010000bb010000c2010000c5010000c6010000
-            m_RenameOverlay:
-              m_UserAcceptedRename: 0
-              m_Name: 
-              m_OriginalName: 
-              m_EditFieldRect:
-                serializedVersion: 2
-                x: 0
-                y: 0
-                width: 0
-                height: 0
-              m_UserData: 0
-              m_IsWaitingForDelay: 0
-              m_IsRenaming: 0
-              m_OriginalEventType: 11
-              m_IsRenamingFilename: 0
-              m_ClientGUIView: {fileID: 0}
-            m_SearchString: 
-          m_MultiColumnHeaderState:
-            m_Columns:
-            - width: 737
-              sortedAscending: 1
-              headerContent:
-                m_Text: Overview
-                m_Image: {fileID: 0}
-                m_Tooltip: 
-              contextMenuText: 
-              headerTextAlignment: 0
-              sortingArrowAlignment: 2
-              minWidth: 200
-              maxWidth: 1000000
-              autoResize: 1
-              allowToggleVisibility: 0
-              canSort: 1
-              userData: 0
-            - width: 80
-              sortedAscending: 0
-              headerContent:
-                m_Text: Total
-                m_Image: {fileID: 0}
-                m_Tooltip: 
-              contextMenuText: 
-              headerTextAlignment: 0
-              sortingArrowAlignment: 2
-              minWidth: 50
-              maxWidth: 1000000
-              autoResize: 0
-              allowToggleVisibility: 1
-              canSort: 1
-              userData: 0
-            - width: 80
-              sortedAscending: 0
-              headerContent:
-                m_Text: Self
-                m_Image: {fileID: 0}
-                m_Tooltip: 
-              contextMenuText: 
-              headerTextAlignment: 0
-              sortingArrowAlignment: 2
-              minWidth: 50
-              maxWidth: 1000000
-              autoResize: 0
-              allowToggleVisibility: 1
-              canSort: 1
-              userData: 0
-            - width: 80
-              sortedAscending: 0
-              headerContent:
-                m_Text: Calls
-                m_Image: {fileID: 0}
-                m_Tooltip: 
-              contextMenuText: 
-              headerTextAlignment: 0
-              sortingArrowAlignment: 2
-              minWidth: 50
-              maxWidth: 1000000
-              autoResize: 0
-              allowToggleVisibility: 1
-              canSort: 1
-              userData: 0
-            - width: 80
-              sortedAscending: 0
-              headerContent:
-                m_Text: GC Alloc
-                m_Image: {fileID: 0}
-                m_Tooltip: 
-              contextMenuText: 
-              headerTextAlignment: 0
-              sortingArrowAlignment: 2
-              minWidth: 50
-              maxWidth: 1000000
-              autoResize: 0
-              allowToggleVisibility: 1
-              canSort: 1
-              userData: 0
-            - width: 80
-              sortedAscending: 0
-              headerContent:
-                m_Text: Time ms
-                m_Image: {fileID: 0}
-                m_Tooltip: 
-              contextMenuText: 
-              headerTextAlignment: 0
-              sortingArrowAlignment: 2
-              minWidth: 50
-              maxWidth: 1000000
-              autoResize: 0
-              allowToggleVisibility: 1
-              canSort: 1
-              userData: 0
-            - width: 80
-              sortedAscending: 0
-              headerContent:
-                m_Text: Self ms
-                m_Image: {fileID: 0}
-                m_Tooltip: 
-              contextMenuText: 
-              headerTextAlignment: 0
-              sortingArrowAlignment: 2
-              minWidth: 50
-              maxWidth: 1000000
-              autoResize: 0
-              allowToggleVisibility: 1
-              canSort: 1
-              userData: 0
-            - width: 25
-              sortedAscending: 0
-              headerContent:
-                m_Text: 
-                m_Image: {fileID: -5161429177145976760, guid: 0000000000000000d000000000000000, type: 0}
-                m_Tooltip: Warnings
-              contextMenuText: 
-              headerTextAlignment: 0
-              sortingArrowAlignment: 2
-              minWidth: 25
-              maxWidth: 25
-              autoResize: 0
-              allowToggleVisibility: 1
-              canSort: 1
-              userData: 0
-            m_VisibleColumns: 0000000001000000020000000300000004000000050000000600000007000000
-            m_SortedColumns: 05000000
-          m_ThreadIndexInThreadNames: 0
-          m_DetailedViewType: 0
-          m_DetailedViewSpliterState:
-            ID: 0
-            splitterInitialOffset: 0
-            currentActiveSplitter: -1
-            realSizes:
-            - 0
-            - 0
-            relativeSizes:
-            - 0.7
-            - 0.3
-            minSizes:
-            - 450
-            - 50
-            maxSizes:
-            - 0
-            - 0
-            lastTotalSize: 0
-            splitSize: 6
-            xOffset: 0
-            m_Version: 1
-            oldRealSizes: 
-            oldMinSizes: 
-            oldMaxSizes: 
-            oldSplitSize: 0
-          m_DetailedObjectsView:
-            m_SelectedID: -1
-            m_TreeViewState:
-              scrollPos: {x: 0, y: 0}
-              m_SelectedIDs: 
-              m_LastClickedID: 0
-              m_ExpandedIDs: 
-              m_RenameOverlay:
-                m_UserAcceptedRename: 0
-                m_Name: 
-                m_OriginalName: 
-                m_EditFieldRect:
-                  serializedVersion: 2
-                  x: 0
-                  y: 0
-                  width: 0
-                  height: 0
-                m_UserData: 0
-                m_IsWaitingForDelay: 0
-                m_IsRenaming: 0
-                m_OriginalEventType: 11
-                m_IsRenamingFilename: 0
-                m_ClientGUIView: {fileID: 0}
-              m_SearchString: 
-            m_MultiColumnHeaderState:
-              m_Columns: []
-              m_VisibleColumns: 
-              m_SortedColumns: 
-            m_VertSplit:
-              ID: 0
-              splitterInitialOffset: 0
-              currentActiveSplitter: 0
-              realSizes: []
-              relativeSizes: []
-              minSizes: []
-              maxSizes: []
-              lastTotalSize: 0
-              splitSize: 0
-              xOffset: 0
-              m_Version: 1
-              oldRealSizes: 
-              oldMinSizes: 
-              oldMaxSizes: 
-              oldSplitSize: 0
-          m_DetailedCallsView:
-            m_SelectedID: -1
-            m_VertSplit:
-              ID: 0
-              splitterInitialOffset: 0
-              currentActiveSplitter: 0
-              realSizes: []
-              relativeSizes: []
-              minSizes: []
-              maxSizes: []
-              lastTotalSize: 0
-              splitSize: 0
-              xOffset: 0
-              m_Version: 1
-              oldRealSizes: 
-              oldMinSizes: 
-              oldMaxSizes: 
-              oldSplitSize: 0
-            m_CalleesTreeView:
-              m_ViewState:
-                scrollPos: {x: 0, y: 0}
-                m_SelectedIDs: 
-                m_LastClickedID: 0
-                m_ExpandedIDs: 
-                m_RenameOverlay:
-                  m_UserAcceptedRename: 0
-                  m_Name: 
-                  m_OriginalName: 
-                  m_EditFieldRect:
-                    serializedVersion: 2
-                    x: 0
-                    y: 0
-                    width: 0
-                    height: 0
-                  m_UserData: 0
-                  m_IsWaitingForDelay: 0
-                  m_IsRenaming: 0
-                  m_OriginalEventType: 11
-                  m_IsRenamingFilename: 0
-                  m_ClientGUIView: {fileID: 0}
-                m_SearchString: 
-              m_ViewHeaderState:
-                m_Columns:
-                - width: 150
-                  sortedAscending: 1
-                  headerContent:
-                    m_Text: Called From
-                    m_Image: {fileID: 0}
-                    m_Tooltip: 'Parents the selected function is called from
-
-
-                      (Press
-                      ''F'' for frame selection)'
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 150
-                  maxWidth: 1000000
-                  autoResize: 1
-                  allowToggleVisibility: 0
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: Calls
-                    m_Image: {fileID: 0}
-                    m_Tooltip: Total number of calls in a selected frame
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: GC Alloc
-                    m_Image: {fileID: 0}
-                    m_Tooltip: 
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: Time ms
-                    m_Image: {fileID: 0}
-                    m_Tooltip: Total time the selected function spends within a parent
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: Time %
-                    m_Image: {fileID: 0}
-                    m_Tooltip: Shows how often the selected function was called from
-                      the parent call
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                m_VisibleColumns: 0000000001000000020000000300000004000000
-                m_SortedColumns: 03000000
-            m_CallersTreeView:
-              m_ViewState:
-                scrollPos: {x: 0, y: 0}
-                m_SelectedIDs: 
-                m_LastClickedID: 0
-                m_ExpandedIDs: 
-                m_RenameOverlay:
-                  m_UserAcceptedRename: 0
-                  m_Name: 
-                  m_OriginalName: 
-                  m_EditFieldRect:
-                    serializedVersion: 2
-                    x: 0
-                    y: 0
-                    width: 0
-                    height: 0
-                  m_UserData: 0
-                  m_IsWaitingForDelay: 0
-                  m_IsRenaming: 0
-                  m_OriginalEventType: 11
-                  m_IsRenamingFilename: 0
-                  m_ClientGUIView: {fileID: 0}
-                m_SearchString: 
-              m_ViewHeaderState:
-                m_Columns:
-                - width: 150
-                  sortedAscending: 1
-                  headerContent:
-                    m_Text: Called From
-                    m_Image: {fileID: 0}
-                    m_Tooltip: 'Parents the selected function is called from
-
-
-                      (Press
-                      ''F'' for frame selection)'
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 150
-                  maxWidth: 1000000
-                  autoResize: 1
-                  allowToggleVisibility: 0
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: Calls
-                    m_Image: {fileID: 0}
-                    m_Tooltip: Total number of calls in a selected frame
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: GC Alloc
-                    m_Image: {fileID: 0}
-                    m_Tooltip: 
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: Time ms
-                    m_Image: {fileID: 0}
-                    m_Tooltip: Total time the selected function spends within a parent
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: Time %
-                    m_Image: {fileID: 0}
-                    m_Tooltip: Shows how often the selected function was called from
-                      the parent call
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                m_VisibleColumns: 0000000001000000020000000300000004000000
-                m_SortedColumns: 03000000
-          m_FullThreadName: Main Thread
-          m_ThreadName: Main Thread
-          <threadId>k__BackingField: 8516439872
-          <threadIndex>k__BackingField: 0
-          m_GroupName: 
-    - rid: 4815275396947771393
-      type: {class: GPUProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.GPUProfilerModule, UnityEditor.CoreModule,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-        m_ViewType: 0
-        updateViewLive: 0
-        m_CurrentFrameIndex: -1
-        m_HierarchyOverruledThreadFromSelection: 0
-        m_ProfilerViewFilteringOptions: 1
-        m_FrameDataHierarchyView:
-          m_Serialized: 0
-          m_TreeViewState:
-            scrollPos: {x: 0, y: 0}
-            m_SelectedIDs: 
-            m_LastClickedID: 0
-            m_ExpandedIDs: 
-            m_RenameOverlay:
-              m_UserAcceptedRename: 0
-              m_Name: 
-              m_OriginalName: 
-              m_EditFieldRect:
-                serializedVersion: 2
-                x: 0
-                y: 0
-                width: 0
-                height: 0
-              m_UserData: 0
-              m_IsWaitingForDelay: 0
-              m_IsRenaming: 0
-              m_OriginalEventType: 11
-              m_IsRenamingFilename: 0
-              m_ClientGUIView: {fileID: 0}
-            m_SearchString: 
-          m_MultiColumnHeaderState:
-            m_Columns: []
-            m_VisibleColumns: 
-            m_SortedColumns: 
-          m_ThreadIndexInThreadNames: 0
-          m_DetailedViewType: 0
-          m_DetailedViewSpliterState:
-            ID: 0
-            splitterInitialOffset: 0
-            currentActiveSplitter: 0
-            realSizes: []
-            relativeSizes: []
-            minSizes: []
-            maxSizes: []
-            lastTotalSize: 0
-            splitSize: 0
-            xOffset: 0
-            m_Version: 1
-            oldRealSizes: 
-            oldMinSizes: 
-            oldMaxSizes: 
-            oldSplitSize: 0
-          m_DetailedObjectsView:
-            m_SelectedID: 0
-            m_TreeViewState:
-              scrollPos: {x: 0, y: 0}
-              m_SelectedIDs: 
-              m_LastClickedID: 0
-              m_ExpandedIDs: 
-              m_RenameOverlay:
-                m_UserAcceptedRename: 0
-                m_Name: 
-                m_OriginalName: 
-                m_EditFieldRect:
-                  serializedVersion: 2
-                  x: 0
-                  y: 0
-                  width: 0
-                  height: 0
-                m_UserData: 0
-                m_IsWaitingForDelay: 0
-                m_IsRenaming: 0
-                m_OriginalEventType: 11
-                m_IsRenamingFilename: 0
-                m_ClientGUIView: {fileID: 0}
-              m_SearchString: 
-            m_MultiColumnHeaderState:
-              m_Columns: []
-              m_VisibleColumns: 
-              m_SortedColumns: 
-            m_VertSplit:
-              ID: 0
-              splitterInitialOffset: 0
-              currentActiveSplitter: 0
-              realSizes: []
-              relativeSizes: []
-              minSizes: []
-              maxSizes: []
-              lastTotalSize: 0
-              splitSize: 0
-              xOffset: 0
-              m_Version: 1
-              oldRealSizes: 
-              oldMinSizes: 
-              oldMaxSizes: 
-              oldSplitSize: 0
-          m_DetailedCallsView:
-            m_SelectedID: -1
-            m_VertSplit:
-              ID: 0
-              splitterInitialOffset: 0
-              currentActiveSplitter: 0
-              realSizes: []
-              relativeSizes: []
-              minSizes: []
-              maxSizes: []
-              lastTotalSize: 0
-              splitSize: 0
-              xOffset: 0
-              m_Version: 1
-              oldRealSizes: 
-              oldMinSizes: 
-              oldMaxSizes: 
-              oldSplitSize: 0
-            m_CalleesTreeView:
-              m_ViewState:
-                scrollPos: {x: 0, y: 0}
-                m_SelectedIDs: 
-                m_LastClickedID: 0
-                m_ExpandedIDs: 
-                m_RenameOverlay:
-                  m_UserAcceptedRename: 0
-                  m_Name: 
-                  m_OriginalName: 
-                  m_EditFieldRect:
-                    serializedVersion: 2
-                    x: 0
-                    y: 0
-                    width: 0
-                    height: 0
-                  m_UserData: 0
-                  m_IsWaitingForDelay: 0
-                  m_IsRenaming: 0
-                  m_OriginalEventType: 11
-                  m_IsRenamingFilename: 0
-                  m_ClientGUIView: {fileID: 0}
-                m_SearchString: 
-              m_ViewHeaderState:
-                m_Columns:
-                - width: 150
-                  sortedAscending: 1
-                  headerContent:
-                    m_Text: Called From
-                    m_Image: {fileID: 0}
-                    m_Tooltip: 'Parents the selected function is called from
-
-
-                      (Press
-                      ''F'' for frame selection)'
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 150
-                  maxWidth: 1000000
-                  autoResize: 1
-                  allowToggleVisibility: 0
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: Calls
-                    m_Image: {fileID: 0}
-                    m_Tooltip: Total number of calls in a selected frame
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: GC Alloc
-                    m_Image: {fileID: 0}
-                    m_Tooltip: 
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: Time ms
-                    m_Image: {fileID: 0}
-                    m_Tooltip: Total time the selected function spends within a parent
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: Time %
-                    m_Image: {fileID: 0}
-                    m_Tooltip: Shows how often the selected function was called from
-                      the parent call
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                m_VisibleColumns: 0000000001000000020000000300000004000000
-                m_SortedColumns: 03000000
-            m_CallersTreeView:
-              m_ViewState:
-                scrollPos: {x: 0, y: 0}
-                m_SelectedIDs: 
-                m_LastClickedID: 0
-                m_ExpandedIDs: 
-                m_RenameOverlay:
-                  m_UserAcceptedRename: 0
-                  m_Name: 
-                  m_OriginalName: 
-                  m_EditFieldRect:
-                    serializedVersion: 2
-                    x: 0
-                    y: 0
-                    width: 0
-                    height: 0
-                  m_UserData: 0
-                  m_IsWaitingForDelay: 0
-                  m_IsRenaming: 0
-                  m_OriginalEventType: 11
-                  m_IsRenamingFilename: 0
-                  m_ClientGUIView: {fileID: 0}
-                m_SearchString: 
-              m_ViewHeaderState:
-                m_Columns:
-                - width: 150
-                  sortedAscending: 1
-                  headerContent:
-                    m_Text: Called From
-                    m_Image: {fileID: 0}
-                    m_Tooltip: 'Parents the selected function is called from
-
-
-                      (Press
-                      ''F'' for frame selection)'
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 150
-                  maxWidth: 1000000
-                  autoResize: 1
-                  allowToggleVisibility: 0
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: Calls
-                    m_Image: {fileID: 0}
-                    m_Tooltip: Total number of calls in a selected frame
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: GC Alloc
-                    m_Image: {fileID: 0}
-                    m_Tooltip: 
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: Time ms
-                    m_Image: {fileID: 0}
-                    m_Tooltip: Total time the selected function spends within a parent
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                - width: 60
-                  sortedAscending: 0
-                  headerContent:
-                    m_Text: Time %
-                    m_Image: {fileID: 0}
-                    m_Tooltip: Shows how often the selected function was called from
-                      the parent call
-                  contextMenuText: 
-                  headerTextAlignment: 0
-                  sortingArrowAlignment: 2
-                  minWidth: 60
-                  maxWidth: 1000000
-                  autoResize: 0
-                  allowToggleVisibility: 1
-                  canSort: 1
-                  userData: 0
-                m_VisibleColumns: 0000000001000000020000000300000004000000
-                m_SortedColumns: 03000000
-          m_FullThreadName: Main Thread
-          m_ThreadName: Main Thread
-          <threadId>k__BackingField: 0
-          <threadIndex>k__BackingField: -1
-          m_GroupName: 
-    - rid: 4815275396947771394
-      type: {class: RenderingProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.RenderingProfilerModule, UnityEditor.CoreModule,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-    - rid: 4815275396947771395
-      type: {class: MemoryProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.MemoryProfilerModule, UnityEditor.CoreModule,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-        m_ViewSplit:
-          ID: 0
-          splitterInitialOffset: 0
-          currentActiveSplitter: -1
-          realSizes:
-          - 0
-          - 0
-          relativeSizes:
-          - 0.7
-          - 0.3
-          minSizes:
-          - 450
-          - 50
-          maxSizes:
-          - 0
-          - 0
-          lastTotalSize: 0
-          splitSize: 6
-          xOffset: 0
-          m_Version: 1
-          oldRealSizes: 
-          oldMinSizes: 
-          oldMaxSizes: 
-          oldSplitSize: 0
-    - rid: 4815275396947771396
-      type: {class: AudioProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.AudioProfilerModule, UnityEditor.CoreModule,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-        m_ShowInactiveDSPChains: 0
-        m_HighlightAudibleDSPChains: 1
-        m_DSPGraphZoomFactor: 1
-        m_DSPGraphHorizontalLayout: 0
-    - rid: 4815275396947771397
-      type: {class: VideoProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.VideoProfilerModule, UnityEditor.CoreModule,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-    - rid: 4815275396947771398
-      type: {class: PhysicsProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.PhysicsProfilerModule, UnityEditor.CoreModule,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-    - rid: 4815275396947771399
-      type: {class: Physics2DProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.Physics2DProfilerModule, UnityEditor.CoreModule,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-    - rid: 4815275396947771402
-      type: {class: UIProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.UIProfilerModule, UnityEditor.CoreModule,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-    - rid: 4815275396947771403
-      type: {class: UIDetailsProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.UIDetailsProfilerModule, UnityEditor.CoreModule,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-    - rid: 4815275396947771404
-      type: {class: GlobalIlluminationProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.GlobalIlluminationProfilerModule,
-          UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-    - rid: 4815275396947771405
-      type: {class: VirtualTexturingProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.VirtualTexturingProfilerModule,
-          UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-        m_VTProfilerView:
-          rid: 4815275396947771408
-    - rid: 4815275396947771406
-      type: {class: FileIOProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.FileIOProfilerModule, UnityEditor.CoreModule,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-    - rid: 4815275396947771407
-      type: {class: AssetLoadingProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
-      data:
-        m_Identifier: UnityEditorInternal.Profiling.AssetLoadingProfilerModule, UnityEditor.CoreModule,
-          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        m_PaneScroll: {x: 0, y: 0}
-    - rid: 4815275396947771408
-      type: {class: VirtualTexturingProfilerView, ns: UnityEditor, asm: UnityEditor.CoreModule}
-      data:
-        m_SortAscending: 0
-        m_SortedColumn: -1
---- !u!114 &32
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Console
-    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 471
-    width: 847
-    height: 415
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
---- !u!114 &33
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1255
-    y: 96
-    width: 256
-    height: 790
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: 160
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
-  m_GlobalObjectId: 
-  m_InspectorMode: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}
---- !u!114 &34
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_TitleContent:
-    m_Text: Project
-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 848
-    y: 286
-    width: 405
-    height: 600
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  m_SearchFilter:
-    m_NameFilter: 
-    m_ClassNames: []
-    m_AssetLabels: []
-    m_AssetBundleNames: []
-    m_ReferencingInstanceIDs: 
-    m_SceneHandles: 
-    m_ShowAllHits: 0
-    m_SkipHidden: 0
-    m_SearchArea: 1
-    m_Folders:
-    - Assets/LiteFramework/Editor/UIModule/UIRouterCodeGenerator
-    m_Globs: []
-    m_OriginalText: 
-    m_ImportLogFlags: 0
-    m_FilterByTypeIntersection: 0
-  m_ViewMode: 0
-  m_StartGridSize: 64
-  m_LastFolders: []
-  m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/chenlin/Documents/GitHub/LiteFramework
-  m_LockTracker:
-    m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ce400000
-    m_LastClickedID: 16590
-    m_ExpandedIDs: 00000000385d00003a5d00003c5d00003e5d0000405d0000425d0000445d0000465d0000485d00004a5d00004c5d00004e5d0000505d0000525d0000545d0000565d0000585d00005a5d00005c5d00005e5d0000605d0000625d0000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 48f6ffffffffffff00000000385d00003a5d00003c5d00003e5d0000405d0000425d0000445d0000485d00004a5d00004c5d00004e5d0000505d0000565d00005e5d0000625d00009c5d0000a65d0000c25d0000c45d0000c85d0000cc5d0000ce5d0000fc5d0000f65f00007c6400008264000098640000ffffff7f
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: UIRouterGenerator
-      m_OriginalName: UIRouterGenerator
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 25734
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 0
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 26}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 26}
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-    m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
-  m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 115
---- !u!114 &35
+--- !u!114 &26
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4919,9 +689,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 96
-    width: 694
-    height: 354
+    y: 83
+    width: 211
+    height: 351
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -4938,7 +708,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1920, y: 1200}
+  m_TargetSize: {x: 1920, y: 1080}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -4955,8 +725,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -480
     m_HBaseRangeMax: 480
-    m_VBaseRangeMin: -300
-    m_VBaseRangeMax: 300
+    m_VBaseRangeMin: -270
+    m_VBaseRangeMax: 270
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -4974,29 +744,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 694
-      height: 333
-    m_Scale: {x: 0.555, y: 0.555}
-    m_Translation: {x: 347, y: 166.5}
+      width: 211
+      height: 330
+    m_Scale: {x: 0.21979167, y: 0.21979168}
+    m_Translation: {x: 105.5, y: 165}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -625.2252
-      y: -300
-      width: 1250.4504
-      height: 600
+      x: -480
+      y: -750.7109
+      width: 960
+      height: 1501.4218
     m_MinimalGUI: 1
-  m_defaultScale: 0.555
-  m_LastWindowPixelSize: {x: 1388, y: 708}
+  m_defaultScale: 0.21979167
+  m_LastWindowPixelSize: {x: 422, y: 702}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &36
+--- !u!114 &27
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5016,10 +786,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 695
-    y: 96
-    width: 151
-    height: 354
+    x: 212
+    y: 83
+    width: 412
+    height: 351
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -5034,9 +804,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -151, y: -26}
+      snapOffset: {x: 0, y: -26}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 3
+      snapCorner: 2
       id: Tool Settings
       index: 0
       layout: 1
@@ -5047,7 +817,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -141, y: -205}
+      snapOffset: {x: -138, y: -205}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: unity-grid-and-snap-toolbar
@@ -5250,16 +1020,16 @@ MonoBehaviour:
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
+    - dockPosition: 0
+      containerId: Floating
+      floating: 1
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 48}
+      snapOffset: {x: -216, y: -172}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 3
       id: AINavigationOverlay
-      index: 7
+      index: 0
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
@@ -5272,7 +1042,7 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/TrailRenderer
-      index: 8
+      index: 7
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
@@ -5379,7 +1149,41 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &37
+--- !u!114 &28
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 455
+    width: 625
+    height: 349
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+--- !u!114 &29
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5399,10 +1203,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 848
-    y: 96
-    width: 405
-    height: 169
+    x: 626
+    y: 83
+    width: 475
+    height: 202
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -5416,9 +1220,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 86640000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: bcebffff2cfbffff
+      m_ExpandedIDs: 54d2fdfff2eefdffeef0fdff9c0cfeff4a19feff841afefffc34feff8435feff6c4afeff44e9feffa4e9feff82f0feff02a200000ca2000016a200001ea2000058a20000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -5434,7 +1238,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 25}
+        m_ClientGUIView: {fileID: 21}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -5442,3 +1246,195 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 64055da714d6945c39c0e0aa45cdcd3d
+--- !u!114 &30
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 626
+    y: 306
+    width: 475
+    height: 498
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/LiteFramework/Editor
+    m_Globs: []
+    m_OriginalText: 
+    m_ImportLogFlags: 0
+    m_FilterByTypeIntersection: 0
+  m_ViewMode: 0
+  m_StartGridSize: 64
+  m_LastFolders: []
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: /Users/chenlin/projects/UnityProjects/LFramework
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: ce400000
+    m_LastClickedID: 16590
+    m_ExpandedIDs: ffffffff00000000ee400000aa410000b64100009e420000c2420000d2420000de420000fe4200001643000032430000664300001a4500005a4500007a4600002498000098980000129b0000309c0000ffffff7f
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: ffffffff00000000ee40000026410000b641000002420000464200005a4200009e420000a6420000be420000c2420000de42000016430000aa430000c24300001a4500005a4500000a460000d646000052480000de4800002498000098980000129b0000309c0000eea5000078a60000f2b30000ffffff7f
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: UIRouterGenerator
+      m_OriginalName: UIRouterGenerator
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 25302
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 0
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 22}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 22}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 64
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 115
+--- !u!114 &31
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1103
+    y: 83
+    width: 336
+    height: 721
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: 160
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}

@@ -2,6 +2,7 @@ using UnityEngine;
 using VContainer;
 using LiteFramework.Core.Module.UI;
 using LiteFramework.Core.Utility;
+using System;
 
 namespace LiteFramework.Module.UI
 {
@@ -97,6 +98,21 @@ namespace LiteFramework.Module.UI
             }
         }
 
+
+        public void OpenUIAsync<TPresenter, TView>(UIType type = UIType.Panel, Transform parent = null, Action success = null, Action<string> failed = null)
+                   where TPresenter : BaseUIPresenter<TView>
+                   where TView : BaseUIView<TPresenter>
+        {
+            //todo 实现UI的异步加载
+        }
+
+        public void CloseUIAsync<TPresenter, TView>(UIType type = UIType.Panel, Transform parent = null, Action success = null, Action<string> failed = null)
+            where TPresenter : BaseUIPresenter<TView>
+            where TView : BaseUIView<TPresenter>
+        {
+            //todo 实现UI的异步销毁
+        }
+
         private Transform GetDialogParent()
         {
             if (dialogParent == null)
@@ -135,5 +151,4 @@ namespace LiteFramework.Module.UI
             return null;
         }
     }
-
 }

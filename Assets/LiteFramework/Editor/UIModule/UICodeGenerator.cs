@@ -31,12 +31,9 @@ namespace LiteFramework.EditorTools
             }
 
             // 路径
-            string viewTemplatePath = Path.Combine(config.templateRootPath, "UIViewTemplate.txt");
-            string viewAutoTemplatePath = Path.Combine(config.templateRootPath, "UIViewAutoTemplate.txt");
-            string presenterTemplatePath = Path.Combine(config.templateRootPath, "UIPresenterTemplate.txt");
-            string viewTemplate = File.ReadAllText(viewTemplatePath);
-            string viewAutoTemplate = File.ReadAllText(viewAutoTemplatePath);
-            string presenterTemplate = File.ReadAllText(presenterTemplatePath);
+            string viewTemplate = Resources.Load<TextAsset>(Path.Combine("Templates", "UIViewTemplate")).text;
+            string viewAutoTemplate = Resources.Load<TextAsset>(Path.Combine("Templates", "UIViewAutoTemplate")).text;
+            string presenterTemplate = Resources.Load<TextAsset>(Path.Combine("Templates", "UIPresenterTemplate")).text;
 
             // 自动字段生成
             var (fields, fieldsFind) = GenerateComponentFields(go.transform, config);

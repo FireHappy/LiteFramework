@@ -15,4 +15,7 @@ MonoBehaviour:
   outputRootPath: Assets/Scripts/Features
   templateRootPath: Assets/LiteFramework/Editor/UIModule/Templates
   nameSpace: 
-  mappings: []
+  mappings:
+  - prefix: 
+    componentType:
+      typeName: 

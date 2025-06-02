@@ -38,8 +38,7 @@ namespace LiteFramework.Configs
     public class UIGeneratorConfig : ScriptableObject
     {
         public string outputRootPath = "Assets/Scripts/Features";
-        public string templateRootPath = "Assets/LiteFramework/Editor/UIModule/Templates";
-        public string nameSpace = "";
+        public string nameSpace = "LiteFramework.Sample";
 
         public List<PrefixComponentMapping> mappings = new List<PrefixComponentMapping>();
 

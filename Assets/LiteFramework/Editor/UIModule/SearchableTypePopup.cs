@@ -13,8 +13,8 @@ namespace LiteFramework.EditorTools
         private string searchText = "";
 
         private Vector2 scroll;
-        private static GUIStyle searchFieldStyle;
-
+        private static GUIStyle SafeSearchFieldStyle =>
+GUI.skin.FindStyle("ToolbarSearchTextField") ?? EditorStyles.textField;
         public static void Show(Rect activatorRect, List<Type> types, string currentType, Action<string> onSelected)
         {
             var window = CreateInstance<SearchableTypePopup>();
@@ -32,13 +32,18 @@ namespace LiteFramework.EditorTools
             window.ShowAsDropDown(activatorRect, new Vector2(500, height));
         }
 
+
+
         private void OnGUI()
         {
-            if (searchFieldStyle == null)
-                searchFieldStyle = GUI.skin.FindStyle("ToolbarSearchTextField");
-
-            EditorGUILayout.BeginHorizontal(GUI.skin.FindStyle("Toolbar"));
-            searchText = EditorGUILayout.TextField(searchText, searchFieldStyle);
+            // 使用统一结构：搜索框 + 清除按钮
+            EditorGUILayout.BeginHorizontal(EditorStyles.toolbar);
+            searchText = EditorGUILayout.TextField(searchText, SafeSearchFieldStyle, GUILayout.ExpandWidth(true));
+            if (GUILayout.Button("", GUI.skin.FindStyle("ToolbarSeachCancelButton")))
+            {
+                searchText = "";
+                GUI.FocusControl(null);
+            }
             EditorGUILayout.EndHorizontal();
 
             scroll = EditorGUILayout.BeginScrollView(scroll);
@@ -57,5 +62,6 @@ namespace LiteFramework.EditorTools
 
             EditorGUILayout.EndScrollView();
         }
+
     }
 }

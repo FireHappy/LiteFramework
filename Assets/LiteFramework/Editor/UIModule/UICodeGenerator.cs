@@ -5,7 +5,7 @@ using System.Text;
 using LiteFramework.EditorTools;
 using System;
 using System.Collections.Generic;
-using System.Data.Common;
+using LiteFramework.Configs;
 
 public static class UIPrefabCodeGenerator
 {

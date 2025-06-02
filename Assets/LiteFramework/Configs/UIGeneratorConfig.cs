@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace LiteFramework.EditorTools
+namespace LiteFramework.Configs
 {
     [Serializable]
     public class ComponentTypeRef
@@ -34,7 +34,7 @@ namespace LiteFramework.EditorTools
         public ComponentTypeRef componentType;
     }
 
-    [CreateAssetMenu(fileName = "UIGeneratorConfig", menuName = "UI/UI Generator Config", order = 0)]
+    [CreateAssetMenu(fileName = "UIGeneratorConfig", menuName = "LiteFramework/UI Generator Config", order = 0)]
     public class UIGeneratorConfig : ScriptableObject
     {
         public string outputRootPath = "Assets/Scripts/Features";

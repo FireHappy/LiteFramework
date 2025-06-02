@@ -3,6 +3,7 @@ using VContainer;
 using LiteFramework.Core.Module.UI;
 using LiteFramework.Core.Utility;
 using System;
+using LiteFramework.Configs;
 
 namespace LiteFramework.Module.UI
 {
@@ -16,18 +17,15 @@ namespace LiteFramework.Module.UI
     public class UIManager : IUIManager
     {
 
-        private string uiPath = "UI";
-        private string defaultUIParentTag = "UIParent";
-        private string defaultUIDialogTag = "DialogParent";
-        private string rootUIPrefab = "UI/UICanvas";
-
         private readonly IObjectResolver container;
+        private readonly UIRootConfig config;
         private Transform uiParent;
         private Transform dialogParent;
 
-        public UIManager(IObjectResolver container)
+        public UIManager(IObjectResolver container, UIRootConfig config)
         {
             this.container = container;
+            this.config = config;
         }
 
         public void OpenUI<TPresenter, TView>(UIType type = UIType.Panel, Transform parent = null)
@@ -57,7 +55,7 @@ namespace LiteFramework.Module.UI
             }
             else
             {
-                view = UIUtility.CreateUI<TView>(parent, uiPath);
+                view = UIUtility.CreateUI<TView>(parent, config.UIPath);
                 //初始化组件
                 view.InitComponents();
             }
@@ -117,12 +115,12 @@ namespace LiteFramework.Module.UI
         {
             if (dialogParent == null)
             {
-                dialogParent = GameObject.FindWithTag(defaultUIDialogTag)?.transform;
+                dialogParent = GameObject.FindWithTag(config.DefaultUIDialogTag)?.transform;
             }
-            if (dialogParent == null)
+            if (dialogParent == null && config.RootUIPrefab != null)
             {
-                GameObject.Instantiate(Resources.Load<GameObject>(rootUIPrefab));
-                dialogParent = GameObject.FindWithTag(defaultUIDialogTag)?.transform;
+                GameObject.Instantiate(config.RootUIPrefab);
+                dialogParent = GameObject.FindWithTag(config.DefaultUIDialogTag)?.transform;
             }
             return dialogParent;
         }
@@ -131,16 +129,15 @@ namespace LiteFramework.Module.UI
         {
             if (uiParent == null)
             {
-                uiParent = GameObject.FindWithTag(defaultUIParentTag)?.transform;
+                uiParent = GameObject.FindWithTag(config.DefaultUIParentTag)?.transform;
             }
-            if (uiParent == null)
+            if (uiParent == null && config.RootUIPrefab != null)
             {
-                GameObject.Instantiate(Resources.Load<GameObject>(rootUIPrefab));
-                uiParent = GameObject.FindWithTag(defaultUIParentTag)?.transform;
+                GameObject.Instantiate(config.RootUIPrefab);
+                uiParent = GameObject.FindWithTag(config.DefaultUIParentTag)?.transform;
             }
             return uiParent;
         }
-
 
         private Transform GetTopChild(Transform tsf)
         {

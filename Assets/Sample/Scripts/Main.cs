@@ -1,54 +1,31 @@
-using VContainer;
-using VContainer.Unity;
+using System.Reflection;
 using LiteFramework.Module.UI;
-using LiteFramework.Core.Utility;
-using LiteFramework.Core.MVP;
-using LiteFramework.Configs;
-using UnityEngine;
+using VContainer;
+
 
 namespace LiteFramework.Sample
 {
-    public class Main : LifetimeScope
+    public class Main : LiteStartupBase
     {
-        [SerializeField]
-        private ScriptableObject UIRootConfig;
-        protected override void Configure(IContainerBuilder builder)
+        protected override Assembly[] GetCustomAutoRegisterAssemblies()
         {
-            RegisterUIModule(builder);
-            RegisterAllAutoRegister(builder);
-        }
-
-        /// <summary>
-        /// RegisterUIModule
-        /// </summary>
-        /// <param name="builder"></param>
-        private void RegisterUIModule(IContainerBuilder builder)
-        {
-            if (UIRootConfig != null)
+            return new[]
             {
-                builder.RegisterInstance(UIRootConfig).As<UIRootConfig>();
-                builder.Register<IUIManager, UIManager>(Lifetime.Singleton);
-                builder.Register<UIRouter>(Lifetime.Singleton);
-            }
+                //添加LoginPresenter所在的程序集
+                typeof(LoginPresenter).Assembly
+            };
         }
 
-        /// <summary>
-        /// AutoRegister
-        /// </summary>
-        /// <param name="builder"></param>
-        private void RegisterAllAutoRegister(IContainerBuilder builder)
+        protected override void OnRegisterCustomServices(IContainerBuilder builder)
         {
-            var assemblies = new[] { typeof(BasePresenter<>).Assembly,
-             typeof(LoginPresenter).Assembly };
-            VContainerAutoRegister.RegisterWithAttribute(builder, assemblies);
+            //todo 注册自定义服务
         }
 
-
-        private void Start()
+        protected override void OnStart()
         {
-            //Start Logic
-            var uiRouter = Container.Resolve<UIRouter>();
-            uiRouter.Open<LoginView>();
+            //使用VContainer容器获取ui路由
+            var router = Container.Resolve<UIRouter>();
+            router.Open<LoginView>();
         }
     }
 }

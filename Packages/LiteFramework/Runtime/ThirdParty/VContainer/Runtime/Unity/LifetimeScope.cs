@@ -145,7 +145,7 @@ namespace VContainer.Unity
                     Build();
                 }
             }
-            catch (VContainerParentTypeReferenceNotFound) when(!IsRoot)
+            catch (VContainerParentTypeReferenceNotFound) when (!IsRoot)
             {
                 if (WaitingList.Contains(this))
                 {
@@ -322,7 +322,8 @@ namespace VContainer.Unity
             var implParent = FindParent();
             if (implParent != null)
             {
-                if (parentReference.Type != null && parentReference.Type != implParent.GetType()) {
+                if (parentReference.Type != null && parentReference.Type != implParent.GetType())
+                {
                     UnityEngine.Debug.LogWarning($"FindParent returned {implParent.GetType()} but parent reference type is {parentReference.Type}. This may be unintentional.");
                 }
                 return implParent;

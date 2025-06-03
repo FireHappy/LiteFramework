@@ -36,8 +36,6 @@ public static class UIConfigCreator
         Selection.activeObject = newConfig;
     }
 
-
-
     private const string UIRootConfigPath = "Packages/com.liteframework.unity/Runtime/DefaultAssets/Configs/UIRootConfig.asset";
 
     [MenuItem("Assets/Create/LiteFramework/UI Root Config")]

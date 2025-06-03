@@ -39,7 +39,7 @@ namespace VContainer.Editor
             using (new EditorGUI.PropertyScope(rect, label, prop))
             {
                 var labelRect = new Rect(rect.x, rect.y, rect.width, 18f);
-                var popupRect = new Rect(rect.x, rect.y + labelRect.height, rect.width , 18f);
+                var popupRect = new Rect(rect.x, rect.y + labelRect.height, rect.width, 18f);
 
                 var index = Array.IndexOf(names, typeNameProp.stringValue);
                 if (index < 0) index = 0;

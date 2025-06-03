@@ -1,22 +1,16 @@
 {
-  "name": "com.liteframework.unity",
-  "displayName": "LiteFramework",
-  "version": "1.0.0",
-  "unity": "2022.3",
-  "author": "LinC",
-  "description": "A lite mvp framework",
-  "keywords": [
-    "MVP",
-    "UI",
-    "Framework"
-  ],
-  "dependencies": {
-    "com.unity.textmeshpro": "3.0.6"
-  },
-  "samples": [
-    {
-      "displayName": "Sample",
-      "path": "Sample~"
+    "name": "com.liteframework.unity",
+    "displayName": "LiteFramework",
+    "version": "1.0.0",
+    "unity": "2022.3",
+    "author": "LinC",
+    "description": "A lite mvp framework",
+    "keywords": [
+        "MVP",
+        "UI",
+        "Framework"
+    ],
+    "dependencies": {
+        "com.unity.textmeshpro": "3.0.6"
     }
-  ]
 }

@@ -11,7 +11,7 @@ namespace {NAMESPACE}
     public class {UI_NAME}Presenter : BaseUIPresenter<{UI_NAME}View>
     {
 
-        public {UI_NAME}Presenter(IUIManager uiManager, IObjectResolver container) : base(uiManager, container)
+        public {UI_NAME}Presenter(UIRouter router, IObjectResolver container) : base(router, container)
         {
 
         }

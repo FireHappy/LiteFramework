@@ -13,11 +13,20 @@ namespace LiteFramework.EditorTools
 {
     public static class UIRouterGeneratorEditor
     {
+        // 方法1: 通过程序集名称过滤（最常用）
+        public static Assembly[] GetMainAssemblies()
+        {
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+
+            return assemblies.Where(assembly =>
+                assembly.GetName().Name == "Assembly-CSharp" ||           // 主程序集
+                assembly.GetName().Name == "Assembly-CSharp-firstpass"   // 预编译程序集
+            ).ToArray();
+        }
         public static void GenerateRouterFiles(string outputFolder)
         {
             Debug.Log("⚙️ 正在生成 UIRouter 注册和委托表...");
-            var assemblies = AppDomain.CurrentDomain.GetAssemblies()
-                .Where(a => !a.FullName.StartsWith("Unity") && !a.FullName.StartsWith("System"));
+            var assemblies = GetMainAssemblies();
 
             var viewTypes = assemblies
                 .SelectMany(a => a.GetTypes())

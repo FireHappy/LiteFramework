@@ -6,13 +6,13 @@ namespace LiteFramework.Sample
 {
     public partial class TipView : BaseUIView<TipPresenter>
     {
-		public TextMeshProUGUI txtuTipTitle;
-		public TextMeshProUGUI txtuTipContent;
+		public TextMeshProUGUI txtUTipTitle;
+		public TextMeshProUGUI txtUTipContent;
 
         public override void InitComponents()
         {
-			txtuTipTitle = transform.Find("Bg/TxtU_TipTitle").GetComponent<TextMeshProUGUI>();
-			txtuTipContent = transform.Find("Bg/TxtU_TipContent").GetComponent<TextMeshProUGUI>();
+			txtUTipTitle = transform.Find("Bg/TxtU_TipTitle").GetComponent<TextMeshProUGUI>();
+			txtUTipContent = transform.Find("Bg/TxtU_TipContent").GetComponent<TextMeshProUGUI>();
 
         }
     }

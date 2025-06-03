@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using LiteFramework.Module.UI;
 using UnityEngine;
 
-namespace LiteFramework.Sample
+namespace LiteFramework.Generated
 {
     public static class UIRouterRegister
     {
@@ -14,6 +14,7 @@ namespace LiteFramework.Sample
             UIRouter.Register<LiteFramework.Sample.LoginPresenter, LiteFramework.Sample.LoginView>();
             UIRouter.Register<LiteFramework.Sample.MainPresenter, LiteFramework.Sample.MainView>();
             UIRouter.Register<LiteFramework.Sample.SettingPresenter, LiteFramework.Sample.SettingView>();
+            UIRouter.Register<LiteFramework.Sample.TipPresenter, LiteFramework.Sample.TipView>();
         }
     }
 }

@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace LiteFramework.Configs
 {
-    [CreateAssetMenu(fileName = "UIRootConfig", menuName = "LiteFramework/UI Root Config")]
     public class UIRootConfig : ScriptableObject
     {
         public string UIPath = "UI";

@@ -10,6 +10,8 @@ namespace LiteFramework.Sample
 {
     public class Main : LifetimeScope
     {
+        [SerializeField]
+        private ScriptableObject UIRootConfig;
         protected override void Configure(IContainerBuilder builder)
         {
             RegisterUIModule(builder);
@@ -22,10 +24,12 @@ namespace LiteFramework.Sample
         /// <param name="builder"></param>
         private void RegisterUIModule(IContainerBuilder builder)
         {
-            var configFromAsset = Resources.Load<UIRootConfig>("Configs/UIRootConfig");
-            builder.RegisterInstance(configFromAsset).As<UIRootConfig>();
-            builder.Register<IUIManager, UIManager>(Lifetime.Singleton);
-            builder.Register<UIRouter>(Lifetime.Singleton);
+            if (UIRootConfig != null)
+            {
+                builder.RegisterInstance(UIRootConfig).As<UIRootConfig>();
+                builder.Register<IUIManager, UIManager>(Lifetime.Singleton);
+                builder.Register<UIRouter>(Lifetime.Singleton);
+            }
         }
 
         /// <summary>

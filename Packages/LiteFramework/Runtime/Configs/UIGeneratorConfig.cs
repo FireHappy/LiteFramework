@@ -34,7 +34,6 @@ namespace LiteFramework.Configs
         public ComponentTypeRef componentType;
     }
 
-    [CreateAssetMenu(fileName = "UIGeneratorConfig", menuName = "LiteFramework/UI Generator Config", order = 0)]
     public class UIGeneratorConfig : ScriptableObject
     {
         public string outputRootPath = "Assets/Scripts/Features";

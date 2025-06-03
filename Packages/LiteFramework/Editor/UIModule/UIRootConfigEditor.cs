@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using LiteFramework.Configs;
+using System;
 
 [CustomEditor(typeof(UIRootConfig))]
 public class UIRootConfigEditor : Editor

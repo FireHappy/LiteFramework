@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using LiteFramework.Module.UI;
 using UnityEngine;
 
-namespace LiteFramework.Generated
+namespace LiteFramework.Sample
 {
     public static class UIRouterRegister
     {

@@ -23,7 +23,7 @@ namespace LiteFramework.EditorTools
                 assembly.GetName().Name == "Assembly-CSharp-firstpass"   // 预编译程序集
             ).ToArray();
         }
-        public static void GenerateRouterFiles(string outputFolder)
+        public static void GenerateRouterFiles(string outputFolder, string nameSpace)
         {
             Debug.Log("⚙️ 正在生成 UIRouter 注册和委托表...");
             var assemblies = GetMainAssemblies();
@@ -42,7 +42,7 @@ namespace LiteFramework.EditorTools
             sb.AppendLine("using LiteFramework.Module.UI;");
             sb.AppendLine("using UnityEngine;");
             sb.AppendLine();
-            sb.AppendLine("namespace LiteFramework.Generated");
+            sb.AppendLine($"namespace {nameSpace}");
             sb.AppendLine("{");
 
             // 单个静态类 UIRouterRegister

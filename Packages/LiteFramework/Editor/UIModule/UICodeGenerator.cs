@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using LiteFramework.Configs;
+using LiteFramework.EditorTools;
 
 namespace LiteFramework.EditorTools
 {
@@ -194,14 +195,14 @@ public static class UIRouterGenerationTrigger
 
         string outputPath = EditorPrefs.GetString("LiteFramework.RouterOutputPath", null);
         EditorPrefs.DeleteKey("LiteFramework.RouterOutputPath");
-
+        var config = UIPrefabCodeGenerator.LoadUIGeneratorConfig();
         if (!string.IsNullOrEmpty(outputPath))
         {
             try
             {
                 Debug.Log("🌀 正在延迟生成 UIRouter...");
 
-                LiteFramework.EditorTools.UIRouterGeneratorEditor.GenerateRouterFiles(outputPath);
+                LiteFramework.EditorTools.UIRouterGeneratorEditor.GenerateRouterFiles(outputPath, config.nameSpace);
                 AssetDatabase.Refresh();
 
                 Debug.Log("✅ 成功生成 UIRouter 映射表！");

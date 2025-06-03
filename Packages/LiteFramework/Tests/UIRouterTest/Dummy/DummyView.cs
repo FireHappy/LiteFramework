@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using LiteFramework.Core.Module.UI;
 using TMPro;
 
-namespace LiteFramework.Sample
+namespace LiteFramework.Tests
 {
     [BindPresenter(typeof(DummyPresenter))]
     public partial class DummyView : BaseUIView<DummyPresenter>

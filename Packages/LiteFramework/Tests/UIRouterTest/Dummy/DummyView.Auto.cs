@@ -1,5 +1,5 @@
 using LiteFramework.Core.Module.UI;
-namespace LiteFramework.Sample
+namespace LiteFramework.Tests
 {
     public partial class DummyView : BaseUIView<DummyPresenter>
     {

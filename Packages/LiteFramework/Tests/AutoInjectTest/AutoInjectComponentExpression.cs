@@ -2,9 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Reflection;
+using LiteFramework.Core.Utility;
 using UnityEngine;
 
-namespace LiteFramework.Core.Utility
+namespace LiteFramework.Tests
 {
 
     public static class AutoInjectComponentExpression

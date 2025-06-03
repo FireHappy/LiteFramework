@@ -4,8 +4,9 @@ using System.Linq.Expressions;
 using UnityEngine;
 using LiteFramework.Core.Module.UI;
 using LiteFramework.Core.MVP;
+using LiteFramework.Module.UI;
 
-namespace LiteFramework.Module.UI
+namespace LiteFramework.Tests
 {
     public class UIRouterInvoke
     {

@@ -29,15 +29,38 @@ public class NamespaceBatchEditor : EditorWindow
             string selectPath = EditorUtility.OpenFolderPanel("选择脚本文件夹", Application.dataPath, "");
             if (!string.IsNullOrEmpty(selectPath))
             {
+                string projectPath = Directory.GetParent(Application.dataPath).FullName;
+
                 if (selectPath.StartsWith(Application.dataPath))
                 {
+                    // Assets文件夹下的路径
                     folderPath = "Assets" + selectPath.Substring(Application.dataPath.Length);
+                }
+                else if (selectPath.StartsWith(Path.Combine(projectPath, "Packages")))
+                {
+                    // Packages文件夹下的路径
+                    string packagesPath = Path.Combine(projectPath, "Packages");
+                    folderPath = "Packages" + selectPath.Substring(packagesPath.Length);
                 }
                 else
                 {
-                    Debug.LogError("请选择Assets文件夹下的路径！");
+                    Debug.LogError("请选择Assets或Packages文件夹下的路径！");
                 }
             }
+        }
+        EditorGUILayout.EndHorizontal();
+
+        EditorGUILayout.Space();
+
+        // 添加快捷按钮
+        EditorGUILayout.BeginHorizontal();
+        if (GUILayout.Button("Assets", GUILayout.Width(60)))
+        {
+            folderPath = "Assets";
+        }
+        if (GUILayout.Button("Packages", GUILayout.Width(80)))
+        {
+            folderPath = "Packages";
         }
         EditorGUILayout.EndHorizontal();
 
@@ -55,7 +78,7 @@ public class NamespaceBatchEditor : EditorWindow
                 return;
             }
 
-            if (!AssetDatabase.IsValidFolder(folderPath))
+            if (!IsValidFolderPath(folderPath))
             {
                 EditorUtility.DisplayDialog("错误", "无效的文件夹路径", "确定");
                 return;
@@ -65,15 +88,24 @@ public class NamespaceBatchEditor : EditorWindow
         }
     }
 
+    private bool IsValidFolderPath(string path)
+    {
+        if (path.StartsWith("Assets"))
+        {
+            return AssetDatabase.IsValidFolder(path);
+        }
+        else if (path.StartsWith("Packages"))
+        {
+            string projectPath = Directory.GetParent(Application.dataPath).FullName;
+            string fullPath = Path.Combine(projectPath, path);
+            return Directory.Exists(fullPath);
+        }
+        return false;
+    }
+
     private void ModifyNamespaceInFolder(string folder, string newNamespace)
     {
-        string relativePath = folder;
-        if (relativePath.StartsWith("Assets"))
-        {
-            relativePath = relativePath.Substring("Assets".Length);
-        }
-
-        string fullPath = Path.Combine(Application.dataPath, relativePath.TrimStart(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar));
+        string fullPath = GetFullPath(folder);
 
         if (!Directory.Exists(fullPath))
         {
@@ -83,24 +115,55 @@ public class NamespaceBatchEditor : EditorWindow
 
         string[] files = Directory.GetFiles(fullPath, "*.cs", SearchOption.AllDirectories);
         int modifiedCount = 0;
+        List<string> readOnlyFiles = new List<string>();
 
         foreach (string file in files)
         {
-            string code = File.ReadAllText(file);
-            string newCode = ModifyNamespaceInCode(code, newNamespace);
+            // 检查文件是否为只读（Packages中的文件通常是只读的）
+            FileAttributes attributes = File.GetAttributes(file);
+            bool isReadOnly = (attributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly;
 
-            if (newCode != code)
+            if (isReadOnly && folder.StartsWith("Packages"))
             {
-                // 备份
-                string backupFile = file + ".bak";
-                if (!File.Exists(backupFile))
-                {
-                    File.Copy(file, backupFile);
-                }
+                readOnlyFiles.Add(file);
+                continue;
+            }
 
-                File.WriteAllText(file, newCode);
-                modifiedCount++;
-                Debug.Log($"修改文件：{file}");
+            try
+            {
+                string code = File.ReadAllText(file);
+                string newCode = ModifyNamespaceInCode(code, newNamespace);
+
+                if (newCode != code)
+                {
+                    // 备份
+                    string backupFile = file + ".bak";
+                    if (!File.Exists(backupFile))
+                    {
+                        File.Copy(file, backupFile);
+                    }
+
+                    // 如果是只读文件，临时移除只读属性
+                    if (isReadOnly)
+                    {
+                        File.SetAttributes(file, attributes & ~FileAttributes.ReadOnly);
+                    }
+
+                    File.WriteAllText(file, newCode);
+
+                    // 恢复只读属性
+                    if (isReadOnly)
+                    {
+                        File.SetAttributes(file, attributes);
+                    }
+
+                    modifiedCount++;
+                    Debug.Log($"修改文件：{file}");
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"处理文件失败：{file}，原因：{e.Message}");
             }
         }
 
@@ -119,8 +182,36 @@ public class NamespaceBatchEditor : EditorWindow
             }
         }
 
-        AssetDatabase.Refresh();
-        EditorUtility.DisplayDialog("完成", $"处理完成，共修改 {modifiedCount} 个文件，已删除备份文件", "确定");
+        // 只有Assets文件夹需要刷新AssetDatabase
+        if (folder.StartsWith("Assets"))
+        {
+            AssetDatabase.Refresh();
+        }
+
+        string message = $"处理完成，共修改 {modifiedCount} 个文件，已删除备份文件";
+        if (readOnlyFiles.Count > 0)
+        {
+            message += $"\n跳过 {readOnlyFiles.Count} 个只读文件";
+        }
+
+        EditorUtility.DisplayDialog("完成", message, "确定");
+    }
+
+    private string GetFullPath(string relativePath)
+    {
+        string projectPath = Directory.GetParent(Application.dataPath).FullName;
+
+        if (relativePath.StartsWith("Assets"))
+        {
+            string assetsRelativePath = relativePath.Substring("Assets".Length).TrimStart(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
+            return Path.Combine(Application.dataPath, assetsRelativePath);
+        }
+        else if (relativePath.StartsWith("Packages"))
+        {
+            return Path.Combine(projectPath, relativePath);
+        }
+
+        return relativePath;
     }
 
     private string ModifyNamespaceInCode(string code, string newNamespace)
@@ -205,5 +296,4 @@ public class NamespaceBatchEditor : EditorWindow
             return string.Join("\n", finalLines);
         }
     }
-
 }

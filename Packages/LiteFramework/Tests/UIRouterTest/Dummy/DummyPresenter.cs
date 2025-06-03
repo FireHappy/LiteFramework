@@ -5,7 +5,7 @@ using LiteFramework.Core.Module.UI;
 using VContainer;
 using UnityEngine;
 
-namespace LiteFramework.Sample
+namespace LiteFramework.Tests
 {
     [AutoRegister(VContainer.Lifetime.Transient)]
     public class DummyPresenter : BaseUIPresenter<DummyView>

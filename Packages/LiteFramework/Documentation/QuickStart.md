@@ -11,7 +11,7 @@
    ```json
    {
      "dependencies": {
-       "com.liteframework.unity": "https://github.com/FireHappy/LiteFramework.git"
+       "com.liteframework.unity": "https://github.com/FireHappy/LiteFramework.git?path=Packages/LiteFramework"
      }
    }
    ```

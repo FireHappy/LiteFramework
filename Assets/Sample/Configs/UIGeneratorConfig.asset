@@ -55,3 +55,7 @@ MonoBehaviour:
     componentType:
       typeName: UnityEngine.UI.Button, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
         PublicKeyToken=null
+  - prefix: Btn
+    componentType:
+      typeName: UnityEngine.UI.Button, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+        PublicKeyToken=null

@@ -13,6 +13,7 @@ public class UIRouterTest : MonoBehaviour
         var manager = new DummyUIManager();
         var router = new UIRouter(manager);     // 使用泛型委托缓存，逆天的牛逼方案
         var routerInvoke = new UIRouterInvoke(manager);
+        UIRouter.Register<DummyPresenter, DummyView>();
         UnityEngine.Debug.Log("---- UI Router Performance Test ----");
         Stopwatch sw = new Stopwatch();
 

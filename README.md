@@ -39,7 +39,7 @@
    | 前缀_功能名     | 映射组件类型                | 生成后的字段     |
    |----------------|-----------------------------|------------------|
    | `Btn_Login`    | `UnityEngine.UI.Button`     | `btnLogin`       |
-   | `Txt_UserName` | `TMPro.TextMeshProUGUI`     | `txtUserName`    |
+   | `TxtU_UserName` | `TMPro.TextMeshProUGUI`     | `txtuUserName`    |
    | `Img_Head`     | `UnityEngine.UI.Image`      | `imgHead`        |
 
 ---

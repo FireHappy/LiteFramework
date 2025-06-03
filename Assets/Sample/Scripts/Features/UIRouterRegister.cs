@@ -14,6 +14,7 @@ namespace LiteFramework.Generated
             UIRouter.Register<LiteFramework.Sample.LoginPresenter, LiteFramework.Sample.LoginView>();
             UIRouter.Register<LiteFramework.Sample.MainPresenter, LiteFramework.Sample.MainView>();
             UIRouter.Register<LiteFramework.Sample.SettingPresenter, LiteFramework.Sample.SettingView>();
+            UIRouter.Register<LiteFramework.Sample.DummyPresenter, LiteFramework.Sample.DummyView>();
         }
     }
 }

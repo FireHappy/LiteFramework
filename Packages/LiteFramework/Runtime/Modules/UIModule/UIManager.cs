@@ -26,7 +26,7 @@ namespace LiteFramework.Module.UI
             this.container = container;
             this.config = config;
             this.pool = pool;
-            pool.Init(30);
+            pool.Init(config.UIKeepAliveTime);
         }
 
         public void OpenUI<TPresenter, TView>(UIType type = UIType.Panel, Transform parent = null)

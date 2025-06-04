@@ -15,12 +15,21 @@ namespace LiteFramework.Sample
 
         protected override void OnViewReady()
         {
+            view.btnLogin.onClick.AddListener(() =>
+            {
+                router.Open<MainView>();
+            });
 
+            view.btnCancel.onClick.AddListener(() =>
+            {
+                router.Close<LoginView>();
+            });
         }
 
         protected override void OnViewDispose()
         {
-
+            view.btnLogin.onClick.RemoveAllListeners();
+            view.btnCancel.onClick.RemoveAllListeners();
         }
     }
 }

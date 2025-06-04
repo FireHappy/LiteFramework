@@ -33,6 +33,7 @@ namespace LiteFramework
             if (UIRootConfig != null)
             {
                 builder.RegisterInstance(UIRootConfig).As<UIRootConfig>();
+                builder.RegisterEntryPoint<UIPoolManager>(Lifetime.Singleton);
                 builder.Register<IUIManager, UIManager>(Lifetime.Singleton);
                 builder.Register<UIRouter>(Lifetime.Singleton);
             }
@@ -62,7 +63,10 @@ namespace LiteFramework
         /// <summary>
         /// 子类可重写此方法添加自动注册程序集（无需包含 BasePresenter）
         /// </summary>
-        protected abstract Assembly[] GetCustomAutoRegisterAssemblies();
+        protected virtual Assembly[] GetCustomAutoRegisterAssemblies()
+        {
+            return null;
+        }
 
         /// <summary>
         /// 子类可额外注册自定义服务

@@ -7,22 +7,22 @@ namespace LiteFramework.Sample
     {
         public override void OnCreate()
         {
-
+            presenter.OnViewCreate();
         }
 
         public override void OnShow()
         {
-
+            presenter.OnViewShow();
         }
 
         public override void OnHide()
         {
-
+            presenter.OnViewHide();
         }
 
         public override void OnDispose()
         {
-
+            presenter.OnViewDispose();
         }
     }
 }

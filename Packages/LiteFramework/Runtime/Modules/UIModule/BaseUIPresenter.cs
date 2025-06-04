@@ -19,18 +19,17 @@ namespace LiteFramework.Module.UI
         public void AttachView(IView view)
         {
             this.view = (TView)view;
-            OnViewReady();
         }
 
         public void DetachView()
         {
             view = default;
-            OnViewDispose();
         }
 
-        protected virtual void OnViewReady() { }
-
-        protected virtual void OnViewDispose() { }
+        public virtual void OnViewCreate() { }
+        public virtual void OnViewShow() { }
+        public virtual void OnViewHide() { }
+        public virtual void OnViewDispose() { }
     }
 }
 

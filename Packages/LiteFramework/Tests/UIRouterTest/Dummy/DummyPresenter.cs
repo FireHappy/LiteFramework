@@ -15,12 +15,12 @@ namespace LiteFramework.Tests
 
         }
 
-        protected override void OnViewReady()
+        public override void OnViewCreate()
         {
 
         }
 
-        protected override void OnViewDispose()
+        public override void OnViewDispose()
         {
 
         }

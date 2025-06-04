@@ -68,9 +68,9 @@ namespace LiteFramework.Module.UI
                 TView view = UIUtility.CreateUI<TView>(parent, config.UIPath);
                 //查找初始化组件
                 view.FindComponents();
-                view.OnCreate();
                 var presenter = container.Resolve<TPresenter>();
                 view.BindPresenter(presenter);
+                view.OnCreate();
             }
         }
 

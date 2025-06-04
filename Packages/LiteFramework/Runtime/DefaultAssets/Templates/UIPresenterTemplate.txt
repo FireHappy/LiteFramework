@@ -13,12 +13,22 @@ namespace {NAMESPACE}
 
         }
 
-        protected override void OnViewReady()
+        public override void OnViewCreate()
         {
 
         }
 
-        protected override void OnViewDispose()
+        public override void OnViewShow()
+        {
+
+        }
+
+        public override void OnViewHide()
+        {
+
+        }
+
+        public override void OnViewDispose()
         {
 
         }

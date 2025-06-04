@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace LiteFramework.Module.UI
 {
-    public abstract class BaseUIView<TPresenter> : MonoBehaviour, IView
+    public abstract class BaseUIView<TPresenter> : MonoBehaviour, IView, IUILifetime
     where TPresenter : class, IPresenter
     {
         public TPresenter presenter { get; private set; }
@@ -23,11 +23,13 @@ namespace LiteFramework.Module.UI
             }
 
             this.presenter = (TPresenter)presenter;
+            this.presenter.AttachView(this);
             OnBind();
         }
 
         public void UnBindPresenter()
         {
+            presenter.DetachView();
             presenter = default;
             OnUnBind();
         }
@@ -39,6 +41,26 @@ namespace LiteFramework.Module.UI
 
         protected virtual void OnBind() { }
         protected virtual void OnUnBind() { }
+
+        public void OnCreate()
+        {
+
+        }
+
+        public void OnShow()
+        {
+
+        }
+
+        public void OnHide()
+        {
+
+        }
+
+        public void OnDispose()
+        {
+
+        }
     }
 }
 

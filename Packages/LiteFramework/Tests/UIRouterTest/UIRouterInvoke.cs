@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
-using LiteFramework.Core.Module.UI;
 using LiteFramework.Core.MVP;
 using LiteFramework.Module.UI;
 

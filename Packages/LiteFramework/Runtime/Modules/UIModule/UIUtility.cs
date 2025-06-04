@@ -42,7 +42,23 @@ namespace LiteFramework.Module.UI
         {
             return parent.Find(viewType.Name);
         }
-    }
 
+        public static void SetUIVisible(GameObject target, bool visible)
+        {
+            if (target == null) return;
+
+            // 获取或添加 CanvasGroup
+            CanvasGroup cg = target.GetComponent<CanvasGroup>();
+            if (cg == null)
+            {
+                cg = target.AddComponent<CanvasGroup>();
+            }
+
+            // 设置属性
+            cg.alpha = visible ? 1f : 0f;
+            cg.interactable = visible;
+            cg.blocksRaycasts = visible;
+        }
+    }
 }
 

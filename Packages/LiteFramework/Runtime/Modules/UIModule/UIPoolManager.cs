@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using LiteFramework.Core.MVP;
 using UnityEngine;
 using VContainer.Unity;
 
@@ -7,14 +8,16 @@ namespace LiteFramework.Module.UI
 {
     public class UIPoolEntry
     {
-        public IUIView IView;
+        public IView IView;
+        public IUILifetime ILifeTime;
         public Transform View;
         public float LastHideTime;
 
         public UIPoolEntry(Transform view)
         {
             View = view;
-            IView = view.GetComponent<IUIView>();
+            IView = view.GetComponent<IView>();
+            ILifeTime = view.GetComponent<IUILifetime>();
             LastHideTime = Time.unscaledTime;
         }
     }
@@ -40,7 +43,7 @@ namespace LiteFramework.Module.UI
             {
                 if (now - kvp.Value.LastHideTime > keepAliveTime)
                 {
-                    kvp.Value.IView.OnDispose();
+                    kvp.Value.ILifeTime.OnDispose();
                     GameObject.Destroy(kvp.Value.View.gameObject);
                     removeQueue.Enqueue(kvp.Key);
                 }
@@ -48,24 +51,22 @@ namespace LiteFramework.Module.UI
             while (removeQueue.Count > 0)
             {
                 Type type = removeQueue.Dequeue();
-                //todo... 实现view&presenter的解绑
-                // uiPool.Remove();
-                // var view = tsf.GetComponent<>();
-                // if (view != null && view.presenter != null)
-                // {
-                //     view.presenter.DetachView();
-                //     view.UnBindPresenter();
-                // }
-                // UIUtility.DestroyUI(tsf);
+                if (uiPool.TryGetValue(type, out UIPoolEntry entry))
+                {
+                    entry.IView.UnBindPresenter();
+                    entry.ILifeTime.OnDispose();
+                    UIUtility.DestroyUI(entry.View);
+                }
             }
         }
 
-        public void RecycleUI<TView>(Transform view) where TView : IUIView
+        public void RecycleUI<TView>(Transform view)
+        where TView : IView
         {
             view.transform.SetParent(poolRoot);
             UIPoolEntry entry = new UIPoolEntry(view);
-            entry.IView.OnHide();
-            uiPool[typeof(TView)] = new UIPoolEntry(view);
+            entry.ILifeTime.OnHide();
+            uiPool.Add(typeof(TView), entry);
         }
 
         public bool TryGetFromPool<TView>(out Transform view)

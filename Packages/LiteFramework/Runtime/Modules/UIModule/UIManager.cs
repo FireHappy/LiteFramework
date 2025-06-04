@@ -1,7 +1,5 @@
 using UnityEngine;
 using VContainer;
-using LiteFramework.Core.Module.UI;
-using LiteFramework.Core.Utility;
 using System;
 using LiteFramework.Configs;
 
@@ -19,13 +17,15 @@ namespace LiteFramework.Module.UI
 
         private readonly IObjectResolver container;
         private readonly UIRootConfig config;
+        private readonly UIPoolManager pool;
         private Transform uiParent;
         private Transform dialogParent;
 
-        public UIManager(IObjectResolver container, UIRootConfig config)
+        public UIManager(IObjectResolver container, UIRootConfig config, UIPoolManager pool)
         {
             this.container = container;
             this.config = config;
+            this.pool = pool;
         }
 
         public void OpenUI<TPresenter, TView>(UIType type = UIType.Panel, Transform parent = null)
@@ -36,7 +36,12 @@ namespace LiteFramework.Module.UI
             {
                 case UIType.Panel:
                     parent ??= GetUIParent();
-                    GetTopChild(parent)?.gameObject.SetActive(false);
+                    var lastUI = GetTopChild(parent);
+                    if (lastUI != null)
+                    {
+                        lastUI.GetComponent<IUILifetime>().OnHide();
+                        UIUtility.SetUIVisible(lastUI.gameObject, false);
+                    }
                     break;
                 case UIType.Dialog:
                     parent ??= GetDialogParent();
@@ -45,26 +50,30 @@ namespace LiteFramework.Module.UI
                     parent ??= GetUIParent();
                     break;
             }
-            TView view;
-            var existing = UIUtility.FindUI<TView>(parent);
-            if (existing != null)
+            var viewObj = UIUtility.FindUI<TView>(parent);
+            if (viewObj != null)
             {
-                existing.SetAsLastSibling();
-                existing.gameObject.SetActive(true);
-                view = existing.GetComponent<TView>();
+                viewObj.SetAsLastSibling();
+                viewObj.gameObject.SetActive(true);
+            }
+            else if (pool.TryGetFromPool<TView>(out viewObj))
+            {
+                viewObj.SetParent(parent);
+                UIUtility.SetUIVisible(viewObj.gameObject, true);
             }
             else
             {
-                view = UIUtility.CreateUI<TView>(parent, config.UIPath);
+                TView view = UIUtility.CreateUI<TView>(parent, config.UIPath);
                 //初始化组件
                 view.InitComponents();
+                view.OnCreate();
+                var presenter = container.Resolve<TPresenter>();
+                view.BindPresenter(presenter);
             }
-            var presenter = container.Resolve<TPresenter>();
-            presenter.AttachView(view);
-            view.BindPresenter(presenter);
         }
 
-        public void CloseUI<TPresenter, TView>(UIType type = UIType.Panel, Transform parent = null) where TPresenter : BaseUIPresenter<TView>
+        public void CloseUI<TPresenter, TView>(UIType type = UIType.Panel, Transform parent = null)
+        where TPresenter : BaseUIPresenter<TView>
         where TView : BaseUIView<TPresenter>
         {
             switch (type)
@@ -82,17 +91,17 @@ namespace LiteFramework.Module.UI
             var tsf = UIUtility.FindUI<TView>(parent);
             if (tsf != null)
             {
-                var view = tsf.GetComponent<TView>();
-                if (view != null && view.presenter != null)
-                {
-                    view.presenter.DetachView();
-                    view.UnBindPresenter();
-                }
-                UIUtility.DestroyUI(tsf);
+                //回收到UI池中
+                pool.RecycleUI<TView>(tsf);
             }
             if (type == UIType.Panel)
             {
-                GetTopChild(parent)?.gameObject.SetActive(true);
+                var lastUI = GetTopChild(parent);
+                if (lastUI != null)
+                {
+                    lastUI.GetComponent<IUILifetime>().OnShow();
+                    UIUtility.SetUIVisible(lastUI.gameObject, true);
+                }
             }
         }
 

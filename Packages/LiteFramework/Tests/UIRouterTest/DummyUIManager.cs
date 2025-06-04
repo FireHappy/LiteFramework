@@ -1,5 +1,4 @@
 using System;
-using LiteFramework.Core.Module.UI;
 using LiteFramework.Core.MVP;
 using LiteFramework.Module.UI;
 using UnityEngine;
@@ -37,5 +36,4 @@ namespace LiteFramework.Tests
 
         }
     }
-
 }

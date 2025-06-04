@@ -1,8 +1,7 @@
 using LiteFramework.Core.MVP;
-using LiteFramework.Module.UI;
 using VContainer;
 
-namespace LiteFramework.Core.Module.UI
+namespace LiteFramework.Module.UI
 {
     public abstract class BaseUIPresenter<TView> : IPresenter
         where TView : IView

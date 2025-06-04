@@ -1,5 +1,4 @@
 using System;
-using LiteFramework.Core.Module.UI;
 using UnityEngine;
 
 namespace LiteFramework.Module.UI

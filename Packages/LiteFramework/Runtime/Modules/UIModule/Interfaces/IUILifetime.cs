@@ -1,10 +1,6 @@
-
-
-using LiteFramework.Core.MVP;
-
 namespace LiteFramework.Module.UI
 {
-    public interface IUIView : IView
+    public interface IUILifetime
     {
         void OnCreate();
         void OnShow();

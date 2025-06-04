@@ -1,9 +1,9 @@
 using LiteFramework.Module.UI;
 
-namespace {NAMESPACE}
+namespace LiteFramework.Sample
 {
-    [BindPresenter(typeof({UI_NAME}Presenter))]
-    public partial class {UI_NAME}View : BaseUIView<{UI_NAME}Presenter>
+    [BindPresenter(typeof(LoginPresenter))]
+    public partial class LoginView : BaseUIView<LoginPresenter>
     {
         public override void OnCreate()
         {

@@ -26,6 +26,7 @@ namespace LiteFramework.Module.UI
             this.container = container;
             this.config = config;
             this.pool = pool;
+            pool.Init(30);
         }
 
         public void OpenUI<TPresenter, TView>(UIType type = UIType.Panel, Transform parent = null)
@@ -59,13 +60,14 @@ namespace LiteFramework.Module.UI
             else if (pool.TryGetFromPool<TView>(out viewObj))
             {
                 viewObj.SetParent(parent);
+                viewObj.localPosition = Vector3.zero;
                 UIUtility.SetUIVisible(viewObj.gameObject, true);
             }
             else
             {
                 TView view = UIUtility.CreateUI<TView>(parent, config.UIPath);
-                //初始化组件
-                view.InitComponents();
+                //查找初始化组件
+                view.FindComponents();
                 view.OnCreate();
                 var presenter = container.Resolve<TPresenter>();
                 view.BindPresenter(presenter);

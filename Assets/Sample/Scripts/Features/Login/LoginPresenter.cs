@@ -2,13 +2,13 @@ using LiteFramework.Core.Utility;
 using LiteFramework.Module.UI;
 using VContainer;
 
-namespace {NAMESPACE}
+namespace LiteFramework.Sample
 {
     [AutoRegister(VContainer.Lifetime.Transient)]
-    public class {UI_NAME}Presenter : BaseUIPresenter<{UI_NAME}View>
+    public class LoginPresenter : BaseUIPresenter<LoginView>
     {
 
-        public {UI_NAME}Presenter(UIRouter router, IObjectResolver container) : base(router, container)
+        public LoginPresenter(UIRouter router, IObjectResolver container) : base(router, container)
         {
 
         }

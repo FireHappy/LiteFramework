@@ -30,7 +30,12 @@ namespace LiteFramework.Module.UI
         private float keepAliveTime;
         private Queue<Type> removeQueue = new Queue<Type>();
 
-        public UIPoolManager(float keepAliveTime)
+        public UIPoolManager()
+        {
+
+        }
+
+        public void Init(float keepAliveTime)
         {
             this.keepAliveTime = keepAliveTime;
             InitPoolRoot();

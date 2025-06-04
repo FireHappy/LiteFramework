@@ -6,6 +6,7 @@ TagManager:
   tags:
   - UIParent
   - DialogParent
+  - UIPool
   layers:
   - Default
   - TransparentFX

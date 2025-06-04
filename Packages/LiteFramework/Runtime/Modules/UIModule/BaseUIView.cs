@@ -24,43 +24,23 @@ namespace LiteFramework.Module.UI
 
             this.presenter = (TPresenter)presenter;
             this.presenter.AttachView(this);
-            OnBind();
         }
 
         public void UnBindPresenter()
         {
             presenter.DetachView();
             presenter = default;
-            OnUnBind();
         }
 
-        public virtual void InitComponents()
-        {
+        public abstract void FindComponents();
 
-        }
+        public abstract void OnCreate();
 
-        protected virtual void OnBind() { }
-        protected virtual void OnUnBind() { }
+        public abstract void OnShow();
 
-        public void OnCreate()
-        {
+        public abstract void OnHide();
 
-        }
-
-        public void OnShow()
-        {
-
-        }
-
-        public void OnHide()
-        {
-
-        }
-
-        public void OnDispose()
-        {
-
-        }
+        public abstract void OnDispose();
     }
 }
 

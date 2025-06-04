@@ -33,7 +33,7 @@ namespace LiteFramework
             if (UIRootConfig != null)
             {
                 builder.RegisterInstance(UIRootConfig).As<UIRootConfig>();
-                builder.RegisterEntryPoint<UIPoolManager>(Lifetime.Singleton);
+                builder.RegisterEntryPoint<UIPoolManager>(Lifetime.Singleton).AsSelf();
                 builder.Register<IUIManager, UIManager>(Lifetime.Singleton);
                 builder.Register<UIRouter>(Lifetime.Singleton);
             }
@@ -65,7 +65,11 @@ namespace LiteFramework
         /// </summary>
         protected virtual Assembly[] GetCustomAutoRegisterAssemblies()
         {
-            return null;
+            {
+                return new Assembly[] {
+                    Assembly.Load("Assembly-CSharp")
+                };
+            }
         }
 
         /// <summary>

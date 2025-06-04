@@ -1,7 +1,7 @@
 using LiteFramework.Core.MVP;
 using UnityEngine;
 
-namespace LiteFramework.Core.Module.UI
+namespace LiteFramework.Module.UI
 {
     public abstract class BaseUIView<TPresenter> : MonoBehaviour, IView
     where TPresenter : class, IPresenter

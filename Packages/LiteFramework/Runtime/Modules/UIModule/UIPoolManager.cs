@@ -48,7 +48,7 @@ namespace LiteFramework.Module.UI
             while (removeQueue.Count > 0)
             {
                 Type type = removeQueue.Dequeue();
-                //todo...
+                //todo... 实现view&presenter的解绑
                 // uiPool.Remove();
                 // var view = tsf.GetComponent<>();
                 // if (view != null && view.presenter != null)

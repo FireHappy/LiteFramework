@@ -1,7 +1,5 @@
-using UnityEngine;
-using UnityEngine.UI;
-using LiteFramework.Core.Module.UI;
 using TMPro;
+using LiteFramework.Module.UI;
 
 namespace LiteFramework.Tests
 {

@@ -48,19 +48,18 @@ namespace LiteFramework.Module.UI
             {
                 if (now - kvp.Value.LastHideTime > keepAliveTime)
                 {
-                    kvp.Value.ILifeTime.OnDispose();
-                    GameObject.Destroy(kvp.Value.View.gameObject);
                     removeQueue.Enqueue(kvp.Key);
                 }
             }
             while (removeQueue.Count > 0)
             {
-                Type type = removeQueue.Dequeue();
-                if (uiPool.TryGetValue(type, out UIPoolEntry entry))
+                Type key = removeQueue.Dequeue();
+                if (uiPool.TryGetValue(key, out UIPoolEntry entry))
                 {
                     entry.IView.UnBindPresenter();
                     entry.ILifeTime.OnDispose();
                     UIUtility.DestroyUI(entry.View);
+                    uiPool.Remove(key);
                 }
             }
         }

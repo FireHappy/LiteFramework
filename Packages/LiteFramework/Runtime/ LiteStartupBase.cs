@@ -61,7 +61,7 @@ namespace LiteFramework
         }
 
         /// <summary>
-        /// 子类可重写此方法添加自动注册程序集（无需包含 BasePresenter）
+        /// 子类可重写此方法添加自动注册程序集
         /// </summary>
         protected virtual Assembly[] GetCustomAutoRegisterAssemblies()
         {

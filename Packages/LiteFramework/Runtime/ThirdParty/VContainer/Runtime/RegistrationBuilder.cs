@@ -90,7 +90,7 @@ namespace VContainer
             Parameters.Add(new NamedParameter(name, value));
             return this;
         }
-        
+
         public RegistrationBuilder WithParameter(string name, Func<IObjectResolver, object> value)
         {
             Parameters = Parameters ?? new List<IInjectParameter>();
@@ -104,7 +104,7 @@ namespace VContainer
             Parameters.Add(new TypedParameter(type, value));
             return this;
         }
-        
+
         public RegistrationBuilder WithParameter(Type type, Func<IObjectResolver, object> value)
         {
             Parameters = Parameters ?? new List<IInjectParameter>();
@@ -116,12 +116,12 @@ namespace VContainer
         {
             return WithParameter(typeof(TParam), value);
         }
-        
+
         public RegistrationBuilder WithParameter<TParam>(Func<IObjectResolver, TParam> value)
         {
             return WithParameter(typeof(TParam), resolver => value(resolver));
         }
-        
+
         public RegistrationBuilder WithParameter<TParam>(Func<TParam> value)
         {
             return WithParameter(typeof(TParam), _ => value());
@@ -137,5 +137,5 @@ namespace VContainer
             if (!InterfaceTypes.Contains(interfaceType))
                 InterfaceTypes.Add(interfaceType);
         }
-   }
+    }
 }

@@ -15,7 +15,14 @@ namespace LiteFramework.Sample
 
         public override void OnViewCreate()
         {
+            view.btnLogin.onClick.AddListener(() =>
+            {
 
+            });
+            view.btnCancel.onClick.AddListener(() =>
+            {
+
+            });
         }
 
         public override void OnViewShow()

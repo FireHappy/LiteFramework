@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace LiteFramework.Configs
 {
-    public class UIRootConfig : ScriptableObject
+    public class UIConfig : ScriptableObject
     {
         /// <summary>
         /// UI加载的路径，相对Resource

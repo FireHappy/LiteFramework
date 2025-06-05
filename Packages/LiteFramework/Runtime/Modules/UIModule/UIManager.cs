@@ -16,12 +16,12 @@ namespace LiteFramework.Module.UI
     {
 
         private readonly IObjectResolver container;
-        private readonly UIRootConfig config;
+        private readonly UIConfig config;
         private readonly UIPoolManager pool;
         private Transform uiParent;
         private Transform dialogParent;
 
-        public UIManager(IObjectResolver container, UIRootConfig config, UIPoolManager pool)
+        public UIManager(IObjectResolver container, UIConfig config, UIPoolManager pool)
         {
             this.container = container;
             this.config = config;

@@ -16,7 +16,7 @@ namespace LiteFramework
     public abstract class LiteStartupBase : LifetimeScope
     {
         [SerializeField]
-        protected ScriptableObject UIRootConfig;
+        protected ScriptableObject UIConfig;
 
         protected override void Configure(IContainerBuilder builder)
         {
@@ -30,9 +30,9 @@ namespace LiteFramework
         /// </summary>
         private void RegisterUIModule(IContainerBuilder builder)
         {
-            if (UIRootConfig != null)
+            if (UIConfig != null)
             {
-                builder.RegisterInstance(UIRootConfig).As<UIRootConfig>();
+                builder.RegisterInstance(UIConfig).As<UIConfig>();
                 builder.RegisterEntryPoint<UIPoolManager>(Lifetime.Singleton).AsSelf();
                 builder.Register<IUIManager, UIManager>(Lifetime.Singleton);
                 builder.Register<UIRouter>(Lifetime.Singleton);

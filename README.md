@@ -82,14 +82,19 @@
 在 `TestPresenter.cs` 中编写逻辑：
 
 ```csharp
-public override void OnViewReady()
+public override void OnViewCreate()
 {
-   View.Btn_Confirm.onClick.AddListener(OnConfirmClicked);
+   View.btnConfirm.onClick.AddListener(OnConfirmClicked);
 }
 
 private void OnConfirmClicked()
 {
    Debug.Log("点击了确认");
+}
+
+public override void OnViewDispose()
+{
+   View.btnConfirm.onClick.RemoveAllListener();
 }
 ```
 
@@ -100,15 +105,7 @@ private void OnConfirmClicked()
 ```csharp
 public class Main : LiteStartupBase
 {
-   protected override Assembly[] GetCustomAutoRegisterAssemblies()
-   {
-       return new[]
-       {
-           // 添加 TestPresenter 所在的程序集
-           typeof(TestPresenter).Assembly
-       };
-   }
-
+   
    protected override void OnRegisterCustomServices(IContainerBuilder builder)
    {
        // todo 注册自定义服务
@@ -137,10 +134,11 @@ public class Main : LiteStartupBase
    - UI 加载路径
    - 默认 UITag
    - 默认 DialogTag
+   - UI被回收到UI池中的保活时间
    - UIRoot 预制体 
 
 3. 将 UIRootConfig 拖拽到 Main 脚本的 UIRootConfig 属性上  
-   ![alt text](image-1.png)
+   ![alt text](image-2.png)
 
 ---
 
